@@ -1,2 +1,3 @@
 # gooderp_fenshujiang
-GoodERP，Simplify everything and multiply everything on demand，only for small mall-sized enterprise.
+Based on Odoo12.
+GoodERP，Simplify everything and multiply everything on demand，only for small-sized enterprise.
