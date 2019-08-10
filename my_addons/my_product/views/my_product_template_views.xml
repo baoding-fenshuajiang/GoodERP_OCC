@@ -14,7 +14,7 @@
 				<xpath expr="//field[@name='name']" position="after">
 					<field name="x_weizhi" />
 					<field name="x_zhizuoren_id" />
-					<field name="x_shouming " />
+					<field name="x_shouming" />
 				</xpath>
             </field>
         </record>
@@ -31,7 +31,7 @@
 				<xpath expr="//field[@name='default_code']" position="after">
 					<field name="x_weizhi" />
 					<field name="x_zhizuoren_id" />
-                    <field name="x_shouming " />
+                    <field name="x_shouming" />
 				</xpath>
             </field>
         </record>

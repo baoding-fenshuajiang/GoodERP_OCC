@@ -12,7 +12,7 @@ class MyProductTemplate(models.Model):
     x_tuhao = fields.Char(string=u'图号')
     x_weizhi = fields.Char(string=u'位置')
     x_zhizuoren_id = fields.Many2one('hr.employee', string=u'制作人')
-    x_shouming =  fields.integer(string=u'使用寿命(件)')
+    x_shouming =  fields.Integer(string=u'使用寿命(件)')
 
     @api.multi
     def name_get(self):
