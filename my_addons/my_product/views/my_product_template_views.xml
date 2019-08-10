@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!--在产品列表视图中添加图号x_tuhao、x_weizhi字段-->
+        <!--在产品列表视图中添加图号x_tuhao、x_weizhi、x_shouming字段-->
         <record id="my_product_template_tree_view" model="ir.ui.view">
             <field name="name">my.product.template.product.tree</field>
             <field name="model">product.template</field>
@@ -14,10 +14,11 @@
 				<xpath expr="//field[@name='name']" position="after">
 					<field name="x_weizhi" />
 					<field name="x_zhizuoren_id" />
+					<field name="x_shouming " />
 				</xpath>
             </field>
         </record>
-        <!--在产品窗体中添加图号x_tuhao、x_weizhi字段-->
+        <!--在产品窗体中添加图号x_tuhao、x_weizhi、x_shouming字段-->
         <record id="my_product_template_only_form_view" model="ir.ui.view">
             <field name="name">my.product.template.product.form</field>
             <field name="model">product.template</field>
@@ -30,6 +31,7 @@
 				<xpath expr="//field[@name='default_code']" position="after">
 					<field name="x_weizhi" />
 					<field name="x_zhizuoren_id" />
+                    <field name="x_shouming " />
 				</xpath>
             </field>
         </record>

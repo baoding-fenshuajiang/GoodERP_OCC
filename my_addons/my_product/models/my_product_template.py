@@ -6,12 +6,13 @@ from odoo import api, fields, models
 from odoo.osv import expression
 
 
-# 在产品模型中增加图号、位置、制作人字段
+# 在产品模型中增加图号、位置、制作人、使用寿命字段
 class MyProductTemplate(models.Model):
     _inherit = "product.template"
     x_tuhao = fields.Char(string=u'图号')
     x_weizhi = fields.Char(string=u'位置')
     x_zhizuoren_id = fields.Many2one('hr.employee', string=u'制作人')
+    x_shouming =  fields.integer(string=u'使用寿命(件)')
 
     @api.multi
     def name_get(self):

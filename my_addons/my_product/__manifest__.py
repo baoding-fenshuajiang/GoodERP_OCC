@@ -4,7 +4,7 @@
 {
     'name': '产品增加字段',
     'version': '1.1',
-    'summary': '产品增加图号、存放位置、工装制作人字段',
+    'summary': '产品增加图号、存放位置、工装制作人、工装寿命字段',
     'description': 'E-Mail:992102498@qq.com',
     'author':  '保定-粉刷匠',
     'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
