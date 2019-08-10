@@ -1,1 +1,1 @@
-Special path to for the development of Odoo12
+Special path for the development based on  Odoo12
