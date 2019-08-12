@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <data>
-        <!--在仓库中的产品默认为列表视图，适用于产品较多的场景-->
-         <record id="stock.product_template_action_product" model="ir.actions.act_window">
-            <field name="view_mode">tree,kanban,form</field>
-        </record>
-    </data>
-</odoo>

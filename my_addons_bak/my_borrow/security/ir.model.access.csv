@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-borrow_access, 工装借还权限,model_borrow_task,borrow_manager,1,1,1,1
-borrow_product_template_access, 工装借还库管员产品权限,product.model_product_template,borrow_manager,1,0,0,0

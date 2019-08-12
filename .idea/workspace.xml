@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="Copy .gitignore to empty path to make it can commit to github.">
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/00/00fb4c413200cd65df61b6f2ad614d47b49451d5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/01/016db1ae999d0b5a3f22f864a95131403cd71023" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/01/01bfc8410270194d70a28389b437459b2daa6da3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/03/03da9332a5cf3a9d34ca06f871566c002d5cd5af" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/04/0454645c85e773618f7ce75079b2db66264de6a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/04/04d355853cc5298d2c99ce88dbc70131f4cceab6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/06/0612121a0580366261ca94edc44b31f1541e231c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/06/064d41df037975327e38ac78ce0adfd6c988cfde" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/06/06b5dcd0c33344d3f8531e2f5b74c83a787b6dc1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/07/076efb9d4a7c915f3ec9007a1119d8ada7f12e69" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/08/083cb8a43fc57e84ff0b881c05df61d20b4fed78" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/08/086dd5b409d2753d894ac5acdff9023a91e3b35e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/0b/0b9c3fc792c7328877e485ed1f4df2c6ab954952" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/0c/0c45faf5b09ce9b7c9fbb6bd1a7787f24d24ab86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/0d/0da07c4691b12e821585c5ef634a7543bd7d2017" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/0e/0e16f3e3e2bf0d08e22ee4133b3ea88c7d32f0d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/11/111f19eb7ba97806bb82e9706b89261b842c753c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/12/12d55e298ea8a606f3fe01d5df0f22c2b7863652" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/14/146a10869ddf61178fbfbf89abf631e69abba989" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/15/15224db1908c41699946c4af05f0464f0d2779f4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/16/161637922ddc2919e18fabcd4b72aa63c8033173" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/16/16200cdad8125792b7c6ebd100ab46bdc04bd5c0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/16/16420f452d92de98c3f67445a9a5b1e507477821" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/17/1723a6d1199242cda82c657fa517f3e066267d7b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/17/1750c2d289fa99c6b414ebad8974991e1e8059f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/17/17cf89651afa19f87be184d6c8426acb9cc6ab17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/18/185739a111942c62dd42e81d936faa13747db58e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/18/18c264e1d9b97ec932d4e09c010f399c84c13e5a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1a/1a11b609123ed1438a3464e90c15413bb824147e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1a/1a9c358ef4aaa3b820b209035e48ce34a18789bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1b/1b01b433fdf56f4efc7ea5ee10c1060c7d341c95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1b/1bb5a4c6c56a790b1ea1e2f8a5438008336ef2d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1b/1bc391c80a5cfd7997fb70ad9ae53e6c86e8c6ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1b/1bfd3bdf679dc07d30e8800acdd200a80853ed9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1d/1da162c5005f8f7c9a583a512ac303bf657a9344" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1d/1db763ae5a9d80910ad17995fa671ae50ff47961" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1e/1e5ace31dd39e50a1c4023bfb569ffb2c4dcda6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1e/1e7200bf95bd92b3f3a2024df771130214b403fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1e/1e770e318133d35b28df1ef1a9c60b6b6979e38c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/1f/1f6fb1a6420857cab8e60dbbfec08466651ca674" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/20/20d9b299afcabf8f8e526c5a4c245fac12f65294" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/23/235858ad94322b474db15ba150702ac0a41c3da5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/23/23f977ac11c242143843e8607cc8a6a3507b3a6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/24/2430e9028e67a9defa8f4dd113918d81e6c0ca93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/26/26121def9dd485db5e4b5ef13a75bca9345b7ee6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/27/2706743e8d036813fdeafd01c6fcde35bf352a87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/27/27b5bae71e8d863bc741a1604b810fce2c7112cb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/27/27f00ac0b0aa70ff444609cc914ef43bc9b1f1ba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/28/28ef9c3165eec3cebd618ffea4aa043cf9dbf967" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/29/29d97078ab599ae3a41d6463316d2aeb703f00f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2b/2b41ffe15ab73a9c87cc69ec8b26b1e9ca08c1b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2b/2b6c39cc1dfa6144daa9d33ae760f570a5400c6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2b/2be4779f543ae2b444dd8a8247657d94f6d64fbd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2c/2c8014f11fee5e470e396361f3cfaf81d1d0caeb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2d/2d6c0cf52f8afb439ca7acbf0bb214ab24d6f937" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2d/2ddc1e58903f60bdda8870a951b7496b9d5f79a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2e/2e0bb9e7cf41c87f4a1b856dba26e53b0a767a0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2e/2ea4c74950fd8de83170eb9f8658fa9366b1eae0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2e/2ea84e686d0b1e7a304e516d412d19f72e005650" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/2f/2f8d90ac092595d6a464ab3c23aa6e7d4221a50f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/30/308470b29452e6caa802d2baa6154b782d4e5337" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/31/3107d94f904e39dd4ba18dbda25e0bd18667e967" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/31/310d239932db60985e96fa36aefa2e7e528a8bf2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/31/31e01ef67e1b776ee706f026f0cbcd0d0c0bc269" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/32/32202c837503c2baa52d98774b6dc0491fe5a7b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/35/359b257ee0452651276a8a5293f862070e3c5be8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/35/35fdbb798253112598c1d96fa01f58fd01ea562c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/36/363886d106b5380aaf6f0723b4cc6f04a425deb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/37/37d7215fdebf94cfa0e5cf50f777a30137d96862" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/39/3965ec4bc7d992d9d8eae700e89289545ea3204c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3a/3a592f02d0aea64519a63241e56bd3cba19ad28d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3b/3b07d638f16a1db8bfee461ede9d721c10ae0265" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3d/3d000adf2fdd1db1b895bd60311d1551cbff03ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3d/3d1afd48d60a3c487b38a19aa543c02aadf871cb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3e/3e0f0b8aaace4cd88cde651e302a271c67edddf1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3e/3e9258f2145fd1b26ae520a58f2c0faaf6cf48b7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/3f/3f12e344154afa2fb588cb7e8dcb28606e3a63b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/42/424b2bcaddc89a0f81aa9e1c16028a0e1f8d954a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/43/432535665a0dc982192de82fb6784782f85ed36c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/43/436bbe1eced6a4b83f12eaac35137a3a10e83356" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/43/43a49ec6a9befb84c4d5f116b1b92e98c5b50107" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/46/464b0caa074bdb67470c0b879b937e62b97ca8fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/46/46f3fa179e7bc2085d237081c1dc219f62994880" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/4a/4aea7b5061c1e128f4a9c7b7789ed057fee53e8c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/4b/4be573aada92d0d2b06fd3abbffcbc7bcbd52008" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/4d/4da9e3121e607449b17117992a948f58faeb5ef5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/4e/4e045328e56934c778b1cba31cab5fc88c4ff5a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/51/510ed2c3fb716e1f2a94925b176b6f8924e34989" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/53/5308a31e4c724b36f36a29e4194aa2e2ef4ac278" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/53/5371c9f9ad9f70bbc8872e72891cd8139bf5a221" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/54/544abec5df4b8cf1fb4961cd7fcae70296b33e72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/54/54562e6079551e987daf395a5037836985d980c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/55/5545b377758adf1b9328a9ec0bc679315fabc7a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/56/56f2be7abab47f6f993093fa73605aae2fb17231" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/57/57387079baaca44f97a9a05ea72e49c22b0210fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/58/58243c56026fc3ace55f88e5c569b7300a82657f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/58/586282639d2eabf41e447782f14cea16635114aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/58/58ee2224b4e0d42d1ed0c318c816c6ff11eb8877" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/5c/5c7b3ba37f987555c48586e16df3b8325d37a782" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/5e/5ecaba56ca51cc853eefeac66320eb0eb2a339b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/5f/5f143ee08138c756a5db88099100b8959f7de1a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/5f/5fa45152c057c3c8973a7fd3f784f8e26140794d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/5f/5fce0d5064a9e755c00ddab5e0a2446dac65cf67" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/60/6054ef01d1c7183a7d5c34d7ebbfad2b5f4ab0d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/60/60def83dde11f6610856306fc9428cc64e8fe749" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/62/621ae7b7e181a27049be09db7d6f266948539fee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/62/627090759f9a66678c28c1bc3c3039b37f40f66e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/65/659bc7ded3378bdf6ff0a5fa17c85e0930092694" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/65/65daa4e9862f2dc67da7594c8d457279f83e0e12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/67/6700d7cdf41b750e7c787bf7cbeb36ce168cc05a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/6b/6be00cab4372c2c66eb2ed1f3afc00995cdcbcc2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/6c/6cf0e8002c646e1fbd42bc75d4c82de01b4c8290" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/6d/6df23a59ad8df12faad8725de41f787f19083252" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/6e/6ecc2c20bcc94c389f2e135bfcbf8051d78ad617" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/6f/6fb2d43162f16ad151039fdb643b60006b0d84a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/6f/6fe1fc481fc5030fa404189495f11748a0016db5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/70/70f1563175ceebf5671eccbcab49b4d38d30345c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/74/74444c21db0ccc88fd8ba274637e0ebd7557d7fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/75/759547880e3173667848f67bf6d5eeec95ad3bec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/75/75f89e69ba1ec7cd5f377b3bbb3dd987253930d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/76/766eb78ec60d2577675a1cb6cf577fda07e6b0fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/76/76b52df765f3624b46cdf32d6cfe856401d43759" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/77/7732804f48dfe4c45bde319a6a71234a3381ccdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/79/7920afcfe2d9f3fd1a5559078c3b1b39c7737ffa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/79/79a882269e95c0202d58446b81517a379ba90377" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/7b/7b4ca1215d91c733c61a49eb3b42b3183213a312" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/7c/7cae029bb9538fe9c41b20cdcd00d93c52ab0501" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/7d/7d8e53f5c8a10b937d1798211d31c256863b1a95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/7e/7ee30b6c56dadf735150a3e08e9a3997c293d89d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/7e/7ef3bc524639d842fe30b0ff2bb13d7633491ec1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/82/822b5bf9dbba254cec7c97111b427db7d76c0850" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/82/8250e24fa706a302025a5ad743efd12cf1385c45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/84/844ebf4ec389573d0963533315feeebbffbb6d1a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/84/8468aeff52f5e338dcaf9000cae16013f6ee793b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/87/87b6fa847f7aec80258acf28c6a247ff67ff281c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/88/88dcdce6e8caea2a56b10c43f3ac3009bcf7a82f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/8b/8bd3b3e26feb00ddc41a8f4be58ad5d4eef43998" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/8b/8bfb3c95d75ff98f039260f960e8dcf518aa27a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/8c/8c88c3e5b91042ae12f0494c6b3145072d47f2b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/8e/8e4431d6666ae1e8d23ec164d7995dd3167f9947" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/8e/8eaf31b575ed498c745503ef8d0d8a17228a5b15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/8f/8fd261380bb6ee08b6c6689fc66910690993ebcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/90/907ea4ff880a2b8ad3073eab1b7a3ffefa0213a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/91/911fe2d78473c94078b0083ba558e7989ded10f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/91/91a7e71640fa963b39908cd91b434cf395c12969" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/91/91bc282e43a444af0994c27129812a2c602d5b38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/93/933b15b530906480292bfb46a3c3cc8d9f6a6bf9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/97/97d5689a6bd71e33f9439f8235d54855a69134f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/99/99a91c169f34f4ca29810b62592f8b020c4a1acf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/9a/9a73cebc6da0b72858928daa02525081c6455bae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/9d/9d10153df45f5e2ee49e65bbef89bce2fe8326c0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/9e/9e57797b8794080c35d8de7738589a02d27fffa4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a0/a030e071ffedfc77feaa1d3d80ec24b3d2f8a9d1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a1/a14c1deedef19394c69d5b706dfb3fef638f143e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a1/a179f5df75bce1da4af1ab9263ee8e2806d1f972" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a1/a1aed485902ee329e77b3d8f63bda76b509f2a3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a1/a1bc0abcf559d1df24a123f65bd5513187184a0c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a2/a2dab6f59952486425a48073fc083fb05abaf0be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a3/a330920abcef2433621d6bb985bc24828d77f77b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a4/a489254755f42531df0373248de069177ead595e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a4/a4f748f591431f9e4a70406399418d5178c79142" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a5/a5a2d5c6d63b61a47fcda3cfdcff99b2cf5a0f25" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a6/a63f65dd20dd82c78932048f66b08c24842b6fd3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a6/a6a5d68263ba6b79b814865166e7ea35c21ff6cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/a6/a6d364b94120ffd485b4396e65eb91df15f22141" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/aa/aa2893ebf94dbbf8aa585e1e6ffccc1673f05cdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ab/ab7e6730db0c9255c1a5c4373a2dec39f94058e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ab/abcf7ebefc75fdbabee97d5a40af8638fbabe368" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ae/aed01a9aea8da445c05073e091c079bdb1083dc8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b0/b01174bb537694110820cfe3dae41573a15957e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b0/b053775659b11e2ca971b473cf3482ec854ca4de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b3/b316956646396995ddc29e3e2c0342a321015c28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b3/b3b548eaf97ff614cb8a0ef07b30ce095c1aed48" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b4/b4119b8e8a6fe400c6771db501e3cb608f7956ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b5/b5272aa96f9c0efc486129306f52eae1a6ae23e7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b5/b570dbe4d96f79e01d3dc24a6c99e028c8e43673" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b6/b61e8bd9e2859d66cac2161066ae25e47d454a7b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b8/b842933a7b10cbf1ac9291c3aa20312e72632455" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b8/b8aea1499825b793c93efc0b92885ed6475ee437" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b8/b8f9001425cfd0ef0315797909281b912817643a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b9/b9305d0b59e46ddd6b3e00c55816934de39fd49f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b9/b969553815815db2f68abb9a33bbf02698939310" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/b9/b972de309340176ca5c17e9c401ca80d43446665" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ba/ba01653d5ddd8f4ab9d959624da1f67cbb079c00" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ba/ba2751d70beca5b1e32033b79bdb1f9ec23ba6a8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ba/bad99cf68aa13183ad31ee9d9cd107ec2ae68257" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/bb/bb3dcf61b537f53e8d93eca3e137c95568e98edd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/bd/bdd3aec91863bb70dbfc051823b475f302ded810" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/be/be0317f0951238afd32d1d02a9e6501fb3292b3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/be/be725aede51f12136f17b2a60e8418edbae57846" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/be/beec00f2b555f547d0f3237bc8f5c340b0d5aed0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/bf/bf9e3c14da881d8d662b50aff76a98f951d019f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c1/c1ea7b18f6a235e71a98280aabb6bba4d24cb275" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c3/c3c4315f8a53cf55c4aca88db8e398017d3f8f7c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c4/c48a8efc9dc2ede0ce0c1fc08eed6d1ad9e37122" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c4/c4a824618c6ad23d4180cab2e1a637e70c5bb0c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c5/c5fd52fe3cf431f70c6d778c555f027c97a0ac09" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c6/c6670c8f46ca7c3c7b102eb2993671a83248713b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c7/c765b797d230cb2de702d5d8f52453670bff7913" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c7/c7e62f2d137604baf9cae56bd99ca821b267199a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/c8/c85d9425dda3028106e657fee05080f58c08e284" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/cb/cb6b5296ee0bef67ff3e3ab9df5313c6b89135d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/cb/cbbf23db3fb9ff947bdf1a2fddaa7b8f98c8848b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/cc/cc73e17d857d175c363382aee62eeafc9e78462c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/cd/cd6c42b651367bcf37a493ec3bd67caf631df663" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ce/ce97f437d5853a887e6ba433b28e93178618f98d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ce/cecdd3a35a268684ba238905be59bf731a518554" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/cf/cf037a6492f74d14e8280f7fd4d6c23a3d48da29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/cf/cf143ab416cd0cfeb7c0d02e5c4070cd93a50e16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/01/01bfc8410270194d70a28389b437459b2daa6da3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/1b/1b01b433fdf56f4efc7ea5ee10c1060c7d341c95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/20/20d9b299afcabf8f8e526c5a4c245fac12f65294" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/29/29d97078ab599ae3a41d6463316d2aeb703f00f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/35/35fdbb798253112598c1d96fa01f58fd01ea562c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/75/759547880e3173667848f67bf6d5eeec95ad3bec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/8f/8fd261380bb6ee08b6c6689fc66910690993ebcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/a6/a6a5d68263ba6b79b814865166e7ea35c21ff6cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/ba/bad99cf68aa13183ad31ee9d9cd107ec2ae68257" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/e2/e215e6ea4eebea7e9b85a658ea51ed08cb42bcf0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/checklist/ec/ec1f61be8a7a33a582a7db19cbff2dc82a73212c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d0/d009c56624cd5d853c5c7b7dacdad2c3b48428d2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d0/d09dc6ca12d3c3faa07800e0bfdee621a7cbd33d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d0/d0c1881d66a0d08edb324fa7e4705af62a8eaae6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d3/d3978c7b1a1eac3d552864831330b48eb24bb1f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d4/d45d3804fff9b59e7f0d80738bf751d0d8deacc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d5/d56e0f0a283058611f04c911c2c2b0fcb6380f2a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d5/d5cce68bf4bb4ab57beaf766f3fb775cf8df0c83" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d6/d6bc92d1655cc98ee4f6a4061bd3883ca89e0162" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/d9/d94ae9131ef7206051953f57417bedce760cc7a8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/da/daff81bcaa7c21ad4716a9545286e8f7a6321b64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/de/debaadcf8602a25e44206d899a52db159caf469e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e0/e042585e95472df6fff84a6466874f4017d1d0e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e0/e0cf658fedf609fcf9da26f0d69335247c9fbed0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e0/e0cf9673128ae1e3719572aae808d96a5f363660" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e1/e1e4e841f50e803ab8c1d6a002b8840ed728f76b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e2/e215e6ea4eebea7e9b85a658ea51ed08cb42bcf0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e5/e55133192c625967353f8489796fe47eb78bcebc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e5/e570e74e4f3ff70b30099d760bd6ae21d6d505b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e5/e5c77c8c25b8a35a014d78ac3d7fb6b19c7c2a49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e8/e8f20385766ddbefe6925800ccaafd3fd38c021a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/e9/e9bc6591940e8b4a6424390ceab5d262c816f626" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ea/eaa262a94373bbd269ded983d9a86ba70dc50093" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ec/ec1f61be8a7a33a582a7db19cbff2dc82a73212c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ec/ec395e5157f557438f6a4d217b6f0cbdece9ff2c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ec/ec9c1058351c3415ed991b8728969581621dde42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ed/ed0dd8839bc6a8b0211fda0de146d014050c4472" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ed/ed8a8b1dbcbe5f2ac1a194ba5c7f0914e22156e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ed/ed9e3a95a587b273f1759c8796af4b47a9bcf9f6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ef/ef6b627769cd44672fce24139789069404bf926a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ef/efb7f18627b8000b1cf28b4fa4944b766a2ad113" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ef/eff4b087e57aad9eb29c05120003b9432bab1043" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/f0/f011ddadc02810cea77f1f0318b143b05ebbba31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/f1/f16e21cc329e644dcdc300304a0d91447e794649" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/f2/f2e4e3751789f309644a147c53e3aa51a6291458" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/f3/f3a5ec7808a0c096ed4991a55f2d250ad9109120" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/f5/f59ac1d6f8f461425c71f6e49dcbfab67ecf76e2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/f7/f74ae1b0193da2e8b8ef8f8a71ef439d1b002ac9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fa/fa088da91a4e669fe1ca15c756546a83405c1ef6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fa/face1d1e2647e7416f3fca12cc9690dd90ce77de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fb/fb0553aeebdb495401cc29a42c950c49f7b05982" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fb/fb1a2b7cf287adc73b164079389502d10bb8be46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fc/fc78476ab1658bfedda7dde9b515d1c705472c1f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fd/fd912c23b77a2075c405b35ae932365f10a0d002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/fd/fdf73470f4810f290cb283fbb20068a4ffb19bc9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ff/ff4fe2a9ad4a0a960dae7a6e895b00c34f61e25a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/filestore/GoodERP_Odoo12/ff/ff98b7370bc86126f47410cb904eed6f1905f348" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sessions/werkzeug_c8c07e3674c10d4108249da65f56642011037150.sess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/models/my_borrow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/security/borrow_security.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_borrow/views/my_borrow_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product/models/my_product_template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product/views/my_product_template_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_default_tree_view/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_default_tree_view/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_default_tree_view/product_default_tree_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_no_translate/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_no_translate/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_no_translate/product_template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_unique/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_unique/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_unique/i18n/zh_CN.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons_bak/my_product_unique/product.py" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gooderp.conf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="baoding-fenshuajiang &lt;openerp@126.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/gooderp.conf" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="286" />
+    <option name="width" value="1432" />
+    <option name="height" value="571" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my_addons/my_product/wizard" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/my_addons/my_product/wizard" />
+      <recent name="$PROJECT_DIR$/my_addons/my_product/tests" />
+      <recent name="$PROJECT_DIR$/my_addons/my_product/static/xls" />
+      <recent name="$PROJECT_DIR$/my_addons/my_product/static/img" />
+      <recent name="$PROJECT_DIR$/my_addons/my_product/static/description" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="odoo-bin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="gooderp_fenshuajiang" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/odoo-bin" />
+      <option name="PARAMETERS" value="-c gooderp.conf" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.odoo-bin" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="" />
+      <created>1565527270201</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565527270201</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-1" width="1442" height="859" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982357" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32871014" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32871014" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/tests/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/wizard/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/data/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/static/xls/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/static/img/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gooderp.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
