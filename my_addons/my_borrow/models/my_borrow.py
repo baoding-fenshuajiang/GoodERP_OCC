@@ -11,6 +11,8 @@ class BorrowTask(models.Model):
     jiechuriqi = fields.Date(string="借出日期", default=lambda self: self._context.get('date', fields.Date.context_today(self)), required=True)
     guihuanriqi = fields.Date(string="归还日期", compute="_compute_date_returned")
     is_returned = fields.Boolean(string=u"是否已归还", default=False)
+    jiagongshulaing=fields.Integer(string=u"加工数量",default=0)
+    leijishuliang=fields.Integer(string=u"累计数量",compute="_compute_leijishulaing")
 
     @api.depends("is_returned")
     @api.multi

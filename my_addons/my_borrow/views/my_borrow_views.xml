@@ -9,8 +9,10 @@
           <field name="name"/>
           <field name="jieyongren_id"/>
           <field name="jiechuriqi"/>
+          <field name="jiagongshulaing"/>
           <field name="guihuanriqi"/>
           <field name="is_returned"/>
+          <field name="leijishuliang"/>
         </tree>
       </field>
     </record>
