@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--在产品列表视图中添加图号x_tuhao、x_weizhi、x_shouming字段-->
+        <record id="my_product_template_tree_view" model="ir.ui.view">
+            <field name="name">my.product.template.product.tree</field>
+            <field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_tree_view"/>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="before">
+					<field name="x_tuhao" />
+				</xpath>
+				<xpath expr="//field[@name='name']" position="after">
+					<field name="x_weizhi" />
+					<field name="x_zhizuoren_id" />
+					<field name="x_shouming" />
+				</xpath>
+            </field>
+        </record>
+        <!--在产品窗体中添加图号x_tuhao、x_weizhi、x_shouming字段-->
+        <record id="my_product_template_only_form_view" model="ir.ui.view">
+            <field name="name">my.product.template.product.form</field>
+            <field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_only_form_view"/>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+				<xpath expr="//field[@name='default_code']" position="before">
+					<field name="x_tuhao" />
+				</xpath>
+				<xpath expr="//field[@name='default_code']" position="after">
+					<field name="x_weizhi" />
+					<field name="x_zhizuoren_id" />
+                    <field name="x_shouming" />
+				</xpath>
+            </field>
+        </record>
+        <!--在产品看板视图中添加图号x_tuhao字段-->
+        <record model="ir.ui.view" id="my_product_template_kanban_view">
+            <field name="name">My.Product.template.product.kanban</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_kanban_view"/>
+            <field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="before">
+					[<field name="x_tuhao"/>]
+				</xpath>
+            </field>
+        </record>
+       <record id="my_product_template_search_view" model="ir.ui.view">
+            <field name="name">my.product.template.search</field>
+            <field name="model">product.template</field>
+			<field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+				<xpath expr="//field[@name='name']" position="replace">
+                   <field name="name" string= "产品" filter_domain="['|', '|', '|', ('product_variant_ids.default_code'
+                   , 'ilike', self),('name', 'ilike', self), ('x_tuhao', 'ilike', self), ('barcode', 'ilike', self)]"/>
+				</xpath>
+		    </field>
+        </record>
+    </data>
+</odoo>
