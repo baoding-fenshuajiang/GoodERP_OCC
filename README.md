@@ -1,6 +1,8 @@
-# GoodERP_粉刷匠
+# GoodERP_OCC
 
-基于Odoo12
+OCC: Odoo Chinese Community
+
+GoodERP_OCC,基于Odoo12
 
 GoodERP理念：一切从简，按需就繁
 
@@ -16,7 +18,7 @@ GoodERP理念：一切从简，按需就繁
 
 本项目完全开源：
 
-项目地址：https://github.com/baoding-fenshuajiang/gooderp_fenshuajiang
+项目地址：https://github.com/baoding-fenshuajiang/GoodERP_OCC
 
             第二章 生产工序管理
 
