@@ -3,8 +3,377 @@
   <component name="ChangeListManager">
     <list default="true" id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/data/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/i18n/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/i18n/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/models/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/models/my_product_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/report/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/report/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/security/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/security/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/static/description/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/static/description/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/static/img/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/static/img/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/static/xls/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/static/xls/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/tests/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/tests/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/views/my_product_template_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_product/wizard/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/wizard/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/data/mrp_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/data/mrp_demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/doc/mrp.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/i18n/zh_CN.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_bom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_document.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_production.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_routing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_unbuild.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_workcenter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/mrp_workorder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/res_company.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/res_config_settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_move.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_picking.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_production_lot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_rule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_scrap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_traceability.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/models/stock_warehouse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/mrp_production_templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/mrp_report_bom_structure.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/mrp_report_bom_structure.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/mrp_report_views_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/report_stock_rule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/report/report_stock_rule.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/security/mrp_security.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/description/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/assebly-worksheet.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/cutting-worksheet.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/drill-worksheet.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_computer_desk_bolt.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_computer_desk_screw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_drawer_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_drawer_case_black.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_plastic_laminate.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_ply_veneer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_table_kit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_wood_panel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_wood_ply.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/product_product_wood_wear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/table.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/table_leg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/img/table_top.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/src/js/mrp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/src/js/mrp_bom_report.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/src/scss/mrp_bom_report.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/src/xml/mrp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/tests/mrp_tests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/static/xls/mrp_bom.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_bom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_multicompany.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_oee.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_order.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_procurement.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_stock.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_traceability.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_unbuild.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_warehouse_multistep_manufacturing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/tests/test_workorder_operation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/ir_attachment_view.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_bom_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_production_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_routing_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_unbuild_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_views_menus.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_workcenter_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/mrp_workorder_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/product_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/res_config_settings_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/stock_move_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/stock_picking_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/stock_scrap_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/views/stock_warehouse_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/change_production_qty.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/change_production_qty_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/mrp_product_produce.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/mrp_product_produce_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/mrp_workcenter_block_view.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/stock_warn_insufficient_qty.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/mrp/wizard/stock_warn_insufficient_qty_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/data/product_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/data/product_demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/af.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/am.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ar.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/az.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/bg.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/bn.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/bs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ca.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/cs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/da.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/de.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/el.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/en_GB.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_AR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_BO.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_CL.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_CO.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_CR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_DO.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_EC.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_PE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_PY.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/es_VE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/et.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/eu.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/fa.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/fi.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/fil.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/fr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/gl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/gu.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/he.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/hr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/hu.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/id.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/is.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/it.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ja.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ka.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/kab.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/km.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ko.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/lt.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/lv.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/mk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/mn.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/nb.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/nl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/nl_BE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/pl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/pt.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/pt_BR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ro.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ru.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/sk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/sl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/sr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/sr@latin.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/sv.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/ta.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/th.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/tr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/uk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/vi.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/zh_CN.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/i18n/zh_TW.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/decimal_precision.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/product_attribute.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/product_pricelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/product_template.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/res_company.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/res_config_settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/models/res_partner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/product_packaging.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/product_pricelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/product_pricelist_templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/product_product_templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/product_reports.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/report/product_template_templates.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/security/product_security.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/description/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/membership_0-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/membership_1-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/membership_2-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_chair.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_lamp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_1-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_10-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_11-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_12-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_13-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_16-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_20-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_22-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_24-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_25-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_27-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_3-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_43-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_46-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_5-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_6-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_7-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_8-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_9-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_d01-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/product_product_d03-image.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/table01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/table02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/table03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/img/table04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/xls/product_pricelist.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/xls/product_supplierinfo.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/static/xls/product_template.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/test_pricelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/test_product_attribute_value_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/test_product_pricelist.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/test_seller.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/tests/test_variants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/views/product_attribute_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/views/product_pricelist_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/views/product_template_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/views/product_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/views/res_config_settings_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/views/res_partner_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/wizard/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/wizard/product_price_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/product/wizard/product_price_list_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/__manifest__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/controllers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/controllers/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/default_barcode_patterns.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/procurement_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/procurement_demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_demo2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_demo_pre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_location_demo_cpu1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_location_demo_cpu3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_orderpoint_demo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_sequence_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/data/stock_traceability_report_data.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/doc/stock.rst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/i18n/zh_CN.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/barcode.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/product_strategy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/res_company.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/res_config_settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/res_partner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_inventory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_location.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_move.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_move_line.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_package_level.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_picking.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_production_lot.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_quant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_rule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_scrap.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_traceability.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/models/stock_warehouse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_deliveryslip.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_location_barcode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_lot_barcode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_package_barcode.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_stock_forecast.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_stock_forecast.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_stock_rule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_stock_rule.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_stockinventory.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/report_stockpicking_operations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/report/stock_report_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/security/ir.model.access.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/security/stock_security.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/description/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/description/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/img/cable_management.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/img/res_partner_address_41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/js/stock_traceability_report_backend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/js/stock_traceability_report_widgets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/scss/report_location_barcode.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/scss/report_stock_rule.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/scss/stock_traceability_report.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/xml/stock_traceability_report_backend.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/src/xml/stock_traceability_report_line.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/static/tests/route_tour.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/common2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_inventory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_move.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_move2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_packing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_packing_neg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_proc_rule.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_product.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_quant.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_robustness.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_shipment.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_stock_flow.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_stock_location_search.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_ui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_warehouse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/tests/test_wise_operator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/product_strategy_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/product_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/report_stock_traceability.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/res_config_settings_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/res_partner_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_inventory_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_location_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_menu_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_move_line_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_move_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_package_level_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_picking_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_production_lot_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_quant_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_rule_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_scrap_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_template.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/views/stock_warehouse_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/product_replenish.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/product_replenish_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_backorder_confirmation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_backorder_confirmation_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_change_product_qty.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_change_product_qty_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_immediate_transfer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_immediate_transfer_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_overprocessed_transfer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_overprocessed_transfer_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_package_destination.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_package_destination_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_picking_return.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_picking_return_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_quantity_history.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_quantity_history.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_rules_report.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_rules_report_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_scheduler_compute.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_scheduler_compute_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_track_confirmation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_track_confirmation_views.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_warn_insufficient_qty.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/odoo/addons/stock/wizard/stock_warn_insufficient_qty_views.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,28 +384,54 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-355">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-274">
-              <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            <state relative-caret-position="533">
+              <caret line="66" column="69" lean-forward="true" selection-start-line="66" selection-end-line="66" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extra-addons/my_product/views/my_product_template_views.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extra-addons/my_product/models/my_product_template.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="33" />
+              <folding>
+                <element signature="e#101#137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,6 +454,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" />
         <option value="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" />
+        <option value="$PROJECT_DIR$/my_addons/my_product/__manifest__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" />
+        <option value="$PROJECT_DIR$/extra-addons/my_product/views/my_product_template_views.xml" />
+        <option value="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" />
       </list>
     </option>
   </component>
@@ -75,6 +475,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -98,20 +499,50 @@
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
               <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_workholder" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_workholder" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
+              <item name="my_workholder" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="odoo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="odoo" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="odoo" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -186,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565608278620</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add fields for life_cycle manage.">
+      <created>1565611752859</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565611752859</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -217,7 +655,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add description of OCC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add description of OCC" />
+    <MESSAGE value="Add fields for life_cycle manage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add fields for life_cycle manage." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/tests/.gitignore">
@@ -242,12 +681,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-355">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -256,10 +691,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odoo/addons/sms/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odoo/addons/base/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-799">
+          <caret line="12" column="11" selection-start-line="12" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra-addons/my_product/models/my_product_template.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#101#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extra-addons/my_product/views/my_product_template_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-274">
-          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        <state relative-caret-position="533">
+          <caret line="66" column="69" lean-forward="true" selection-start-line="66" selection-end-line="66" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
