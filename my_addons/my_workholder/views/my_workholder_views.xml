@@ -44,7 +44,7 @@
         <field name="name">equipment.workholder.select</field>
         <field name="arch" type="xml">
             <search string="Search Actions">
-                <filter name="active" domain=" [('active','=',False)]" help="有效"/>
+                <filter name="active" domain=" [('active','=',True)]" help="有效"/>
                 <filter name="archived" domain=" [('active','=',False)]" help="已存档"/>
                 <field name="default_code" filter_domain="[('default_code','ilike',self)]"/>
                 <field name="name" filter_domain="[('name','ilike',self)]"/>
@@ -58,6 +58,7 @@
         <field name="res_model">equipment.workholder</field>
         <field name="view_mode">tree,form</field>
         <field name="view_type">form</field>
+        <field name="context">{'search_default_active': 1}</field>
         <field name="target">current</field>
     </record>
 
