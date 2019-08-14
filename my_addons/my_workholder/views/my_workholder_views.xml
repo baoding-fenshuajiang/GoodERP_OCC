@@ -5,7 +5,7 @@
         <field name="name">equipment.workholder.tree</field>
         <field name="model">equipment.workholder</field>
         <field name="arch" type="xml">
-            <tree string="workholder">
+            <tree string="夹具">
                 <field name="default_code"/>
                 <field name="name"/>
                 <field name="drawing_number"/>
@@ -13,7 +13,6 @@
                 <field name="producer"/>
                 <field name="durability"/>
                 <field name="location"/>
-                <field name="active" invisible="0"/>
             </tree>
         </field>
     </record>
@@ -33,10 +32,24 @@
                         <field name="producer"/>
                         <field name="durability"/>
                         <field name="location"/>
-                        <field name="active" invisible="1"/>
+                        <field name="active" invisible="0"/>
                     </group>
                 </sheet>
             </form>
+        </field>
+    </record>
+
+    <record id="equipment_workholder_view_search" model="ir.ui.view">
+        <field name="model">equipment.workholder</field>
+        <field name="name">equipment.workholder.select</field>
+        <field name="arch" type="xml">
+            <search string="Search Actions">
+                <filter name="active" domain=" [('active','=',False)]" help="有效"/>
+                <filter name="archived" domain=" [('active','=',False)]" help="已存档"/>
+                <field name="default_code" filter_domain="[('default_code','ilike',self)]"/>
+                <field name="name" filter_domain="[('name','ilike',self)]"/>
+                <field name="drawing_number" filter_domain="[('drawing_number','ilike',self)]"/>
+            </search>
         </field>
     </record>
 
