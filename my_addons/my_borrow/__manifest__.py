@@ -2,14 +2,13 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': '工装借还',
+    'name': 夹具借还',
     'version': '1.1',
     'summary': '工装库中的夹具、检具借还',
-    'description': "记录工装库中工装和检具的领用和借还。",
+    'description': "记录工装库中工装和检具的领用和借还，并根据加工的产品件数计算产品寿命。",
     'author':  "保定-粉刷匠，992102498@qq.com",
     'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
-    'depends': ['product',
-                'my_product',
+    'depends': ['my_workholder',
                 'hr',
                 ],
     'category': 'Warehouse',
