@@ -9,14 +9,13 @@ from odoo.osv import expression
 # 在产品模型中增加图号、位置、制作人、使用寿命字段
 class MyWorkholder(models.Model):
     _name = "equipment.workholder"
-    _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = "夹具"
     _order = "name"
-    name = fields.Char('Name', index=True, required=True, translate=False)
-    drawing_number = fields.Char(string=u'图号')
-    location = fields.Char(string=u'位置')
-    producer = fields.Many2one('hr.employee', string=u'制作人')
-    durability =  fields.Integer(string=u'使用寿命(件)')
+    name = fields.Char('名称', index=True, required=True, translate=False)
+    drawing_number = fields.Char('图号')
+    location = fields.Char('位置')
+    producer = fields.Many2one('hr.employee', string='制作人')
+    durability =  fields.Integer('使用寿命(件)')
     description = fields.Text('备注', translate=False)
     default_code = fields.Char('编号', index=True)
     active = fields.Boolean('有效', default=True,help="如果取消勾选，可以实现隐藏这个产品而不是移除它。")
