@@ -1,29 +1,26 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * iap
-# 
-# Translators:
-# Martin Trigaux, 2018
-# liAnGjiA <liangjia@qq.com>, 2018
-# xu xiaohu <xu.xiaohu@gmail.com>, 2018
+# 	* iap
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-02 10:05+0000\n"
-"PO-Revision-Date: 2018-10-02 10:05+0000\n"
-"Last-Translator: xu xiaohu <xu.xiaohu@gmail.com>, 2018\n"
-"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"PO-Revision-Date: 2019-05-06 06:59+0800\n"
+"Last-Translator: 保定-粉刷匠 <992102498@qq.com>\n"
+"Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: zh_CN\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #. module: iap
 #: model_terms:ir.ui.view,arch_db:iap.iap_account_view_form
 msgid "Account Information"
-msgstr "账号信息"
+msgstr "账户信息"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__account_token
@@ -35,14 +32,14 @@ msgstr "账户令牌"
 #: code:addons/iap/static/src/js/crash_manager.js:23
 #, python-format
 msgid "Buy credits at Odoo"
-msgstr "在odoo中购买信用"
+msgstr "在 Odoo 上的采购信誉"
 
 #. module: iap
 #. openerp-web
 #: code:addons/iap/static/src/xml/iap_templates.xml:41
 #, python-format
 msgid "Buy more credits"
-msgstr "购买更多信用"
+msgstr "购买更多积分"
 
 #. module: iap
 #. openerp-web
@@ -56,12 +53,12 @@ msgstr "取消"
 #: code:addons/iap/static/src/xml/iap_templates.xml:28
 #, python-format
 msgid "Checking remaining credit ..."
-msgstr "正在检查剩余信用..."
+msgstr "查看剩余积分 ..."
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__company_id
 msgid "Company"
-msgstr "公司"
+msgstr "服务提供商"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__create_uid
@@ -71,7 +68,7 @@ msgstr "创建人"
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__create_date
 msgid "Created on"
-msgstr "创建时间"
+msgstr "创建于"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__display_name
@@ -88,13 +85,13 @@ msgstr "IAP"
 #: model:ir.model,name:iap.model_iap_account
 #: model_terms:ir.ui.view,arch_db:iap.iap_account_view_form
 msgid "IAP Account"
-msgstr "IAP 账户"
+msgstr "IAP账户"
 
 #. module: iap
 #: model:ir.ui.menu,name:iap.iap_account_menu
 #: model_terms:ir.ui.view,arch_db:iap.iap_account_view_tree
 msgid "IAP Accounts"
-msgstr "IAP 账户"
+msgstr "IAP账户"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__id
@@ -106,7 +103,7 @@ msgstr "ID"
 #: code:addons/iap/static/src/xml/iap_templates.xml:21
 #, python-format
 msgid "In-App Purchases"
-msgstr "IAP在线采购"
+msgstr "购买的应用"
 
 #. module: iap
 #. openerp-web
@@ -120,29 +117,29 @@ msgstr "余额不足"
 #: code:addons/iap/static/src/xml/iap_templates.xml:31
 #, python-format
 msgid "Insufficient credit"
-msgstr "信用不足"
+msgstr "积分不足"
 
 #. module: iap
 #. openerp-web
 #: code:addons/iap/static/src/xml/iap_templates.xml:14
 #, python-format
 msgid "Insufficient credit to perform this service."
-msgstr "额度不足，无法执行此服务。"
+msgstr "信用不足于执行此项服务。"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account____last_update
 msgid "Last Modified on"
-msgstr "最后修改时间"
+msgstr "最近修改日期"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__write_uid
 msgid "Last Updated by"
-msgstr "最后更新人"
+msgstr "最近更新人"
 
 #. module: iap
 #: model:ir.model.fields,field_description:iap.field_iap_account__write_date
 msgid "Last Updated on"
-msgstr "最后更新时间"
+msgstr "最近更新于"
 
 #. module: iap
 #. openerp-web
@@ -161,18 +158,21 @@ msgstr "服务名称"
 #: code:addons/iap/static/src/js/crash_manager.js:23
 #, python-format
 msgid "Start a Trial at Odoo"
-msgstr "在odoo中开始试用"
+msgstr "开始测试Odoo"
 
 #. module: iap
 #. openerp-web
 #: code:addons/iap/static/src/xml/iap_templates.xml:37
 #, python-format
 msgid "Temporarily unavailable"
-msgstr "暂时不可用"
+msgstr "临时不可用"
 
 #. module: iap
 #. openerp-web
 #: code:addons/iap/static/src/xml/iap_templates.xml:34
 #, python-format
 msgid "credits"
-msgstr "信用"
+msgstr "积分"
+
+#~ msgid "iap.account"
+#~ msgstr "iap.account"
