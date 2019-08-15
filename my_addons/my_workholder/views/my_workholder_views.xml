@@ -31,7 +31,6 @@
                         <field name="location"/>
                         <field name="producer"/>
                         <field name="durability"/>
-                        <field name="location"/>
                         <field name="active" invisible="0"/>
                     </group>
                 </sheet>
