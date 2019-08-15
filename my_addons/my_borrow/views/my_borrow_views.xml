@@ -5,14 +5,14 @@
       <field name="name">Borrow Task List</field>
       <field name="model">borrow.task</field>
       <field name="arch" type="xml">
-        <tree string="工装借还任务" decoration-danger="not(is_returned)"  editable="top">
+        <tree string="夹具借还任务" decoration-danger="not(is_returned)"  editable="top">
           <field name="name"/>
-          <field name="jieyongren_id"/>
-          <field name="jiechuriqi"/>
-          <field name="jiagongshulaing"/>
-          <field name="guihuanriqi"/>
+          <field name="borrower_id"/>
+          <field name="borrow_date"/>
+          <field name="processing_quantity"/>
+          <field name="return_date"/>
           <field name="is_returned"/>
-          <field name="leijishuliang"/>
+          <field name="left_amount"/>
         </tree>
       </field>
     </record>
@@ -26,10 +26,12 @@
             <group>
               <group>
 				  <field name="name"/>
-				  <field name="jieyongren_id"/>
-				  <field name="jiechuriqi"/>
-				  <field name="guihuanriqi"/>
+				  <field name="borrower_id"/>
+				  <field name="borrow_date"/>
+                  <field name="processing_quantity"/>
+				  <field name="return_date"/>
 				  <field name="is_returned"/>
+                  <field name="left_amount"/>
               </group>
             </group>
           </sheet>
@@ -39,10 +41,10 @@
 
 
     <record id="borrow_task_search" model="ir.ui.view">
-      <field name="name">工装借还搜索</field>
+      <field name="name">夹具借还搜索</field>
       <field name="model">borrow.task</field>
       <field name="arch" type="xml">
-        <search string="工装借还">
+        <search string="夹具借还">
           <filter string="未归还" name="NotReturnned" domain="[('is_returned', '=', False)]"/>
           <filter string="已归还" name="Returnned" domain="[('is_returned', '=', True)]"/>
           <field name="name" string= "工装" filter_domain="[('name', 'ilike', self)]"/>
@@ -50,21 +52,15 @@
       </field>
     </record>
 
-    <record model="ir.actions.act_url" id="act_open_baodu">
-      <field name="name">打开主页</field>
-      <field name="target">new</field>
-      <field name="url">http://192.168.1.101</field>
-    </record>
-
     <!--  -->
     <record model="ir.actions.act_window" id="act_borrow_task_win">
-      <field name="name">工装借还</field>
+      <field name="name">夹具借还</field>
       <field name="context">{'search_default_NotReturnned': 1}</field>
       <field name="res_model">borrow.task</field>
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="工装借还" id="menu_borrow_task" action="act_borrow_task_win"/>
+    <menuitem name="夹具借还" id="menu_borrow_task" action="act_borrow_task_win" parent="my_workholder.menu_equipment" sequence="1"/>
 
   </data>
 </odoo>

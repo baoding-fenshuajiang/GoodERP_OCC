@@ -4,15 +4,15 @@ from odoo import models, fields, api
 
 class BorrowTask(models.Model):
     _name = 'borrow.task'
-    _description=u"借还事项"
+    _description = "借还事项"
 
-    name = fields.Many2one('product.template', string='工装', required=True)
+    name = fields.Many2one('equipment.workholder', string='工装', required=True)
     borrower_id = fields.Many2one('hr.employee', string='借用人', required=True)
     borrow_date = fields.Date(string="借出日期", default=lambda self: self._context.get('date', fields.Date.context_today(self)), required=True)
     return_date = fields.Date(string="归还日期", compute="_compute_date_returned")
-    is_returned = fields.Boolean(string=u"是否已归还", default=False)
-    processing_quantity=fields.Integer(string=u"加工数量",default=0)
-    left_amount = fields.Integer(string=u"累计数量",compute="_compute_leijishulaing")
+    is_returned = fields.Boolean(string="是否已归还", default=False)
+    processing_quantity = fields.Integer(string="加工数量",default=0)
+    left_amount = fields.Integer(string="累计数量",compute="_compute_left_amount")
 
     @api.depends("is_returned")
     @api.multi
@@ -23,3 +23,9 @@ class BorrowTask(models.Model):
             if (not rec.is_returned) and rec.return_date:
                 rec.return_date = False
 
+    @api.depends("processing_quantity")
+    @api.multi
+    def _compute_left_amount(self):
+        for rec in self:
+            if rec.processing_quantity and (not rec.left_amount):
+                rec.left_amount = rec.processing_quantity
