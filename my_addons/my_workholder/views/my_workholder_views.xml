@@ -12,6 +12,7 @@
                 <field name="location"/>
                 <field name="producer"/>
                 <field name="durability"/>
+                <field name="left_amount"/>
                 <field name="location"/>
             </tree>
         </field>
@@ -31,6 +32,7 @@
                         <field name="location"/>
                         <field name="producer"/>
                         <field name="durability"/>
+                        <field name="left_amount"/>
                         <field name="active" invisible="0"/>
                     </group>
                 </sheet>

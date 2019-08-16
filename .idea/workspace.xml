@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" line="48" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="">
+    <list default="true" id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="Add depends addons hr.">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/zhf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" afterDir="false" />
     </list>
@@ -15,33 +20,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/odoo/addons/base/views/base_menus.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="270">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-end-line="18" selection-end-column="43" />
               <folding>
                 <element signature="e#101#137#0" expanded="true" />
               </folding>
@@ -50,23 +32,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/odoo/addons/mail/models/res_users.py">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-495" />
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/odoo/addons/mail/models/res_partner.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/odoo/addons/base/views/ir_actions_views.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jiechuriqi</find>
+      <find>jieyongren_id</find>
+      <find>product.template</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/my_addons/my_borrow</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -82,12 +87,15 @@
       <list>
         <option value="$PROJECT_DIR$/gooderp.conf" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" />
-        <option value="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" />
         <option value="$PROJECT_DIR$/my_addons/my_product/__manifest__.py" />
         <option value="$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py" />
         <option value="$PROJECT_DIR$/extra-addons/my_product/views/my_product_template_views.xml" />
+        <option value="$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_borrow/security/borrow_security.xml" />
+        <option value="$PROJECT_DIR$/my_addons/my_borrow/security/ir.model.access.csv" />
+        <option value="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" />
         <option value="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" />
         <option value="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" />
       </list>
     </option>
@@ -121,6 +129,19 @@
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
               <item name="my_workholder" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -133,28 +154,9 @@
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="odoo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="odoo" type="462c0819:PsiDirectoryNode" />
-              <item name="addons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="odoo" type="462c0819:PsiDirectoryNode" />
-              <item name="addons" type="462c0819:PsiDirectoryNode" />
-              <item name="mail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="odoo" type="462c0819:PsiDirectoryNode" />
-              <item name="addons" type="462c0819:PsiDirectoryNode" />
-              <item name="mail" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_workholder" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -165,7 +167,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/my_addons/my_product/wizard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my_addons/my_borrow" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -249,8 +251,59 @@
       <option name="project" value="LOCAL" />
       <updated>1565738268339</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix some errors about model and views.">
+      <created>1565781935934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1565781935934</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add some search filters and search fields.">
+      <created>1565783845835</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1565783845835</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Set default search filter.">
+      <created>1565785300117</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1565785300117</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add depends addons hr.">
+      <created>1565785875539</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1565785875539</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix some errors.">
+      <created>1565871566023</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1565871566024</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Change some translation po files.">
+      <created>1565872511355</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1565872511363</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1442" height="859" extended-state="6" />
@@ -265,7 +318,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32871014" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32871014" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -282,7 +335,13 @@
     <MESSAGE value="Add description of OCC" />
     <MESSAGE value="Add fields for life_cycle manage." />
     <MESSAGE value="Chang Workholder from product.template to a new model." />
-    <option name="LAST_COMMIT_MESSAGE" value="Chang Workholder from product.template to a new model." />
+    <MESSAGE value="Fix some errors about model and views." />
+    <MESSAGE value="Add some search filters and search fields." />
+    <MESSAGE value="Set default search filter." />
+    <MESSAGE value="Add depends addons hr." />
+    <MESSAGE value="Fix some errors." />
+    <MESSAGE value="Change some translation po files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Change some translation po files." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/tests/.gitignore">
@@ -307,16 +366,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -336,48 +385,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extra-addons/my_product/models/my_product_template.py" />
     <entry file="file://$PROJECT_DIR$/extra-addons/my_product/views/my_product_template_views.xml" />
-    <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="66" column="69" selection-start-line="66" selection-end-line="66" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/odoo/addons/base/views/ir_actions_views.xml">
+    <entry file="file://$PROJECT_DIR$/odoo/addons/mail/models/res_partner.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/odoo/addons/base/views/base_menus.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/odoo/addons/mail/models/res_users.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-495" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/odoo/addons/base/views/ir_actions_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6615">
+          <caret line="441" column="25" selection-start-line="433" selection-start-column="1" selection-end-line="443" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odoo/addons/base/views/res_users_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="306" column="23" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odoo/addons/hr/views/hr_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="309" column="13" selection-start-line="309" selection-start-column="13" selection-end-line="309" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/security/ir.model.access.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="88" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/security/borrow_security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="74" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="270">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-end-line="18" selection-end-column="43" />
           <folding>
             <element signature="e#101#137#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/odoo/addons/mail/models/res_partner.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state relative-caret-position="108">
+          <caret line="15" column="40" lean-forward="true" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="30" column="57" lean-forward="true" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
         </state>
       </provider>
     </entry>
