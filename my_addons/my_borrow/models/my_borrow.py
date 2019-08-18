@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api
 
+
 class BorrowTask(models.Model):
     _name = 'borrow.task'
     _description = "借还事项"
@@ -23,9 +24,10 @@ class BorrowTask(models.Model):
             if (not rec.is_returned) and rec.return_date:
                 rec.return_date = False
 
-    @api.depends("processing_quantity")
-    @api.multi
-    def _compute_left_amount(self):
+    @api.onchange('processing_quantity')
+    def _on_processing_quantity(self):
         for rec in self:
             if rec.processing_quantity and (not rec.left_amount):
-                rec.left_amount = rec.processing_quantity
+                rec.left_amount = rec.name.left_amount-rec.processing_quantity
+                rec.name.write({'left_amount': rec.left_amount})
+
