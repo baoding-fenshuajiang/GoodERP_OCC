@@ -9,9 +9,9 @@
           <field name="name"/>
           <field name="borrower_id"/>
           <field name="borrow_date"/>
-          <field name="processing_quantity"/>
           <field name="return_date"/>
           <field name="is_returned"/>
+          <field name="processing_quantity"/>
           <field name="left_amount"/>
         </tree>
       </field>
@@ -28,9 +28,9 @@
 				  <field name="name"/>
 				  <field name="borrower_id"/>
 				  <field name="borrow_date"/>
-                  <field name="processing_quantity"/>
 				  <field name="return_date"/>
 				  <field name="is_returned"/>
+                  <field name="processing_quantity"/>
                   <field name="left_amount"/>
               </group>
             </group>

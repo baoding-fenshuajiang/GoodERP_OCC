@@ -1,0 +1,62 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="maintenance_task_list">
+      <field name="name">Maintenance Task List</field>
+      <field name="model">maintenance.task</field>
+      <field name="arch" type="xml">
+        <tree string="夹具维护任务" decoration-danger="not(is_returned)"  editable="top">
+          <field name="name"/>
+          <field name="serviceman_id"/>
+          <field name="maintenance_date"/>
+          <field name="return_date"/>
+          <field name="is_returned"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="borrow_task_form">
+      <field name="name">Maintenance Task Form</field>
+      <field name="model">maintenance.task</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+				  <field name="name"/>
+				  <field name="serviceman_id"/>
+				  <field name="maintenance_date"/>
+				  <field name="return_date"/>
+				  <field name="is_returned"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record id="maintenance_task_search" model="ir.ui.view">
+      <field name="name">夹具维护搜索</field>
+      <field name="model">maintenance.task</field>
+      <field name="arch" type="xml">
+        <search string="夹具维护">
+          <filter string="未完成" name="NotReturnned" domain="[('is_returned', '=', False)]"/>
+          <filter string="已完成" name="Returnned" domain="[('is_returned', '=', True)]"/>
+          <field name="name" string= "工装" filter_domain="[('name', 'ilike', self)]"/>
+         </search>
+      </field>
+    </record>
+
+    <!--  -->
+    <record model="ir.actions.act_window" id="act_maintenance_task_win">
+      <field name="name">夹具维护</field>
+      <field name="context">{'search_default_NotReturnned': 1}</field>
+      <field name="res_model">maintenance.task</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="夹具维护" id="menu_maintenance_task" action="act_maintenance_task_win" parent="my_workholder.menu_equipment" sequence="1"/>
+
+  </data>
+</odoo>

@@ -27,7 +27,7 @@ class BorrowTask(models.Model):
     @api.onchange('processing_quantity')
     def _on_processing_quantity(self):
         for rec in self:
-            if rec.processing_quantity and (not rec.left_amount):
+            if rec.is_returned and rec.processing_quantity and (not rec.left_amount):
                 rec.left_amount = rec.name.left_amount-rec.processing_quantity
                 rec.name.write({'left_amount': rec.left_amount})
 
