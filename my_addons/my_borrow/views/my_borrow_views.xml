@@ -9,6 +9,7 @@
           <field name="name"/>
           <field name="borrower_id"/>
           <field name="borrow_date"/>
+          <field name="current_amount"/>
           <field name="return_date"/>
           <field name="is_returned"/>
           <field name="processing_quantity"/>
@@ -28,6 +29,7 @@
 				  <field name="name"/>
 				  <field name="borrower_id"/>
 				  <field name="borrow_date"/>
+                  <field name="current_amount"/>
 				  <field name="return_date"/>
 				  <field name="is_returned"/>
                   <field name="processing_quantity"/>

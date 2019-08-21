@@ -10,6 +10,7 @@ class BorrowTask(models.Model):
     name = fields.Many2one('equipment.workholder', string='夹具', required=True)
     borrower_id = fields.Many2one('hr.employee', string='借用人', required=True)
     borrow_date = fields.Date(string="借出日期", default=lambda self: self._context.get('date', fields.Date.context_today(self)), required=True)
+    current_amount =  fields.Integer(string="借前寿命(件)")
     return_date = fields.Date(string="归还日期", compute="_compute_date_returned")
     is_returned = fields.Boolean(string="是否已归还", default=False)
     processing_quantity = fields.Integer(string="加工数量",default=0)
@@ -23,6 +24,11 @@ class BorrowTask(models.Model):
                 rec.return_date = fields.Date.context_today(self)
             if (not rec.is_returned) and rec.return_date:
                 rec.return_date = False
+
+    @api.onchange('name')
+    def _on_name(self):
+        for rec in self:
+            rec.current_amount = rec.name.left_amount
 
     @api.onchange('processing_quantity')
     def _on_processing_quantity(self):
