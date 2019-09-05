@@ -20,7 +20,7 @@
 
     <!--夹具产品窗体-->
     <record id="equipment_workholder_form_view" model="ir.ui.view">
-        <field name="name">equipment.workholder.tree</field>
+        <field name="name">equipment.workholder.form</field>
         <field name="model">equipment.workholder</field>
         <field name="arch" type="xml">
             <form string="夹具">
@@ -33,6 +33,7 @@
                         <field name="producer"/>
                         <field name="durability"/>
                         <field name="left_amount"/>
+                        <field name="description"/>
                         <field name="active" invisible="0"/>
                     </group>
                 </sheet>

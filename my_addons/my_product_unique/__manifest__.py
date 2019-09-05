@@ -19,11 +19,11 @@
 #
 ##############################################################################
 {
-    'name': '产品内部编号唯一性',
+    'name': '夹具内部编号唯一性',
     'version': '12.0.1.0.0',
-    'category': 'Product',
+    'category': 'Warehouse',
     'sequence': 14,
-    'summary': '产品编号唯一性验证',
+    'summary': '夹具内部编号唯一性验证',
     'description': """
 产品编号唯一性验证
 ==============
@@ -35,7 +35,7 @@
     'images': [
     ],
     'depends': [
-        'product',
+        'my_workholder',
     ],
     'data': [
     ],

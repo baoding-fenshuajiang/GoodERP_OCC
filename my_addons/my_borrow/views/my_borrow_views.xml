@@ -5,11 +5,10 @@
       <field name="name">Borrow Task List</field>
       <field name="model">borrow.task</field>
       <field name="arch" type="xml">
-        <tree string="夹具借还任务" decoration-danger="not(is_returned)"  editable="top">
-          <field name="name"/>
-          <field name="borrower_id"/>
+        <tree string="夹具借还任务" decoration-danger="not(is_returned)">
+          <field name="name" options='{"no_open":True}'/>
+          <field name="borrower_id" options='{"no_open":True}'/>
           <field name="borrow_date"/>
-          <field name="current_amount"/>
           <field name="return_date"/>
           <field name="is_returned"/>
           <field name="processing_quantity"/>
@@ -26,10 +25,9 @@
           <sheet>
             <group>
               <group>
-				  <field name="name"/>
-				  <field name="borrower_id"/>
+				  <field name="name" options='{"no_open":True}'/>
+				  <field name="borrower_id" options='{"no_open":True}'/>
 				  <field name="borrow_date"/>
-                  <field name="current_amount"/>
 				  <field name="return_date"/>
 				  <field name="is_returned"/>
                   <field name="processing_quantity"/>

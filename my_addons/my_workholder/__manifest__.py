@@ -8,11 +8,11 @@
     'description': 'E-Mail:992102498@qq.com',
     'author':  '保定-粉刷匠',
     'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
-    'depends': [],
-    'sequence': 13,
-    'demo': [
-
+    'depends':  [
+        'hr',
        ],
+    'sequence': 13,
+    'demo': [],
     'data': [
         'views/my_workholder_views.xml'
     ],

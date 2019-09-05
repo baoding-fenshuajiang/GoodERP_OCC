@@ -5,9 +5,9 @@
       <field name="name">Maintenance Task List</field>
       <field name="model">maintenance.task</field>
       <field name="arch" type="xml">
-        <tree string="夹具维护任务" decoration-danger="not(is_returned)"  editable="top">
-          <field name="name"/>
-          <field name="serviceman_id"/>
+        <tree string="夹具维护任务" decoration-danger="not(is_returned)">
+          <field name="name" options='{"no_open":True}'/>
+          <field name="serviceman_id" options='{"no_open":True}'/>
           <field name="maintenance_date"/>
           <field name="return_date"/>
           <field name="is_returned"/>
@@ -23,11 +23,12 @@
           <sheet>
             <group>
               <group>
-				  <field name="name"/>
-				  <field name="serviceman_id"/>
+				  <field name="name" options='{"no_open":True}'/>
+				  <field name="serviceman_id" options='{"no_open":True}'/>
 				  <field name="maintenance_date"/>
 				  <field name="return_date"/>
 				  <field name="is_returned"/>
+                  <field name="description"/>
               </group>
             </group>
           </sheet>
