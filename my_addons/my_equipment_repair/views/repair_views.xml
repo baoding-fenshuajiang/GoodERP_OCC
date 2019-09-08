@@ -168,7 +168,7 @@
             </field>
         </record>
 
-        <menuitem action="action_repair_order_tree" id="menu_repair_order" groups="stock.group_stock_user" name="Repairs" sequence="36"
+        <menuitem action="action_repair_order_tree" id="menu_repair_order" groups="my_equipment_maintenance.group_equipment_manager" name="维修" sequence="36"
             web_icon="repair,static/description/icon.png"/>
 
     </data>

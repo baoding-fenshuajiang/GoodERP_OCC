@@ -14,32 +14,32 @@ class MaintenanceStage(models.Model):
     _description = 'Maintenance Stage'
     _order = 'sequence, id'
 
-    name = fields.Char('Name', required=True, translate=True)
+    name = fields.Char('名称', required=True, translate=True)
     sequence = fields.Integer('Sequence', default=20)
     fold = fields.Boolean('Folded in Maintenance Pipe')
-    done = fields.Boolean('Request Done')
+    done = fields.Boolean('请求完成')
 
 
 class MaintenanceEquipmentCategory(models.Model):
     _name = 'my_equipment_maintenance.equipment.category'
     _inherit = ['mail.alias.mixin', 'mail.thread']
-    _description = 'Maintenance Equipment Category'
+    _description = '设备维护分类'
 
     @api.one
     @api.depends('equipment_ids')
     def _compute_fold(self):
         self.fold = False if self.equipment_count else True
 
-    name = fields.Char('Category Name', required=True, translate=True)
+    name = fields.Char('分类名称', required=True, translate=True)
     company_id = fields.Many2one('res.company', string='Company',
         default=lambda self: self.env.user.company_id)
     technician_user_id = fields.Many2one('res.users', 'Responsible', track_visibility='onchange', default=lambda self:
     self.env.uid, oldname='user_id')
     color = fields.Integer('Color Index')
-    note = fields.Text('Comments', translate=True)
+    note = fields.Text('备注', translate=False)
     equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'category_id', string='Equipments',
                                     copy=False)
-    equipment_count = fields.Integer(string="Equipment", compute='_compute_equipment_count')
+    equipment_count = fields.Integer(string="设备", compute='_compute_equipment_count')
     my_equipment_maintenance_ids = fields.One2many('my_equipment_maintenance.request', 'category_id', copy=False)
     my_equipment_maintenance_count = fields.Integer(string="Maintenance Count",
                                                     compute='_compute_my_equipment_maintenance_count')
@@ -432,7 +432,7 @@ class MaintenanceRequest(models.Model):
 
 class MaintenanceTeam(models.Model):
     _name = 'my_equipment_maintenance.team'
-    _description = 'Maintenance Teams'
+    _description = '维护团队'
 
     name = fields.Char(required=True, translate=True)
     active = fields.Boolean(default=True)

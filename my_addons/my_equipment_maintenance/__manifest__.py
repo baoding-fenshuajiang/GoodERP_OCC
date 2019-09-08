@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': 'Maintenance',
+    'name': '设备维护',
     'version': '1.0',
     'sequence': 125,
-    'category': 'Human Resources',
+    'category': '设备管理',
     'description': """
-        Track equipments and my_equipment_maintenance requests""",
+        设备维护""",
     'depends': ['mail'],
-    'summary': 'Track equipment and manage my_equipment_maintenance requests',
-    'website': 'https://www.odoo.com/page/tpm-my_equipment_maintenance-software',
+    'summary': '管理设备维护',
+    'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
     'data': [
         'security/mymaintenance.xml',
         'security/ir.model.access.csv',

@@ -21,7 +21,7 @@ The following topics are covered by this module:
     * Repair quotation report
     * Notes for the technician and for the final customer
 """,
-    'depends': ['my_equipment_spare_parts', 'my_equipment_maintenance'],
+    'depends': ['my_equipment_parts', 'my_equipment_maintenance'],
     'data': [
         'security/ir.model.access.csv',
         'security/repair_security.xml',

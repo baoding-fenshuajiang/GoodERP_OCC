@@ -955,7 +955,7 @@
     </record>
 
     <record id="my_equipment_maintenance_dashboard_action" model="ir.actions.act_window">
-        <field name="name">Maintenance Teams</field>
+        <field name="name">维护团队</field>
         <field name="res_model">my_equipment_maintenance.team</field>
         <field name="view_mode">kanban,form</field>
         <field name="view_type">form</field>
@@ -971,13 +971,13 @@
     <!-- Menu items hierachy -->
     <menuitem
         id="menu_my_equipment_maintenance_title"
-        name="Maintenance"
+        name="设备管理"
         web_icon="my_equipment_maintenance,static/description/icon.png"
         sequence="110"/>
 
     <menuitem
         id="menu_m_dashboard"
-        name="Dashboard"
+        name="看板"
         parent="menu_my_equipment_maintenance_title"
         groups="group_equipment_manager,base.group_user"
         action="my_equipment_maintenance_dashboard_action"
@@ -985,14 +985,14 @@
 
     <menuitem
         id="menu_m_request"
-        name="Maintenance"
+        name="设备维护"
         parent="menu_my_equipment_maintenance_title"
         groups="group_equipment_manager,base.group_user"
         sequence="1"/>
 
     <menuitem
         id="menu_m_request_form"
-        name="Maintenance Requests"
+        name="维护请求"
         parent="menu_m_request"
         action="hr_equipment_request_action"
         groups="group_equipment_manager,base.group_user"
@@ -1000,7 +1000,7 @@
 
     <menuitem
         id="menu_m_request_calendar"
-        name="Maintenance Calendar"
+        name="维护日历"
         parent="menu_m_request"
         action="hr_equipment_request_action_cal"
         groups="group_equipment_manager,base.group_user"
@@ -1008,7 +1008,7 @@
 
     <menuitem
         id="menu_equipment_form"
-        name="Equipments"
+        name="设备"
         parent="menu_my_equipment_maintenance_title"
         action="hr_equipment_action"
         groups="group_equipment_manager,base.group_user"
@@ -1016,28 +1016,28 @@
 
     <menuitem
         id="menu_m_reports"
-        name="Reporting"
+        name="报表"
         parent="menu_my_equipment_maintenance_title"
         groups="group_equipment_manager,base.group_user"
         sequence="3"/>
 
     <menuitem
         id="menu_m_reports_oee"
-        name="Overall Equipment Effectiveness (OEE)"
+        name="设备综合效率 (OEE)"
         parent="menu_m_reports"
         groups="group_equipment_manager,base.group_user"
         sequence="1"/>
 
     <menuitem
         id="menu_m_reports_losses"
-        name="Losses Analysis"
+        name="损失分析"
         parent="menu_m_reports"
         groups="group_equipment_manager,base.group_user"
         sequence="2"/>
 
     <menuitem
         id="my_equipment_maintenance_reporting"
-        name="Reporting"
+        name="报表"
         parent="menu_my_equipment_maintenance_title"
         sequence="20"/>
     <menuitem
@@ -1047,14 +1047,14 @@
 
     <menuitem
         id="menu_my_equipment_maintenance_configuration"
-        name="Configuration"
+        name="设置"
         parent="menu_my_equipment_maintenance_title"
         groups="group_equipment_manager"
         sequence="100"/>
 
     <menuitem
         id="menu_my_equipment_maintenance_teams"
-        name="Maintenance Teams"
+        name="维护团队"
         parent="menu_my_equipment_maintenance_configuration"
         action="my_equipment_maintenance_team_action_settings"
         groups="group_equipment_manager"
@@ -1062,14 +1062,14 @@
 
     <menuitem
         id="menu_my_equipment_maintenance_cat"
-        name="Equipment Categories"
+        name="设备分类"
         parent="menu_my_equipment_maintenance_configuration"
         action="hr_equipment_category_action"
         sequence="2"/>
 
     <menuitem
         id="menu_my_equipment_maintenance_stage_configuration"
-        name="Maintenance Stages"
+        name="维护阶段"
         parent="menu_my_equipment_maintenance_configuration"
         action="hr_equipment_stage_action"
         groups="base.group_no_one"

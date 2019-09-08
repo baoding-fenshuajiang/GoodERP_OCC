@@ -119,7 +119,7 @@ class RepairLine(models.Model):
     type = fields.Selection([
         ('add', 'Add'),
         ('remove', 'Remove')], 'Type', required=True)
-    product_id = fields.Many2one('product.product', 'Product', required=True)
+    product_id = fields.Many2one('equipment.parts', 'Product', required=True)
     price_unit = fields.Float('Unit Price', required=True, digits=dp.get_precision('Product Price'))
     product_uom_qty = fields.Float(
         'Quantity', default=1.0,
