@@ -4,38 +4,83 @@
     <bookmark url="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" line="49" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="">
+    <list default="true" id="eefbf6b7-2281-4c3e-928a-69a08cc68ed8" name="Default Changelist" comment="更改模块名称">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/security/borrow_security.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/security/borrow_security.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/security/ir.model.access.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/static/description/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/static/description/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/models/my_maintenance.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/models/my_maintenance.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/security/ir.model.access.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/static/description/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/static/description/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_maintenance/views/my_maintenance_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_maintenance/views/my_maintenance_views.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_default_tree_view/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_default_tree_view/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_default_tree_view/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_default_tree_view/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_default_tree_view/product_default_tree_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_default_tree_view/product_default_tree_views.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_no_translate/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_no_translate/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_no_translate/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_no_translate/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_no_translate/product_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_no_translate/product_template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_unique/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_unique/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_unique/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_unique/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_unique/i18n/zh_CN.po" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_unique/i18n/zh_CN.po" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_product_unique/product.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_product_unique/product.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/__manifest__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/models/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/models/my_workholder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/af.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/am.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ar.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/az.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/bg.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/bn.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/bs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ca.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/cs.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/da.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/de.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/el.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/en_GB.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_AR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_BO.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_CL.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_CO.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_CR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_DO.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_EC.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_PE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_PY.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/es_VE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/et.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/eu.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fa.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fi.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fil.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fo.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fr_BE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/fr_CA.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/gl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/gu.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/he.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/hi.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/hr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/hu.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/id.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/is.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/it.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ja.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ka.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/kab.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/kk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/km.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ko.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/lo.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/lt.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/lv.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/mk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/mn.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/nb.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ne.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/nl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/nl_BE.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/pl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/pt.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/pt_BR.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ro.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ru.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/sk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/sl.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/sq.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/sr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/sr@latin.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/sv.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/ta.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/th.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/tr.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/uk.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/vi.po" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/zh_CN.po" beforeDir="false" afterPath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/zh_CN.po" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/zh_TW.po" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,90 +91,34 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gooderp.conf">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/mymaintenance.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="990">
+              <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+              <folding>
+                <element signature="e#25#71#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/contributor.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/views/my_maintenance_views.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="41" column="38" selection-start-line="41" selection-start-column="38" selection-end-line="41" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/security/borrow_security.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="32" selection-start-line="3" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/security/ir.model.access.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/ir.model.access.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/__manifest__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="108" selection-start-line="5" selection-start-column="108" selection-end-line="5" selection-end-column="108" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/models/__init__.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/views/mymaintenance_views.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/my_addons/my_workholder/views/my_workholder_views.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="92">
+              <caret line="1044" column="48" selection-start-line="1044" selection-start-column="29" selection-end-line="1044" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -144,13 +133,36 @@
       <find>ON CHANGE</find>
       <find>on_change</find>
       <find>api.onchange</find>
+      <find>model_maintenance</find>
+      <find>_maintenance_</find>
+      <find>mymaintenance</find>
+      <find>model_my_equipment_maintenance_request</find>
+      <find>maintenance_count</find>
+      <find>maintenance</find>
+      <find>maintenance_duration</find>
+      <find>maintenance_open_count</find>
+      <find>maintenance_ids</find>
+      <find>request_action_reports</find>
+      <find>maintenance_request</find>
+      <find>maintenance_team_id</find>
     </findStrings>
     <replaceStrings>
       <replace />
+      <replace>model_my_equipment_maintenance</replace>
+      <replace>_mymaintenance_</replace>
+      <replace>my_equipment_maintenance_count</replace>
+      <replace>my_equipment_maintenance</replace>
+      <replace>my_equipment_maintenance_duration</replace>
+      <replace>my_equipment_maintenance_team_id</replace>
+      <replace>my_equipment_maintenance_open_count</replace>
+      <replace>my_equipment_maintenance_ids</replace>
+      <replace>my_equipment_maintenance_request</replace>
+      <replace>mymaintenance</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/my_addons/my_borrow</dir>
       <dir>$PROJECT_DIR$/odoo/addons</dir>
+      <dir>$PROJECT_DIR$/my_addons/my_equipment_maintenance</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -184,6 +196,16 @@
         <option value="$PROJECT_DIR$/my_addons/my_maintenance/models/my_maintenance.py" />
         <option value="$PROJECT_DIR$/my_addons/my_borrow/views/my_borrow_views.xml" />
         <option value="$PROJECT_DIR$/my_addons/my_borrow/models/my_borrow.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_repair/__manifest__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/maintenance.xml" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/maintenance.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/__init__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/tests/__init__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/__manifest__.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/ir.model.access.csv" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/mymaintenance.xml" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/mymaintenance.py" />
+        <option value="$PROJECT_DIR$/my_addons/my_equipment_maintenance/views/mymaintenance_views.xml" />
       </list>
     </option>
   </component>
@@ -216,69 +238,67 @@
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_borrow" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
-              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
               <item name="i18n" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
               <item name="security" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
               <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
               <item name="my_addons" type="462c0819:PsiDirectoryNode" />
-              <item name="my_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="my_addons" type="462c0819:PsiDirectoryNode" />
+              <item name="my_equipment_maintenance" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="odoo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GoodERP_OCC" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GoodERP_OCC" type="462c0819:PsiDirectoryNode" />
+              <item name="odoo" type="462c0819:PsiDirectoryNode" />
+              <item name="addons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -289,7 +309,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/my_addons" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/my_addons/my_equipment_maintenance" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -443,7 +463,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566390457788</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="上线前详细测试后的完善内容，修复Bug。">
+      <created>1567724020134</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567724020134</updated>
+    </task>
+    <task id="LOCAL-00015" summary="添加自动备份模块和设备维护和维修功能">
+      <created>1567913189560</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567913189560</updated>
+    </task>
+    <task id="LOCAL-00016" summary="更改模块名称">
+      <created>1567920789826</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1567920789826</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -456,10 +497,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1442" height="859" extended-state="7" />
+    <frame x="-1" y="-1" width="1442" height="859" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24982357" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982357" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -477,6 +518,25 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24982357" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46463245" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32871014" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32871014" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.conf" />
@@ -495,27 +555,12 @@
     <MESSAGE value="Add the method of saving left_amount to module workholder.&#10;Add contributor.txt for recording the contributor of GoodERP_GCC." />
     <MESSAGE value="Add management of workholder maintenance." />
     <MESSAGE value="Add field current_amount to record the left_amount before borrow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add field current_amount to record the left_amount before borrow." />
+    <MESSAGE value="上线前详细测试后的完善内容，修复Bug。" />
+    <MESSAGE value="添加自动备份模块和设备维护和维修功能" />
+    <MESSAGE value="更改模块名称" />
+    <option name="LAST_COMMIT_MESSAGE" value="更改模块名称" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/tests/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/wizard/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/data/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/static/xls/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/static/img/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/odoo/addons/sms/__manifest__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/odoo/addons/base/__manifest__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-799">
@@ -569,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/odoo/addons/mail/models/ir_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1230">
@@ -623,13 +661,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/security/maintenance_security.xml" />
     <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/security/ir.model.access.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/__init__.py">
@@ -646,6 +684,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gooderp.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contributor.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -671,13 +726,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/security/ir.model.access.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="30">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my_addons/my_maintenance/__manifest__.py">
@@ -701,20 +756,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gooderp.conf">
+    <entry file="file://$PROJECT_DIR$/my_addons/my_borrow/__manifest__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CONTRIBUTING.md">
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/maintenance.py" />
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/maintenance.xml" />
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_repair/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_repair/models/repair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/data/mymaintenance_demo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/i18n/zh_CN.po">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/contributor.txt">
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/data/mymaintenance_data.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/data/mail_data.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="56" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#25#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/__manifest__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/data/mymaintenance_cron.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/odoo/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="3466" column="8" selection-start-line="3466" selection-start-column="8" selection-end-line="3466" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/mymaintenance.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/models/mymaintenance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+          <folding>
+            <element signature="e#25#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/security/ir.model.access.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="108" selection-start-line="5" selection-start-column="108" selection-end-line="5" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_addons/my_equipment_maintenance/views/mymaintenance_views.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="1044" column="48" selection-start-line="1044" selection-start-column="29" selection-end-line="1044" selection-end-column="48" />
         </state>
       </provider>
     </entry>
