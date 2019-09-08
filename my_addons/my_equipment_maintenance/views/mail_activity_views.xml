@@ -6,12 +6,12 @@
         <field name="res_model">mail.activity.type</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
-        <field name="domain">['|', ('res_model_id', '=', False), ('res_model_id.model', '=', 'maintenance.request')]</field>
-        <field name="context">{'default_res_model': 'maintenance.request'}</field>
+        <field name="domain">['|', ('res_model_id', '=', False), ('res_model_id.model', '=', 'my_equipment_maintenance.request')]</field>
+        <field name="context">{'default_res_model': 'my_equipment_maintenance.request'}</field>
     </record>
     <menuitem id="maintenance_menu_config_activity_type"
         action="mail_activity_type_action_config_maintenance"
-        parent="menu_maintenance_configuration"
+        parent="menu_my_equipment_maintenance_configuration"
         sequence="20"
         groups="base.group_no_one"/>
 </odoo>
