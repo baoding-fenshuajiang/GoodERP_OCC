@@ -3,40 +3,43 @@
 
 from datetime import datetime
 from odoo import api, fields, models
-from odoo.addons import decimal_precision as dp
 from odoo.exceptions import UserError, ValidationError
 from odoo.tools import float_compare
 
 
 class Repair(models.Model):
     _name = 'repair.order'
-    _description = 'Repair Order'
+    _description = '维修单'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _order = 'create_date desc'
 
     name = fields.Char(
-        'Repair Reference',
+        '维修单号 ',
         default=lambda self: self.env['ir.sequence'].next_by_code('repair.order'),
         copy=False, required=True,
         states={'confirmed': [('readonly', True)]})
     product_id = fields.Many2one(
-        'maintenance.equipment', string='要维修的设备',
+        'my_equipment_maintenance.equipment', string='要维修的设备',
         readonly=True, required=True, states={'draft': [('readonly', False)]})
+    fault_symptom = fields.Text('故障现象')
+    technician_user_id = fields.Many2one('res.users', '维修人')
+    fault_analysis = fields.Text('故障分析')
+    solving_process = fields.Text('解决过程记录')
     state = fields.Selection([
-        ('draft', 'Quotation'),
-        ('cancel', 'Cancelled'),
-        ('confirmed', 'Confirmed'),
-        ('under_repair', 'Under Repair'),
-        ('done', 'Repaired')], string='Status',
-        copy=False, default='draft', readonly=True, track_visibility='onchange',
-        help="* The \'Draft\' status is used when a user is encoding a new and unconfirmed repair order.\n"
+        ('draft', '草稿'),
+        ('cancel', '已取消'),
+        ('confirmed', '已确认'),
+        ('done', 'Repaired')], string='状态',
+        copy=False, default='draft', readonly=True, track_visibility='onchange'
         )
     operations = fields.One2many(
         'repair.line', 'repair_id', 'Parts',
-        copy=True, readonly=True, states={'draft': [('readonly', False)]})
-    internal_notes = fields.Text('Internal Notes')
+        copy=True, readonly=False, states={'done': [('readonly', True)]})
+    internal_notes = fields.Text('内部备注')
+    start_date_time = fields.Datetime('开始时间')
+    end_date_time = fields.Datetime('结束时间')
     _sql_constraints = [
-        ('name', 'unique (name)', 'The name of the Repair Order must be unique!'),
+        ('name', 'unique (name)', '维修单的编号必须是唯一的。'),
     ]
 
     @api.multi
@@ -46,27 +49,34 @@ class Repair(models.Model):
         self.mapped('operations').write({'state': 'draft'})
         return self.write({'state': 'draft'})
 
+    def action_validate(self):
+        self.ensure_one()
+        return self.action_repair_confirm()
+
     @api.multi
     def action_repair_confirm(self):
-        """ Repair order state is set to 'To be invoiced' when invoice method
-        is 'Before repair' else state becomes 'Confirmed'.
-        @param *arg: Arguments
-        @return: True
-        """
         if self.filtered(lambda repair: repair.state != 'draft'):
             raise UserError(_("Only draft repairs can be confirmed."))
-        to_confirm = self - before_repair
-        to_confirm_operations = to_confirm.mapped('operations')
-        to_confirm_operations.write({'state': 'confirmed'})
-        to_confirm.write({'state': 'confirmed'})
+        self.write({'state': 'confirmed'})
         return True
 
     @api.multi
     def action_repair_cancel(self):
         if self.filtered(lambda repair: repair.state == 'done'):
-            raise UserError(_("Cannot cancel completed repairs."))
+            raise UserError(_("不能取消已完成的维修单。"))
         self.mapped('operations').write({'state': 'cancel'})
         return self.write({'state': 'cancel'})
+
+    @api.multi
+    def action_repair_end(self):
+        """ Writes repair order state to 'To be invoiced' if invoice method is
+        After repair else state is set to 'Ready'.
+        @return: True
+        """
+        if self.filtered(lambda repair: repair.state != 'confirmed'):
+            raise UserError(_("维修完成前首先要确认维修单！"))
+        self.write({'state': 'done'})
+        return True
 
     @api.multi
     def action_send_mail(self):
@@ -93,47 +103,19 @@ class Repair(models.Model):
     def print_repair_order(self):
         return self.env.ref('repair.action_report_repair_order').report_action(self)
 
-    def action_repair_ready(self):
-        self.mapped('operations').write({'state': 'confirmed'})
-        return self.write({'state': 'ready'})
-
-    @api.multi
-    def action_repair_start(self):
-        """ Writes repair order state to 'Under Repair'
-        @return: True
-        """
-        if self.filtered(lambda repair: repair.state not in ['confirmed', 'ready']):
-            raise UserError(_("Repair must be confirmed before starting reparation."))
-        self.mapped('operations').write({'state': 'confirmed'})
-        return self.write({'state': 'under_repair'})
-
 
 class RepairLine(models.Model):
     _name = 'repair.line'
-    _description = 'Repair Line (parts)'
+    _description = '维修用零件'
 
-    name = fields.Text('Description', required=True)
+    name = fields.Text('描述')
     repair_id = fields.Many2one(
-        'repair.order', 'Repair Order Reference',
+        'repair.order', '维修单编号',
         index=True, ondelete='cascade')
-    type = fields.Selection([
-        ('add', 'Add'),
-        ('remove', 'Remove')], 'Type', required=True)
-    product_id = fields.Many2one('equipment.parts', 'Product', required=True)
-    price_unit = fields.Float('Unit Price', required=True, digits=dp.get_precision('Product Price'))
+    product_id = fields.Many2one('equipment.parts', '产品', required=True)
     product_uom_qty = fields.Float(
-        'Quantity', default=1.0,
-        digits=dp.get_precision('Product Unit of Measure'), required=True)
-    product_uom = fields.Many2one(
-        'uom.uom', 'Product Unit of Measure',
-        required=True)
-    state = fields.Selection([
-        ('draft', 'Draft'),
-        ('confirmed', 'Confirmed'),
-        ('done', 'Done'),
-        ('cancel', 'Cancelled')], 'Status', default='draft',
-        copy=False, readonly=True, required=True,
-        help='The status of a repair line is set automatically to the one of the linked repair order.')
+        'Quantity', default=1.0, required=True)
+
 
 
 

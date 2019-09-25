@@ -6,7 +6,7 @@
         <field name="name">equipment.request.search</field>
         <field name="model">my_equipment_maintenance.request</field>
         <field name="arch" type="xml">
-            <search string="my_equipment_maintenance Request Search">
+            <search string="维护请求搜索">
                 <field name="name"/>
                 <field name="category_id"/>
                 <field name="user_id"/>
@@ -14,36 +14,36 @@
                 <field name="owner_user_id"/>
                 <field name="stage_id"/>
                 <field name="my_equipment_maintenance_team_id"/>
-                <filter string="My Requests" name="my_requests" domain="[('user_id', '=', uid)]"/>
+                <filter string="我的请求" name="my_requests" domain="[('user_id', '=', uid)]"/>
                 <separator/>
-                <filter string="To do" domain="[('stage_id.done', '=', False)]" name="todo"/>
-                <filter string="Blocked" name="kanban_state_block" domain="[('kanban_state', '=', 'blocked')]"/>
-                <filter string="In Progress" name="progress" domain="[('kanban_state', '=', 'normal')]"/>
-                <filter string="Done" name="done" domain="[('kanban_state', '=', 'done')]"/>
-                <filter string="Top Priorities" name="top_priority" domain="[('priority', '=', '3')]"/>
+                <filter string="待办" domain="[('stage_id.done', '=', False)]" name="todo"/>
+                <filter string="受阻" name="kanban_state_block" domain="[('kanban_state', '=', 'blocked')]"/>
+                <filter string="进行中" name="progress" domain="[('kanban_state', '=', 'normal')]"/>
+                <filter string="已完成" name="done" domain="[('kanban_state', '=', 'done')]"/>
+                <filter string="最高优先级" name="top_priority" domain="[('priority', '=', '3')]"/>
                 <separator/>
-                <filter string="Unscheduled Maintenance" domain="[('schedule_date', '=', False)]" name="unscheduled"/>
+                <filter string="未计划维护" domain="[('schedule_date', '=', False)]" name="unscheduled"/>
                 <separator/>
-                <filter string="My Activities" name="activities_my"
+                <filter string="我的活动" name="activities_my"
                     domain="[('activity_ids.user_id', '=', uid)]"/>
                 <separator/>
-                <filter string="Late Activities" name="activities_overdue"
+                <filter string="近期活动" name="activities_overdue"
                     domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
                     help="Show all records which has next action date is before today"/>
-                <filter string="Today Activities" name="activities_today"
+                <filter string="今天活动" name="activities_today"
                     domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
-                <filter string="Future Activities" name="activities_upcoming_all"
+                <filter string="将来活动" name="activities_upcoming_all"
                         domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))
                         ]"/>
                 <separator/>
-                <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                <filter string="未读信息" name="message_needaction" domain="[('message_needaction','=',True)]"/>
                 <separator/>
-                <filter string="Archived" name="inactive" domain="[('archive','=',True)]"/>
+                <filter string="已存档" name="inactive" domain="[('archive','=',True)]"/>
                 <group  expand='0' string='Group by...'>
-                    <filter string='Assigned' name="assigned" domain="[]" context="{'group_by': 'user_id'}"/>
-                    <filter string='Category' name="category" domain="[]" context="{'group_by' : 'category_id'}"/>
-                    <filter string='Stages' name="stages" domain="[]" context="{'group_by' : 'stage_id'}"/>
-                    <filter string='Created By' name='created_by' domain="[]" context="{'group_by': 'owner_user_id'}"/>
+                    <filter string='已指派' name="assigned" domain="[]" context="{'group_by': 'user_id'}"/>
+                    <filter string='分类' name="category" domain="[]" context="{'group_by' : 'category_id'}"/>
+                    <filter string='阶段' name="stages" domain="[]" context="{'group_by' : 'stage_id'}"/>
+                    <filter string='创建者' name='created_by' domain="[]" context="{'group_by': 'owner_user_id'}"/>
                 </group>
             </search>
         </field>
@@ -53,10 +53,10 @@
         <field name="name">equipment.request.form</field>
         <field name="model">my_equipment_maintenance.request</field>
         <field name="arch" type="xml">
-            <form string="Maintenance Request">
+            <form string="维护请求">
                 <header>
-                    <button string="Cancel" name="archive_equipment_request" type="object" attrs="{'invisible': [('archive', '=', True)]}"/>
-                    <button string="Reopen Request" name="reset_equipment_request" type="object" attrs="{'invisible': [('archive', '=', False)]}"/>
+                    <button string="取消" name="archive_equipment_request" type="object" attrs="{'invisible': [('archive', '=', True)]}"/>
+                    <button string="再次打开请求" name="reset_equipment_request" type="object" attrs="{'invisible': [('archive', '=', False)]}"/>
                     <field name="stage_id" widget="statusbar" options="{'clickable': '1'}" attrs="{'invisible': [('archive', '=', True)]}"/>
                 </header>
                 <sheet>
@@ -67,14 +67,14 @@
                         <field name="kanban_state" class="oe_inline" widget="state_selection"/>
                     </div>
                     <div class="oe_title">
-                        <label for="name" class="oe_edit_only" string="Name"/>
+                        <label for="name" class="oe_edit_only" string="名称"/>
                         <h1>
-                            <field name="name" placeholder="Maintenance Request"/>
+                            <field name="name" placeholder="维护请求"/>
                         </h1>
                     </div>
                     <group>
                         <group>
-                            <field name="owner_user_id" string="Requested By"/>
+                            <field name="owner_user_id" string="请求人"/>
                             <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
                             <field name="equipment_id"  context="{'default_category_id':category_id}"/>
                             <field name="category_id" groups="my_equipment_maintenance.group_equipment_manager" attrs="{'invisible': [('equipment_id', '=', False)]}"/>
@@ -85,7 +85,7 @@
                         </group>
                         <group>
                             <field name="my_equipment_maintenance_team_id" options="{'no_create': True, 'no_open': True}"/>
-                            <field name="user_id" string="Responsible"/>
+                            <field name="user_id" string="负责人"/>
                             <field name="schedule_date"/>
                             <label for="duration"/>
                             <div>
@@ -96,7 +96,7 @@
                             <field name="priority" widget="priority"/>
                         </group>
                     </group>
-                    <field name='description' placeholder="Internal Note ......."/>
+                    <field name='description' placeholder="内部备注 ......."/>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
@@ -148,7 +148,7 @@
                                     <b class="o_kanban_record_title"><field name="name"/></b>
                                 </div>
                                 <div class="o_kanban_record_body">
-                                    <span name="owner_user_id" t-if="record.owner_user_id.raw_value">Requested by : <field name="owner_user_id"/><br/></span>
+                                    <span name="owner_user_id" t-if="record.owner_user_id.raw_value">请求创建人 : <field name="owner_user_id"/><br/></span>
                                     <span class="oe_grey" t-if="record.equipment_id.raw_value"><field name="equipment_id"/><br/></span>
                                     <span t-if="record.category_id.raw_value"><field name="category_id"/></span>
                                 </div>
@@ -228,22 +228,22 @@
 
     <!-- equiment.request : actions -->
     <record id="hr_equipment_request_action" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
+        <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
         <field name="view_id" ref="hr_equipment_request_view_kanban"/>
         <field name="context">{'default_user_id': uid}</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new my_equipment_maintenance request
+                新建一个维护请求
             </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                按照请求步骤并和协作人进行沟通。
             </p>
         </field>
     </record>
 
     <record id="hr_equipment_request_action_link" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
+        <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
         <field name="search_view_id" ref="hr_equipment_request_view_search"/>
@@ -254,15 +254,15 @@
         }</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new my_equipment_maintenance request
+                新建一个维护请求。
             </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                遵循请求步骤并与协作者沟通。
             </p>
         </field>
     </record>
 
     <record id="hr_equipment_request_action_from_equipment" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
+        <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="src_model">my_equipment_maintenance.equipment</field>
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
@@ -272,53 +272,53 @@
         <field name="domain">[('equipment_id', '=', active_id)]</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new my_equipment_maintenance request
+                新建一个维护请求
             </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                 遵循请求步骤并与协作者沟通。
             </p>
         </field>
     </record>
 
     <record id="hr_equipment_todo_request_action_from_dashboard" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
+        <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
         <field name="context">{
             'default_my_equipment_maintenance_team_id': active_id,
         }</field>
-        <field name="domain">[('my_equipment_maintenance_team_id', '=', active_id), ('maintenance_type', 'in', context.get('maintenance_type', ['preventive', 'corrective']))]</field>
+        <field name="domain">[('my_equipment_maintenance_team_id', '=', active_id), ('my_equipment_maintenance_type', 'in', context.get('maintenance_type', ['preventive', 'corrective']))]</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new my_equipment_maintenance request
+                新建一个维护请求。
             </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                遵循请求流程并且和合作者沟通。
             </p>
         </field>
     </record>
 
     <record id="hr_equipment_request_action_cal" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
+        <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">calendar,kanban,tree,form,pivot,graph</field>
         <field name="view_id" ref="hr_equipment_view_calendar"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new my_equipment_maintenance request
+                新建一个维护请求
             </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                遵循请求流程并且和合作者沟通。
             </p>
         </field>
     </record>
 
     <record id="my_equipment_maintenance_request_action_reports" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
+        <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">graph,pivot,kanban,tree,form,calendar</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new my_equipment_maintenance request
+                新建一个维护请求
             </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                遵循请求流程并且和合作者沟通。
             </p>
         </field>
     </record>
@@ -328,14 +328,14 @@
         <field name="name">equipment.form</field>
         <field name="model">my_equipment_maintenance.equipment</field>
         <field name="arch" type="xml">
-            <form string="Equipments">
+            <form string="设备">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button name="%(hr_equipment_request_action_from_equipment)d"
                             type="action"
                             class="oe_stat_button"
                             icon="fa-ticket">
-                            <field string="Maintenance" name="my_equipment_maintenance_count" widget="statinfo"/>
+                            <field string="维护" name="my_equipment_maintenance_count" widget="statinfo"/>
                         </button>
                         <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
                             <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
@@ -343,27 +343,27 @@
                     </div>
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only"/>
-                        <h1><field name="name" string="Name" placeholder="Equipment Name"/></h1>
+                        <h1><field name="name" string="名称" placeholder="设备名称"/></h1>
                     </div>
                     <group>
                         <group>
                             <field name="category_id" options="{&quot;no_open&quot;: True}"/>
                             <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
-                            <field name="owner_user_id" string="Owner"/>
+                            <field name="owner_user_id" string="所有者"/>
                         </group>
                         <group>
                             <field name="my_equipment_maintenance_team_id" attrs="{'required': [('period', '!=', 0)]}"/>
                             <field name="technician_user_id"/>
                             <field name="assign_date" groups="base.group_no_one"/>
                             <field name="scrap_date" groups="base.group_no_one"/>
-                            <field name="location" string="Used in location"/>
+                            <field name="location" string="设备使用位置"/>
                         </group>
                     </group>
                     <notebook>
-                        <page string="Description">
+                        <page string="描述">
                             <field name="note"/>
                         </page>
-                        <page string="Product Information">
+                        <page string="产品信息">
                             <group>
                                 <group>
                                     <field name="partner_id" context="{'default_supplier': True, 'default_customer': False}"/>
@@ -377,15 +377,15 @@
                                 </group>
                             </group>
                         </page>
-                        <page string="Maintenance">
+                        <page string="维护">
                             <group>
                                 <group name="my_equipment_maintenance">
                                     <field name="next_action_date" class="oe_read_only" string="Next Preventive Maintenance"/>
-                                    <label for="period" string="Preventive Maintenance Frequency"/>
+                                    <label for="period" string="预防性维护频次"/>
                                     <div class="o_row">
                                         <field name="period"/> days
                                     </div>
-                                    <label for="my_equipment_maintenance_duration" string="Maintenance Duration"/>
+                                    <label for="my_equipment_maintenance_duration" string="维护周期"/>
                                     <div class="o_row">
                                         <field name="my_equipment_maintenance_duration"/> hours
                                     </div>
@@ -424,8 +424,8 @@
                 <templates>
                     <t t-name="kanban-tooltip">
                         <ul class="oe_kanban_tooltip">
-                            <li><b>Serial Number:</b> <field name="serial_no"/></li>
-                            <li><b>Model Number:</b> <field name="model"/></li>
+                            <li><b>序列号:</b> <field name="serial_no"/></li>
+                            <li><b>型号数量:</b> <field name="model"/></li>
                         </ul>
                     </t>
                     <t t-name="kanban-box">
@@ -479,7 +479,7 @@
         <field name="name">equipment.tree</field>
         <field name="model">my_equipment_maintenance.equipment</field>
         <field name="arch" type="xml">
-            <tree string="Assign To User"  decoration-bf="message_needaction==True">
+            <tree string="指定用户"  decoration-bf="message_needaction==True">
                 <field name="message_needaction" invisible="1"/>
                 <field name="name"/>
                 <!-- <field name="active" invisible="1"/> -->
@@ -501,56 +501,53 @@
                 <field name="name"  filter_domain="['|','|','|',('name','ilike',self),('model','ilike',self),('serial_no','ilike',self),('partner_ref', 'ilike', self)]"/>
                 <field name="category_id"/>
                 <field name="owner_user_id"/>
-                <filter string="Under Maintenance" name="under_my_equipment_maintenance" domain="[('my_equipment_maintenance_open_count', '&gt;', 0)]"/>
+                <filter string="维护进行中" name="under_my_equipment_maintenance" domain="[('my_equipment_maintenance_open_count', '&gt;', 0)]"/>
                 <separator/>
-                <filter string="Assigned" name="assigned" domain="[('owner_user_id', '!=', False)]"/>
-                <filter string="Available" name="available" domain="[('owner_user_id', '=', False)]"/>
+                <filter string="已指定" name="assigned" domain="[('owner_user_id', '!=', False)]"/>
+                <filter string="可用" name="available" domain="[('owner_user_id', '=', False)]"/>
                 <separator/>
-                <filter string="My Equipments" name="my" domain="[('owner_user_id', '=', uid)]"/>
-                <filter string="Archived" domain="[('active', '=', False)]" name="inactive"/>
+                <filter string="我的设备" name="my" domain="[('owner_user_id', '=', uid)]"/>
+                <filter string="已存档" domain="[('active', '=', False)]" name="inactive"/>
                 <separator/>
-                <filter string="My Activities" name="activities_my"
+                <filter string="我的活动s" name="activities_my"
                     domain="[('activity_ids.user_id', '=', uid)]"/>
                 <separator/>
-                <filter string="Late Activities" name="activities_overdue"
+                <filter string="最近活动" name="activities_overdue"
                     domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
                     help="Show all records which has next action date is before today"/>
-                <filter string="Today Activities" name="activities_today"
+                <filter string="今天活动" name="activities_today"
                     domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
-                <filter string="Future Activities" name="activities_upcoming_all"
+                <filter string="将来活动" name="activities_upcoming_all"
                         domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))
                         ]"/>
                 <separator/>
-                <filter string="Unread Messages" name="message_needaction" domain="[('message_needaction','=',True)]"/>
+                <filter string="未读信息" name="message_needaction" domain="[('message_needaction','=',True)]"/>
                 <!-- <filter string="Archived" name="inactive" domain="[('active','=',False)]"/> -->
                 <group  expand='0' string='Group by...'>
-                    <filter string='Technicians' name="technicians" domain="[]" context="{'group_by': 'technician_user_id'}"/>
-                    <filter string='Category' name="category" domain="[]" context="{'group_by': 'category_id'}"/>
-                    <filter string='Owner' name="owner" domain="[]" context="{'group_by': 'owner_user_id'}"/>
-                    <filter string='Vendor' name="vendor" domain="[]" context="{'group_by': 'partner_id'}"/>
+                    <filter string='维护人' name="technicians" domain="[]" context="{'group_by': 'technician_user_id'}"/>
+                    <filter string='分类' name="category" domain="[]" context="{'group_by': 'category_id'}"/>
+                    <filter string='拥有者' name="owner" domain="[]" context="{'group_by': 'owner_user_id'}"/>
+                    <filter string='供应商' name="vendor" domain="[]" context="{'group_by': 'partner_id'}"/>
                 </group>
             </search>
         </field>
     </record>
 
     <record id="hr_equipment_action" model="ir.actions.act_window">
-        <field name="name">Equipments</field>
+        <field name="name">设备</field>
         <field name="res_model">my_equipment_maintenance.equipment</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="view_id" ref="hr_equipment_view_kanban"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new equipment
-            </p><p>
-                Track equipments and link it to an employee or department.
-                You will be able to manage allocations, issues and my_equipment_maintenance of your equipment.
+                新建一个设备
             </p>
         </field>
     </record>
 
     <!-- equiment : actions -->
     <record id="hr_equipment_action_from_category_form" model="ir.actions.act_window">
-        <field name="name">Equipments</field>
+        <field name="name">设备</field>
         <field name="res_model">my_equipment_maintenance.equipment</field>
         <field name="view_mode">kanban,tree,form</field>
         <field name="search_view_id" ref="hr_equipment_view_search"/>
@@ -694,8 +691,8 @@
         <field name="name">equipment.stage.search</field>
         <field name="model">my_equipment_maintenance.stage</field>
         <field name="arch" type="xml">
-            <search string="Maintenance Request Stages">
-               <field name="name" string="Maintenance Request Stages"/>
+            <search string="维护请求阶段">
+               <field name="name" string="维护请求阶段"/>
             </search>
         </field>
     </record>
@@ -704,7 +701,7 @@
         <field name="name">equipment.stage.tree</field>
         <field name="model">my_equipment_maintenance.stage</field>
         <field name="arch" type="xml">
-            <tree string="Maintenance Request Stage" editable="top">
+            <tree string="维护请求阶段" editable="top">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
                 <field name="fold"/>
@@ -732,13 +729,13 @@
 
     <!-- equipment.stages : actions -->
     <record id="hr_equipment_stage_action" model="ir.actions.act_window">
-        <field name="name">Stages</field>
+        <field name="name">阶段</field>
         <field name="res_model">my_equipment_maintenance.stage</field>
         <field name="view_mode">tree,kanban,form</field>
         <field name="view_type">form</field>
         <field name="help" type="html">
           <p class="o_view_nocontent_smiling_face">
-            Add a new stage in the my_equipment_maintenance request
+            在维护请求中新建一个阶段。
           </p>
         </field>
     </record>
@@ -748,7 +745,7 @@
         <field name="name">my_equipment_maintenance.team.form</field>
         <field name="model">my_equipment_maintenance.team</field>
         <field name="arch" type="xml">
-            <form string="Maintenance Team">
+            <form string="维护团队">
                 <sheet>
                 <div class="oe_button_box" name="button_box">
                     <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive">
@@ -778,7 +775,7 @@
         <field name="name">my_equipment_maintenance.team.tree</field>
         <field name="model">my_equipment_maintenance.team</field>
         <field name="arch" type="xml">
-            <tree string="Maintenance Team">
+            <tree string="维护团队">
                 <field name="name"/>
             </tree>
         </field>
@@ -833,14 +830,14 @@
                                 <div class="row">
                                     <div class="col-6 o_kanban_primary_left">
                                         <button class="btn btn-primary" name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_todo': 1}">
-                                            <t t-esc="record.todo_request_count.value"/> To Do
+                                            <t t-esc="record.todo_request_count.value"/> 待办
                                         </button>
                                     </div>
                                     <div class="col-6 o_kanban_primary_right">
                                         <div class="row">
                                             <div class="col-9">
                                                 <a name="%(hr_equipment_request_action_cal)d" type="action">
-                                                    Scheduled
+                                                    已计划
                                                 </a>
                                             </div>
                                             <div class="col-3">
@@ -848,7 +845,7 @@
                                             </div>
                                             <div class="col-9">
                                                 <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_top_priority': 1}">
-                                                    Top Priorities
+                                                    最高优先级
                                                 </a>
                                             </div>
                                             <div class="col-3">
@@ -856,7 +853,7 @@
                                             </div>
                                             <div class="col-9">
                                                 <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_kanban_state_block': 1}">
-                                                    Blocked
+                                                    受阻
                                                 </a>
                                             </div>
                                             <div class="col-3">
@@ -864,7 +861,7 @@
                                             </div>
                                             <div class="col-9">
                                                 <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_unscheduled': 1}">
-                                                    Unscheduled
+                                                    未计划
                                                 </a>
                                             </div>
                                             <div class="col-3">
@@ -877,36 +874,36 @@
                                 <div class="row">
                                     <div class="col-6 o_kanban_card_manage_section o_kanban_manage_view">
                                         <div role="menuitem" class="o_kanban_card_manage_title">
-                                            <span>View</span>
+                                            <span>查看</span>
                                         </div>
                                         <div role="menuitem">
                                             <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action">
-                                                All
+                                                全部
                                             </a>
                                         </div>
                                         <div role="menuitem">
                                             <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_todo': 1}">
-                                                To Do
+                                                待办
                                             </a>
                                         </div>
                                         <div role="menuitem">
                                             <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_progress': 1}">
-                                                In Progress
+                                                进行中
                                             </a>
                                         </div>
                                         <div role="menuitem">
                                             <a name="%(hr_equipment_todo_request_action_from_dashboard)d" type="action" context="{'search_default_done': 1}">
-                                                Done
+                                                已完成
                                             </a>
                                         </div>
                                     </div>
                                     <div class="col-6 o_kanban_card_manage_section o_kanban_manage_new">
                                         <div role="menuitem" class="o_kanban_card_manage_title">
-                                            <span>Reporting</span>
+                                            <span>报表</span>
                                         </div>
                                         <div role="menuitem">
                                             <a name="%(my_equipment_maintenance_request_action_reports)d" type="action" context="{'search_default_my_equipment_maintenance_team_id': active_id}">
-                                            Maintenance Requests
+                                            维护请求
                                             </a>
                                         </div>
                                     </div>
@@ -916,7 +913,7 @@
                                         <ul role="menu" class="oe_kanban_colorpicker" data-field="color"/>
                                     </div>
                                     <div role="menuitem" class="col-4 text-right">
-                                        <a type="edit">Settings</a>
+                                        <a type="edit">设置</a>
                                     </div>
                                 </div>
                             </div>
@@ -932,14 +929,14 @@
         <field name="model">my_equipment_maintenance.team</field>
         <field name="arch" type="xml">
             <search string="Search">
-                <filter string="Archived" domain="[('active', '=', False)]" name="inactive"/>
+                <filter string="已存档" domain="[('active', '=', False)]" name="inactive"/>
             </search>
         </field>
     </record>
 
     <!-- equipment.team : actions -->
     <record id="my_equipment_maintenance_team_action_settings" model="ir.actions.act_window">
-        <field name="name">Teams</field>
+        <field name="name">团队</field>
         <field name="res_model">my_equipment_maintenance.team</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,kanban,form</field>
@@ -962,7 +959,7 @@
         <field name="view_id" ref="my_equipment_maintenance_team_kanban"/>
         <field name="help" type="html">
           <p class="o_view_nocontent_smiling_face">
-            Add a new stage in the my_equipment_maintenance request
+            在维护请求中添加一个新阶段。
           </p>
         </field>
     </record>

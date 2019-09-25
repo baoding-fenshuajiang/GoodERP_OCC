@@ -3,23 +3,15 @@
 
 
 {
-    'name': 'Repairs',
+    'name': '设备维修',
     'version': '1.0',
     'sequence': 200,
-    'category': 'Manufacturing',
-    'summary': 'Repair damaged products',
+    'category': '设备管理',
+    'summary': '设备维修记录',
     'description': """
-The aim is to have a complete module to manage all products repairs.
-====================================================================
-
-The following topics are covered by this module:
-------------------------------------------------------
-    * Add/remove products in the reparation
-    * Impact for stocks
-    * Invoicing (products and/or services)
-    * Warranty concept
-    * Repair quotation report
-    * Notes for the technician and for the final customer
+管理设备维修
+============
+满足IATF16949关于设备履历的要求
 """,
     'depends': ['my_equipment_parts', 'my_equipment_maintenance'],
     'data': [

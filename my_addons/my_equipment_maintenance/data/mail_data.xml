@@ -3,57 +3,57 @@
 <data>
     <!-- Maintenance-specific activities, for automatic generation mainly -->
     <record id="mail_act_my_equipment_maintenance_request" model="mail.activity.type">
-        <field name="name">Maintenance Request</field>
+        <field name="name">维护请求</field>
         <field name="icon">fa-wrench</field>
         <field name="res_model_id" ref="my_equipment_maintenance.model_my_equipment_maintenance_request"/>
     </record>
 
     <!-- email alias for my_equipment_maintenance requests -->
     <record id="mail_alias_equipment" model="mail.alias">
-        <field name="alias_name">helpdesk</field>
+        <field name="alias_name">帮助台</field>
         <field name="alias_model_id" ref="model_my_equipment_maintenance_request"/>
         <field name="alias_user_id" ref="base.user_admin"/>
     </record>
 
     <!-- Maintenance Request-related subtypes for messaging / Chatter -->
     <record id="mt_req_created" model="mail.message.subtype">
-        <field name="name">Request Created</field>
+        <field name="name">创建的请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="default" eval="False"/>
         <field name="hidden" eval="True"/>
-        <field name="description">Maintenance Request created</field>
+        <field name="description">创建的维护请求</field>
     </record>
     <record id="mt_req_status" model="mail.message.subtype">
-        <field name="name">Status Changed</field>
+        <field name="name">改变的状态</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="default" eval="True"/>
-        <field name="description">Status changed</field>
+        <field name="description">改变的状态</field>
     </record>
 
     <!-- Equipment-related subtypes for messaging / Chatter -->
     <record id="mt_mat_assign" model="mail.message.subtype">
-        <field name="name">Equipment Assigned</field>
+        <field name="name">指定的设备</field>
         <field name="res_model">my_equipment_maintenance.equipment</field>
-        <field name="description">Equipment Assigned</field>
+        <field name="description">指定的设备</field>
     </record>
 
     <!-- Equipment Category-related subtypes for messaging / Chatter -->
     <record id="mt_cat_req_created" model="mail.message.subtype">
-        <field name="name">Maintenance Request Created</field>
+        <field name="name">创建的维护请求</field>
         <field name="res_model">my_equipment_maintenance.equipment.category</field>
         <field name="default" eval="True"/>
         <field name="parent_id" eval="ref('mt_req_created')"/>
         <field name="relation_field">category_id</field>
     </record>
     <record id="mt_cat_mat_assign" model="mail.message.subtype">
-        <field name="name">Equipment Assigned</field>
+        <field name="name">指定的设备</field>
         <field name="res_model">my_equipment_maintenance.equipment.category</field>
         <field name="default" eval="True"/>
         <field name="parent_id" eval="ref('mt_mat_assign')"/>
         <field name="relation_field">category_id</field>
     </record>
     <record id="equipment_team_maintenance" model="my_equipment_maintenance.team">
-        <field name="name">Internal Maintenance</field>
+        <field name="name">内部维护</field>
     </record>
 </data>
 </odoo>

@@ -9,7 +9,9 @@ class BorrowTask(models.Model):
 
     name = fields.Many2one('equipment.workholder', string='夹具', required=True)
     borrower_id = fields.Many2one('hr.employee', string='借用人', required=True)
-    borrow_date = fields.Date(string="借出日期", default=lambda self: self._context.get('date', fields.Date.context_today(self)), required=True)
+    borrow_date = fields.Date(string="借出日期",
+                              default=lambda self: self._context.get('date', fields.Date.context_today(self)),
+                              required=True)
     return_date = fields.Date(string="归还日期")
     is_returned = fields.Boolean(string="是否已归还", default=False)
     processing_quantity = fields.Integer(string="加工数量", default=0)

@@ -11,12 +11,12 @@ class MaintenanceStage(models.Model):
     """ Model for case stages. This models the main stages of a Maintenance Request management flow. """
 
     _name = 'my_equipment_maintenance.stage'
-    _description = 'Maintenance Stage'
+    _description = '维护阶段'
     _order = 'sequence, id'
 
     name = fields.Char('名称', required=True, translate=True)
     sequence = fields.Integer('Sequence', default=20)
-    fold = fields.Boolean('Folded in Maintenance Pipe')
+    fold = fields.Boolean('在维护中折叠！')
     done = fields.Boolean('请求完成')
 
 
@@ -31,23 +31,22 @@ class MaintenanceEquipmentCategory(models.Model):
         self.fold = False if self.equipment_count else True
 
     name = fields.Char('分类名称', required=True, translate=True)
-    company_id = fields.Many2one('res.company', string='Company',
-        default=lambda self: self.env.user.company_id)
-    technician_user_id = fields.Many2one('res.users', 'Responsible', track_visibility='onchange', default=lambda self:
-    self.env.uid, oldname='user_id')
+    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
+    technician_user_id = fields.Many2one('res.users', '维护负责人', track_visibility='onchange',
+                                         default=lambda self: self.env.uid, oldname='user_id')
     color = fields.Integer('Color Index')
     note = fields.Text('备注', translate=False)
-    equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'category_id', string='Equipments',
+    equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'category_id', string='设备',
                                     copy=False)
     equipment_count = fields.Integer(string="设备", compute='_compute_equipment_count')
     my_equipment_maintenance_ids = fields.One2many('my_equipment_maintenance.request', 'category_id', copy=False)
-    my_equipment_maintenance_count = fields.Integer(string="Maintenance Count",
+    my_equipment_maintenance_count = fields.Integer(string="维护个数",
                                                     compute='_compute_my_equipment_maintenance_count')
     alias_id = fields.Many2one(
         'mail.alias', 'Alias', ondelete='restrict', required=True,
         help="Email alias for this equipment category. New emails will automatically "
         "create new my_equipment_maintenance request for this equipment category.")
-    fold = fields.Boolean(string='Folded in Maintenance Pipe', compute='_compute_fold', store=True)
+    fold = fields.Boolean(string='在维护中折叠', compute='_compute_fold', store=True)
 
     @api.multi
     def _compute_equipment_count(self):
@@ -59,9 +58,9 @@ class MaintenanceEquipmentCategory(models.Model):
 
     @api.multi
     def _compute_my_equipment_maintenance_count(self):
-        maintenance_data = self.env['my_equipment_maintenance.request'].read_group([('category_id', 'in', self.ids)],
+        my_equipment_maintenance_data = self.env['my_equipment_maintenance.request'].read_group([('category_id', 'in', self.ids)],
                                                                                    ['category_id'], ['category_id'])
-        mapped_data = dict([(m['category_id'][0], m['category_id_count']) for m in my_quipment_maintenance_data])
+        mapped_data = dict([(m['category_id'][0], m['category_id_count']) for m in my_equipment_maintenance_data])
         for category in self:
             category.my_equipment_maintenance_count = mapped_data.get(category.id, 0)
 
@@ -81,8 +80,7 @@ class MaintenanceEquipmentCategory(models.Model):
         MailAlias = self.env['mail.alias']
         for category in self:
             if category.equipment_ids or category.my_equipment_maintenance_ids:
-                raise UserError(_("You cannot delete an equipment category containing equipments or "
-                                  "my_equipment_maintenance requests."))
+                raise UserError(_("你不能删除一个包含设备维护请求或设备的分类！"))
             MailAlias += category.alias_id
         res = super(MaintenanceEquipmentCategory, self).unlink()
         MailAlias.unlink()
@@ -129,40 +127,38 @@ class MaintenanceEquipment(models.Model):
             equipment_ids = self._search([('name', operator, name)] + args, limit=limit, access_rights_uid=name_get_uid)
         return self.browse(equipment_ids).name_get()
 
-    name = fields.Char('Equipment Name', required=True, translate=True)
-    company_id = fields.Many2one('res.company', string='Company',
-        default=lambda self: self.env.user.company_id)
+    name = fields.Char('设备名称', required=True, translate=True)
+    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
     active = fields.Boolean(default=True)
-    technician_user_id = fields.Many2one('res.users', string='Technician', track_visibility='onchange',
+    technician_user_id = fields.Many2one('res.users', string='维护人', track_visibility='onchange',
                                          oldname='user_id')
-    owner_user_id = fields.Many2one('res.users', string='Owner', track_visibility='onchange')
-    category_id = fields.Many2one('my_equipment_maintenance.equipment.category', string='Equipment Category',
+    owner_user_id = fields.Many2one('res.users', string='所有者', track_visibility='onchange')
+    category_id = fields.Many2one('my_equipment_maintenance.equipment.category', string='设备分类',
                                   track_visibility='onchange', group_expand='_read_group_category_ids')
-    partner_id = fields.Many2one('res.partner', string='Vendor', domain="[('supplier', '=', 1)]")
-    partner_ref = fields.Char('Vendor Reference')
-    location = fields.Char('Location')
-    model = fields.Char('Model')
-    serial_no = fields.Char('Serial Number', copy=False)
-    assign_date = fields.Date('Assigned Date', track_visibility='onchange')
-    effective_date = fields.Date('Effective Date', default=fields.Date.context_today, required=True,
+    partner_id = fields.Many2one('res.partner', string='供应商', domain="[('supplier', '=', 1)]")
+    partner_ref = fields.Char('供应商编号')
+    location = fields.Char('位置')
+    model = fields.Char('型号')
+    serial_no = fields.Char('序列号', copy=False)
+    assign_date = fields.Date('指定日期', track_visibility='onchange')
+    effective_date = fields.Date('有效日期', default=fields.Date.context_today, required=True,
                                  help="Date at which the equipment became effective. This date will be used to "
                                       "compute "
                                       "the Mean Time Between Failure.")
-    cost = fields.Float('Cost')
-    note = fields.Text('Note')
-    warranty_date = fields.Date('Warranty Expiration Date', oldname='warranty')
-    color = fields.Integer('Color Index')
-    scrap_date = fields.Date('Scrap Date')
+    cost = fields.Float('成本')
+    note = fields.Text('备注')
+    warranty_date = fields.Date('质保期失效日期', oldname='warranty')
+    color = fields.Integer('颜色索引')
+    scrap_date = fields.Date('报废日期')
     my_equipment_maintenance_ids = fields.One2many('my_equipment_maintenance.request', 'equipment_id')
     my_equipment_maintenance_count = fields.Integer(compute='_compute_my_equipment_maintenance_count',
-                                                    string="Maintenance Count", store=True)
+                                                    string="维护次数", store=True)
     my_equipment_maintenance_open_count = fields.Integer(compute='_compute_my_equipment_maintenance_count',
-                                                         string="Current Maintenance", store=True)
-    period = fields.Integer('Days between each preventive my_equipment_maintenance')
-    next_action_date = fields.Date(compute='_compute_next_my_equipment_maintenance', string='Date of the next '
-                                            'preventive my_equipment_maintenance', store=True)
-    my_equipment_maintenance_team_id = fields.Many2one('my_equipment_maintenance.team', string='Maintenance Team')
-    my_equipment_maintenance_duration = fields.Float(help="Maintenance Duration in hours.")
+                                                         string="当前维护", store=True)
+    period = fields.Integer('预防性维护之间的天数')
+    next_action_date = fields.Date(compute='_compute_next_my_equipment_maintenance', string='预防性设备维护', store=True)
+    my_equipment_maintenance_team_id = fields.Many2one('my_equipment_maintenance.team', string='维护团队')
+    my_equipment_maintenance_duration = fields.Float(help="维护期间的小时数")
 
     @api.depends('effective_date', 'period', 'my_equipment_maintenance_ids.request_date',
                  'my_equipment_maintenance_ids.close_date')
@@ -276,10 +272,11 @@ class MaintenanceEquipment(models.Model):
             if not next_requests:
                 equipment._create_new_request(equipment.next_action_date)
 
+
 class MaintenanceRequest(models.Model):
     _name = 'my_equipment_maintenance.request'
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _description = 'Maintenance Request'
+    _description = '维护请求'
     _order = "id desc"
 
     @api.returns('self')
@@ -303,39 +300,34 @@ class MaintenanceRequest(models.Model):
         return team.id
 
     name = fields.Char('Subjects', required=True)
-    company_id = fields.Many2one('res.company', string='Company',
-        default=lambda self: self.env.user.company_id)
-    description = fields.Text('Description')
-    request_date = fields.Date('Request Date', track_visibility='onchange', default=fields.Date.context_today,
-                               help="Date requested for the my_equipment_maintenance to happen")
-    owner_user_id = fields.Many2one('res.users', string='Created by User', default=lambda s: s.env.uid)
+    company_id = fields.Many2one('res.company', string='公司', default=lambda self: self.env.user.company_id)
+    description = fields.Text('描述')
+    request_date = fields.Date('请求日期', track_visibility='onchange', default=fields.Date.context_today,
+                               help="要求维修实施的时间。")
+    owner_user_id = fields.Many2one('res.users', string='创建人', default=lambda s: s.env.uid)
     category_id = fields.Many2one('my_equipment_maintenance.equipment.category', related='equipment_id.category_id',
-                                  string='Category', store=True, readonly=True)
-    equipment_id = fields.Many2one('my_equipment_maintenance.equipment', string='Equipment',
+                                  string='分类', store=True, readonly=True)
+    equipment_id = fields.Many2one('my_equipment_maintenance.equipment', string='设备',
                                    ondelete='restrict', index=True)
-    user_id = fields.Many2one('res.users', string='Technician', track_visibility='onchange',
+    user_id = fields.Many2one('res.users', string='技术员', track_visibility='onchange',
                               oldname='technician_user_id')
-    stage_id = fields.Many2one('my_equipment_maintenance.stage', string='Stage', ondelete='restrict',
+    stage_id = fields.Many2one('my_equipment_maintenance.stage', string='阶段', ondelete='restrict',
                                track_visibility='onchange',
                                group_expand='_read_group_stage_ids', default=_default_stage)
-    priority = fields.Selection([('0', 'Very Low'), ('1', 'Low'), ('2', 'Normal'), ('3', 'High')], string='Priority')
-    color = fields.Integer('Color Index')
-    close_date = fields.Date('Close Date', help="Date the my_equipment_maintenance was finished. ")
-    kanban_state = fields.Selection([('normal', 'In Progress'), ('blocked', 'Blocked'), ('done',
-                                                                                         'Ready for next stage')],
-                                    string='Kanban State', required=True, default='normal', track_visibility='onchange')
+    priority = fields.Selection([('0', '很低'), ('1', '低'), ('2', '一般'), ('3', '高')], string='优先级')
+    color = fields.Integer('颜色索引')
+    close_date = fields.Date('关闭日期', help="Date the my_equipment_maintenance was finished. ")
+    kanban_state = fields.Selection([('normal', '进行中'), ('blocked', '受阻'), ('done','已为下阶段准备好')],
+                                    string='看板状态', required=True, default='normal', track_visibility='onchange')
     # active = fields.Boolean(default=True, help="Set active to false to hide the my_equipment_maintenance request
     # without deleting it.")
-    archive = fields.Boolean(default=False, help="Set archive to true to hide the my_equipment_maintenance request "
-                                                 "without deleting it.")
-    my_equipment_maintenance_type = fields.Selection([('corrective', 'Corrective'), ('preventive', 'Preventive')],
-                                                     string='Maintenance Type', default="corrective")
-    schedule_date = fields.Datetime('Scheduled Date', help="Date the my_equipment_maintenance team plans "
-                                                           "the my_equipment_maintenance.  It should not differ "
-                                                           "much from the Request Date. ")
-    my_equipment_maintenance_team_id = fields.Many2one('my_equipment_maintenance.team', string='Team',
+    archive = fields.Boolean(default=False, help="使用存档来讲维护请求在不删除的情况下不可见。")
+    my_equipment_maintenance_type = fields.Selection([('corrective', '纠正'), ('preventive', '预防')],
+                                                     string='维护类型', default="corrective")
+    schedule_date = fields.Datetime('计划日期', help="维护团队期望的实施日期")
+    my_equipment_maintenance_team_id = fields.Many2one('my_equipment_maintenance.team', string='团队',
                                                        required=True, default=_get_default_team_id)
-    duration = fields.Float(help="Duration in hours and minutes.")
+    duration = fields.Float('期间',help="用小时和分钟表示的期间")
 
     @api.multi
     def archive_equipment_request(self):
@@ -436,23 +428,22 @@ class MaintenanceTeam(models.Model):
 
     name = fields.Char(required=True, translate=True)
     active = fields.Boolean(default=True)
-    company_id = fields.Many2one('res.company', string='Company',
-        default=lambda self: self.env.user.company_id)
-    member_ids = fields.Many2many('res.users', 'my_equipment_maintenance_team_users_rel', string="Team Members")
-    color = fields.Integer("Color Index", default=0)
+    company_id = fields.Many2one('res.company', string='Company',default=lambda self: self.env.user.company_id)
+    member_ids = fields.Many2many('res.users', 'my_equipment_maintenance_team_users_rel', string="团队成员")
+    color = fields.Integer("颜色", default=0)
     request_ids = fields.One2many('my_equipment_maintenance.request', 'my_equipment_maintenance_team_id', copy=False)
     equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'my_equipment_maintenance_team_id',
                                     copy=False)
 
     # For the dashboard only
-    todo_request_ids = fields.One2many('my_equipment_maintenance.request', string="Requests", copy=False,
+    todo_request_ids = fields.One2many('my_equipment_maintenance.request', string="请求", copy=False,
                                        compute='_compute_todo_requests')
-    todo_request_count = fields.Integer(string="Number of Requests", compute='_compute_todo_requests')
-    todo_request_count_date = fields.Integer(string="Number of Requests Scheduled", compute='_compute_todo_requests')
-    todo_request_count_high_priority = fields.Integer(string="Number of Requests in High Priority",
+    todo_request_count = fields.Integer(string="请求数量", compute='_compute_todo_requests')
+    todo_request_count_date = fields.Integer(string="计划的请求数量", compute='_compute_todo_requests')
+    todo_request_count_high_priority = fields.Integer(string="高优先级的请求数量",
                                                       compute='_compute_todo_requests')
-    todo_request_count_block = fields.Integer(string="Number of Requests Blocked", compute='_compute_todo_requests')
-    todo_request_count_unscheduled = fields.Integer(string="Number of Requests Unscheduled",
+    todo_request_count_block = fields.Integer(string="受阻的请求数量", compute='_compute_todo_requests')
+    todo_request_count_unscheduled = fields.Integer(string="未计划的请求数量",
                                                     compute='_compute_todo_requests')
 
     @api.one

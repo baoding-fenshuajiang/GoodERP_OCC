@@ -4,23 +4,23 @@
 
     <!-- Standard stages for Maintenance Request -->
     <record id="stage_0" model="my_equipment_maintenance.stage">
-        <field name="name">New Request</field>
+        <field name="name">新请求</field>
         <field name="sequence" eval="1" />
         <field name="fold" eval="False" />
     </record>
     <record id="stage_1" model="my_equipment_maintenance.stage">
-        <field name="name">In Progress</field>
+        <field name="name">进行中</field>
         <field name="sequence" eval="2" />
         <field name="fold" eval="False" />
     </record>
     <record id="stage_3" model="my_equipment_maintenance.stage">
-        <field name="name">Repaired</field>
+        <field name="name">已维修</field>
         <field name="sequence" eval="3" />
         <field name="fold" eval="True" />
         <field name="done" eval="True" />
     </record>
     <record id="stage_4" model="my_equipment_maintenance.stage">
-        <field name="name">Scrap</field>
+        <field name="name">报废</field>
         <field name="sequence" eval="4" />
         <field name="fold" eval="True" />
         <field name="done" eval="True" />
