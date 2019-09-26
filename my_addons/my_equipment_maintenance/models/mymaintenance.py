@@ -32,8 +32,6 @@ class MaintenanceEquipmentCategory(models.Model):
 
     name = fields.Char('分类名称', required=True, translate=True)
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
-    technician_user_id = fields.Many2one('res.users', '维护负责人', track_visibility='onchange',
-                                         default=lambda self: self.env.uid, oldname='user_id')
     color = fields.Integer('Color Index')
     note = fields.Text('备注', translate=False)
     equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'category_id', string='设备',
@@ -215,10 +213,6 @@ class MaintenanceEquipment(models.Model):
         self.my_equipment_maintenance_open_count = len(self.my_equipment_maintenance_ids.filtered(lambda x:
                                                                                                   not x.stage_id.done))
 
-    @api.onchange('category_id')
-    def _onchange_category_id(self):
-        self.technician_user_id = self.category_id.technician_user_id
-
     _sql_constraints = [
         ('serial_no', 'unique(serial_no)', "Another asset already exists with this serial number!"),
     ]
@@ -343,16 +337,7 @@ class MaintenanceRequest(models.Model):
     @api.onchange('equipment_id')
     def onchange_equipment_id(self):
         if self.equipment_id:
-            self.user_id = self.equipment_id.technician_user_id if self.equipment_id.technician_user_id else \
-                self.equipment_id.category_id.technician_user_id
-            self.category_id = self.equipment_id.category_id
-            if self.equipment_id.my_equipment_maintenance_team_id:
-                self.my_equipment_maintenance_team_id = self.equipment_id.my_equipment_maintenance_team_id.id
-
-    @api.onchange('category_id')
-    def onchange_category_id(self):
-        if not self.user_id or not self.equipment_id or (self.user_id and not self.equipment_id.technician_user_id):
-            self.user_id = self.category_id.technician_user_id
+            self.user_id = self.equipment_id.technician_user_id
 
     @api.model
     def create(self, vals):

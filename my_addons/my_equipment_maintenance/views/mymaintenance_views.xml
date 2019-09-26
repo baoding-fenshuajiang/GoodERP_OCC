@@ -61,7 +61,7 @@
                 </header>
                 <sheet>
                     <div attrs="{'invisible': [('archive', '=', False)]}">
-                        <span class="badge badge-warning float-right">Canceled</span>
+                        <span class="badge badge-warning float-right">已取消</span>
                     </div>
                     <div class="oe_right">
                         <field name="kanban_state" class="oe_inline" widget="state_selection"/>
@@ -91,7 +91,7 @@
                             <div>
                                 <field name="duration"
                                        widget="float_time"
-                                       class="oe_inline"/> <span class="ml8">hours</span>
+                                       class="oe_inline"/> <span class="ml8">小时</span>
                             </div>
                             <field name="priority" widget="priority"/>
                         </group>
@@ -138,8 +138,8 @@
                                     <span class="fa fa-ellipsis-v"/>
                                 </a>
                                 <div class="dropdown-menu" role="menu">
-                                    <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit...</a></t>
-                                    <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">Delete</a></t>
+                                    <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">编辑...</a></t>
+                                    <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">删除</a></t>
                                     <ul class="oe_kanban_colorpicker" data-field="color"/>
                                 </div>
                             </div>
@@ -380,7 +380,7 @@
                         <page string="维护">
                             <group>
                                 <group name="my_equipment_maintenance">
-                                    <field name="next_action_date" class="oe_read_only" string="Next Preventive Maintenance"/>
+                                    <field name="next_action_date" class="oe_read_only" string="下一次预防性维护"/>
                                     <label for="period" string="预防性维护频次"/>
                                     <div class="o_row">
                                         <field name="period"/> days
@@ -418,7 +418,6 @@
                 <field name="my_equipment_maintenance_ids"/>
                 <field name="my_equipment_maintenance_open_count"/>
                 <field name="next_action_date"/>
-                <field name="technician_user_id"/>
                 <field name="activity_ids" />
                 <field name="activity_state" />
                 <templates>
@@ -483,7 +482,7 @@
                 <field name="message_needaction" invisible="1"/>
                 <field name="name"/>
                 <!-- <field name="active" invisible="1"/> -->
-                <field name="owner_user_id" string="Owner"/>
+                <field name="owner_user_id" string="拥有者"/>
                 <field name="assign_date" groups="base.group_no_one"/>
                 <field name="serial_no"/>
                 <field name="technician_user_id"/>
@@ -524,8 +523,6 @@
                 <filter string="未读信息" name="message_needaction" domain="[('message_needaction','=',True)]"/>
                 <!-- <filter string="Archived" name="inactive" domain="[('active','=',False)]"/> -->
                 <group  expand='0' string='Group by...'>
-                    <filter string='维护人' name="technicians" domain="[]" context="{'group_by': 'technician_user_id'}"/>
-                    <filter string='分类' name="category" domain="[]" context="{'group_by': 'category_id'}"/>
                     <filter string='拥有者' name="owner" domain="[]" context="{'group_by': 'owner_user_id'}"/>
                     <filter string='供应商' name="vendor" domain="[]" context="{'group_by': 'partner_id'}"/>
                 </group>
@@ -558,10 +555,7 @@
         }</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new equipment
-            </p><p>
-                Track equipments and link it to an employee or department.
-                You will be able to manage allocations, issues and my_equipment_maintenance of your equipment.
+                新建一个设备
             </p>
         </field>
     </record>
@@ -578,27 +572,26 @@
                         class="oe_stat_button"
                         icon="fa-laptop"
                         type="action">
-                        <field string="Equipments" name="equipment_count" widget="statinfo"/>
+                        <field string="设备" name="equipment_count" widget="statinfo"/>
                     </button>
                     <button name="%(hr_equipment_request_action_link)d"
                         type="action"
                         class="oe_stat_button"
                         icon="fa-ticket">
-                        <field string="Maintenance" name="my_equipment_maintenance_count" widget="statinfo"/>
+                        <field string="维护" name="my_equipment_maintenance_count" widget="statinfo"/>
                     </button>
                 </div>
                 <div class="oe_title">
-                    <label for="name" class="oe_edit_only" string="Category Name"/>
+                    <label for="name" class="oe_edit_only" string="分类名称"/>
                     <h1>
                         <field name="name"/>
                     </h1>
                 </div>
                 <group>
-                    <field name="technician_user_id" class="oe_inline"/>
                     <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}" class="oe_inline"/>
                 </group>
                 <group name="group_alias" attrs="{'invisible': [('alias_domain', '=', False)]}" groups="base.group_no_one">
-                    <label for="alias_name" string="Email Alias"/>
+                    <label for="alias_name" string="邮件别名"/>
                     <div name="alias_def">
                         <field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
                         <div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;">
@@ -620,10 +613,9 @@
         <field name="name">equipment.category.tree</field>
         <field name="model">my_equipment_maintenance.equipment.category</field>
         <field name="arch" type="xml">
-            <tree string="Assign To User">
-                <field name="name" string="Name"/>
-                <field name="technician_user_id"/>
-            </tree>
+            <tree string="指定给用户">
+                <field name="name" string="名称"/>
+             </tree>
         </field>
     </record>
 
@@ -632,10 +624,7 @@
         <field name="model">my_equipment_maintenance.equipment.category</field>
         <field name="arch" type="xml">
             <search string="Search">
-                <field name="name" string="Category Name" filter_domain="[('name','ilike',self)]"/>
-                <group  expand='0' string='Group by...'>
-                    <filter string='Responsible' name="responsible" domain="[]" context="{'group_by' : 'technician_user_id'}"/>
-                </group>
+                <field name="name" string="分类名称" filter_domain="[('name','ilike',self)]"/>
             </search>
         </field>
     </record>
@@ -646,23 +635,21 @@
         <field name="arch" type="xml">
             <kanban>
                 <field name="name"/>
-                <field name="technician_user_id"/>
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="mb4">
                                 <strong><field name="name"/></strong>
-                                <img t-att-src="kanban_image('res.users', 'image_small', record.technician_user_id.raw_value)" t-att-title="record.technician_user_id.value" t-att-alt="record.technician_user_id.value" width="24" height="24" class="oe_kanban_avatar float-right"/>
                             </div>
                             <div class="row mt4">
                                 <div class="col-6">
                                     <span class="badge badge-pill">
-                                        <strong>Equipments:</strong> <field name="equipment_count"/>
+                                        <strong>设备:</strong> <field name="equipment_count"/>
                                     </span>
                                 </div>
                                 <div class="col-6 text-right">
                                     <span class="badge badge-pill">
-                                        <strong>Maintenance:</strong> <field name="my_equipment_maintenance_count"/>
+                                        <strong>维护:</strong> <field name="my_equipment_maintenance_count"/>
                                     </span>
                                 </div>
                             </div>
@@ -675,13 +662,13 @@
 
     <!-- equipment.category : actions -->
     <record id="hr_equipment_category_action" model="ir.actions.act_window">
-        <field name="name">Equipment Categories</field>
+        <field name="name">设备分类</field>
         <field name="res_model">my_equipment_maintenance.equipment.category</field>
         <field name="view_mode">tree,kanban,form</field>
         <field name="view_id" ref="hr_equipment_category_view_tree"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new equipment category
+               新建一个设备分类。
             </p>
         </field>
     </record>

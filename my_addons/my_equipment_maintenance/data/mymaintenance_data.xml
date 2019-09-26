@@ -25,6 +25,15 @@
         <field name="fold" eval="True" />
         <field name="done" eval="True" />
     </record>
+    <record id="category_0" model="my_equipment_maintenance.equipment.category">
+        <field name="name">关键设备</field>
+    </record>
+        <record id="category_1" model="my_equipment_maintenance.equipment.category">
+        <field name="name">重要设备</field>
+     </record>
+        <record id="category_2" model="my_equipment_maintenance.equipment.category">
+        <field name="name">一般设备</field>
+    </record>
 
 </data>
 </odoo>
