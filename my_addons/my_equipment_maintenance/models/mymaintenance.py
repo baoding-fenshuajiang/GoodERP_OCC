@@ -31,7 +31,6 @@ class MaintenanceEquipmentCategory(models.Model):
         self.fold = False if self.equipment_count else True
 
     name = fields.Char('分类名称', required=True, translate=True)
-    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
     color = fields.Integer('Color Index')
     note = fields.Text('备注', translate=False)
     equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'category_id', string='设备',
@@ -96,7 +95,7 @@ class MaintenanceEquipmentCategory(models.Model):
 class MaintenanceEquipment(models.Model):
     _name = 'my_equipment_maintenance.equipment'
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _description = 'Maintenance Equipment'
+    _description = '设备'
 
     @api.multi
     def _track_subtype(self, init_values):
@@ -126,24 +125,19 @@ class MaintenanceEquipment(models.Model):
         return self.browse(equipment_ids).name_get()
 
     name = fields.Char('设备名称', required=True, translate=True)
-    company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
     active = fields.Boolean(default=True)
     technician_user_id = fields.Many2one('res.users', string='维护人', track_visibility='onchange',
                                          oldname='user_id')
-    owner_user_id = fields.Many2one('res.users', string='所有者', track_visibility='onchange')
+    owner_user_id = fields.Many2one('res.users', string='操作者', track_visibility='onchange')
     category_id = fields.Many2one('my_equipment_maintenance.equipment.category', string='设备分类',
                                   track_visibility='onchange', group_expand='_read_group_category_ids')
     partner_id = fields.Many2one('res.partner', string='供应商', domain="[('supplier', '=', 1)]")
-    partner_ref = fields.Char('供应商编号')
-    location = fields.Char('位置')
+    location = fields.Char('安装位置')
     model = fields.Char('型号')
-    serial_no = fields.Char('序列号', copy=False)
-    assign_date = fields.Date('指定日期', track_visibility='onchange')
-    effective_date = fields.Date('有效日期', default=fields.Date.context_today, required=True,
-                                 help="Date at which the equipment became effective. This date will be used to "
-                                      "compute "
-                                      "the Mean Time Between Failure.")
-    cost = fields.Float('成本')
+    serial_no = fields.Char('设备编号', copy=False)
+    production_date = fields.Date('生产日期')
+    effective_date = fields.Date('验收合格日期')
+    cost = fields.Float('价格')
     note = fields.Text('备注')
     warranty_date = fields.Date('质保期失效日期', oldname='warranty')
     color = fields.Integer('颜色索引')
@@ -155,8 +149,7 @@ class MaintenanceEquipment(models.Model):
                                                          string="当前维护", store=True)
     period = fields.Integer('预防性维护之间的天数')
     next_action_date = fields.Date(compute='_compute_next_my_equipment_maintenance', string='预防性设备维护', store=True)
-    my_equipment_maintenance_team_id = fields.Many2one('my_equipment_maintenance.team', string='维护团队')
-    my_equipment_maintenance_duration = fields.Float(help="维护期间的小时数")
+    my_equipment_maintenance_duration = fields.Float(help="维护用时")
 
     @api.depends('effective_date', 'period', 'my_equipment_maintenance_ids.request_date',
                  'my_equipment_maintenance_ids.close_date')
@@ -249,7 +242,6 @@ class MaintenanceEquipment(models.Model):
             'my_equipment_maintenance_type': 'preventive',
             'owner_user_id': self.owner_user_id.id,
             'user_id': self.technician_user_id.id,
-            'my_equipment_maintenance_team_id': self.my_equipment_maintenance_team_id.id,
             'duration': self.my_equipment_maintenance_duration,
             })
 
@@ -286,15 +278,8 @@ class MaintenanceRequest(models.Model):
             return 'my_equipment_maintenance.mt_req_status'
         return super(MaintenanceRequest, self)._track_subtype(init_values)
 
-    def _get_default_team_id(self):
-        MT = self.env['my_equipment_maintenance.team']
-        team = MT.search([('company_id', '=', self.env.user.company_id.id)], limit=1)
-        if not team:
-            team = MT.search([], limit=1)
-        return team.id
 
     name = fields.Char('Subjects', required=True)
-    company_id = fields.Many2one('res.company', string='公司', default=lambda self: self.env.user.company_id)
     description = fields.Text('描述')
     request_date = fields.Date('请求日期', track_visibility='onchange', default=fields.Date.context_today,
                                help="要求维修实施的时间。")
@@ -319,8 +304,6 @@ class MaintenanceRequest(models.Model):
     my_equipment_maintenance_type = fields.Selection([('corrective', '纠正'), ('preventive', '预防')],
                                                      string='维护类型', default="corrective")
     schedule_date = fields.Datetime('计划日期', help="维护团队期望的实施日期")
-    my_equipment_maintenance_team_id = fields.Many2one('my_equipment_maintenance.team', string='团队',
-                                                       required=True, default=_get_default_team_id)
     duration = fields.Float('期间',help="用小时和分钟表示的期间")
 
     @api.multi
@@ -346,8 +329,6 @@ class MaintenanceRequest(models.Model):
         request = super(MaintenanceRequest, self).create(vals)
         if request.owner_user_id or request.user_id:
             request._add_followers()
-        if request.equipment_id and not request.my_equipment_maintenance_team_id:
-            request.my_equipment_maintenance_team_id = request.equipment_id.my_equipment_maintenance_team_id
         request.activity_update()
         return request
 
@@ -407,41 +388,3 @@ class MaintenanceRequest(models.Model):
         return stages.browse(stage_ids)
 
 
-class MaintenanceTeam(models.Model):
-    _name = 'my_equipment_maintenance.team'
-    _description = '维护团队'
-
-    name = fields.Char(required=True, translate=True)
-    active = fields.Boolean(default=True)
-    company_id = fields.Many2one('res.company', string='Company',default=lambda self: self.env.user.company_id)
-    member_ids = fields.Many2many('res.users', 'my_equipment_maintenance_team_users_rel', string="团队成员")
-    color = fields.Integer("颜色", default=0)
-    request_ids = fields.One2many('my_equipment_maintenance.request', 'my_equipment_maintenance_team_id', copy=False)
-    equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'my_equipment_maintenance_team_id',
-                                    copy=False)
-
-    # For the dashboard only
-    todo_request_ids = fields.One2many('my_equipment_maintenance.request', string="请求", copy=False,
-                                       compute='_compute_todo_requests')
-    todo_request_count = fields.Integer(string="请求数量", compute='_compute_todo_requests')
-    todo_request_count_date = fields.Integer(string="计划的请求数量", compute='_compute_todo_requests')
-    todo_request_count_high_priority = fields.Integer(string="高优先级的请求数量",
-                                                      compute='_compute_todo_requests')
-    todo_request_count_block = fields.Integer(string="受阻的请求数量", compute='_compute_todo_requests')
-    todo_request_count_unscheduled = fields.Integer(string="未计划的请求数量",
-                                                    compute='_compute_todo_requests')
-
-    @api.one
-    @api.depends('request_ids.stage_id.done')
-    def _compute_todo_requests(self):
-        self.todo_request_ids = self.request_ids.filtered(lambda e: e.stage_id.done==False)
-        self.todo_request_count = len(self.todo_request_ids)
-        self.todo_request_count_date = len(self.todo_request_ids.filtered(lambda e: e.schedule_date != False))
-        self.todo_request_count_high_priority = len(self.todo_request_ids.filtered(lambda e: e.priority == '3'))
-        self.todo_request_count_block = len(self.todo_request_ids.filtered(lambda e: e.kanban_state == 'blocked'))
-        self.todo_request_count_unscheduled = len(self.todo_request_ids.filtered(lambda e: not e.schedule_date))
-
-    @api.one
-    @api.depends('equipment_ids')
-    def _compute_equipment(self):
-        self.equipment_count = len(self.equipment_ids)

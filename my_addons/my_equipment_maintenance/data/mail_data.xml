@@ -52,8 +52,5 @@
         <field name="parent_id" eval="ref('mt_mat_assign')"/>
         <field name="relation_field">category_id</field>
     </record>
-    <record id="equipment_team_maintenance" model="my_equipment_maintenance.team">
-        <field name="name">内部维护</field>
-    </record>
-</data>
+ </data>
 </odoo>
