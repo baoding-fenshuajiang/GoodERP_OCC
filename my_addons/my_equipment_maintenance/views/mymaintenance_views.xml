@@ -351,6 +351,7 @@
                         </group>
                         <group>
                             <field name="location"/>
+                            <field name="effective_date"/>
                             <field name="owner_user_id"/>
                             <field name="technician_user_id"/>
                             <field name="warranty_date"/>
@@ -416,10 +417,10 @@
                                     <span class="fa fa-ellipsis-v"/>
                                 </a>
                                 <div class="dropdown-menu" role="menu">
-                                    <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">Edit...</a></t>
-                                    <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">Delete</a></t>
+                                    <t t-if="widget.editable"><a role="menuitem" type="edit" class="dropdown-item">编辑...</a></t>
+                                    <t t-if="widget.deletable"><a role="menuitem" type="delete" class="dropdown-item">删除</a></t>
                                     <div role="separator" class="dropdown-divider"></div>
-                                    <div role="separator" class="dropdown-header">Record Colour</div>
+                                    <div role="separator" class="dropdown-header">颜色标记</div>
                                     <ul class="oe_kanban_colorpicker" data-field="color"/>
                                 </div>
                             </div>
@@ -433,7 +434,7 @@
                                 <div class="o_kanban_record_bottom">
                                     <div class="oe_kanban_bottom_left">
                                         <div class="badge badge-danger" t-if="record.my_equipment_maintenance_open_count.raw_value" >
-                                            <t t-raw="record.my_equipment_maintenance_open_count.raw_value"/> Request
+                                            <t t-raw="record.my_equipment_maintenance_open_count.raw_value"/>维护请求
                                         </div>
                                         <div class="badge badge-secondary" t-if="record.next_action_date.raw_value" >
                                             <t t-raw="moment(record.next_action_date.raw_value).format('MMMM Do')"/>
@@ -468,7 +469,8 @@
                 <field name="serial_no"/>
                 <field name="technician_user_id"/>
                 <field name="category_id"/>
-                <field name="partner_id" invisible="1"/>
+                <field name="partner_id" />
+                <field name="next_action_date"/>
             </tree>
         </field>
     </record>
@@ -489,7 +491,7 @@
                 <filter string="我的设备" name="my" domain="[('owner_user_id', '=', uid)]"/>
                 <filter string="已存档" domain="[('active', '=', False)]" name="inactive"/>
                 <separator/>
-                <filter string="我的活动s" name="activities_my"
+                <filter string="我的活动" name="activities_my"
                     domain="[('activity_ids.user_id', '=', uid)]"/>
                 <separator/>
                 <filter string="最近活动" name="activities_overdue"
@@ -504,7 +506,7 @@
                 <filter string="未读信息" name="message_needaction" domain="[('message_needaction','=',True)]"/>
                 <!-- <filter string="Archived" name="inactive" domain="[('active','=',False)]"/> -->
                 <group  expand='0' string='Group by...'>
-                    <filter string='拥有者' name="owner" domain="[]" context="{'group_by': 'owner_user_id'}"/>
+                    <filter string='操作者' name="owner" domain="[]" context="{'group_by': 'owner_user_id'}"/>
                     <filter string='供应商' name="vendor" domain="[]" context="{'group_by': 'partner_id'}"/>
                 </group>
             </search>

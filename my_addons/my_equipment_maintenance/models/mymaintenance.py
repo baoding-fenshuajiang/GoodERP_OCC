@@ -136,8 +136,9 @@ class MaintenanceEquipment(models.Model):
     model = fields.Char('型号')
     serial_no = fields.Char('设备编号', copy=False)
     production_date = fields.Date('生产日期')
-    effective_date = fields.Date('验收合格日期')
-    cost = fields.Float('价格')
+    effective_date = fields.Date('投入使用日期', default=fields.Date.context_today, required=True,
+                                 help="设备投入使用日期，用于按维护频次计算维护时间")
+    cost = fields.Float('价格（元）')
     note = fields.Text('备注')
     warranty_date = fields.Date('质保期失效日期', oldname='warranty')
     color = fields.Integer('颜色索引')
@@ -149,7 +150,7 @@ class MaintenanceEquipment(models.Model):
                                                          string="当前维护", store=True)
     period = fields.Integer('预防性维护之间的天数')
     next_action_date = fields.Date(compute='_compute_next_my_equipment_maintenance', string='预防性设备维护', store=True)
-    my_equipment_maintenance_duration = fields.Float(help="维护用时")
+    my_equipment_maintenance_duration = fields.Float('维护用时',help="维护用时")
 
     @api.depends('effective_date', 'period', 'my_equipment_maintenance_ids.request_date',
                  'my_equipment_maintenance_ids.close_date')
