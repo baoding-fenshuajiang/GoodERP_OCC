@@ -66,9 +66,9 @@
                         <field name="kanban_state" class="oe_inline" widget="state_selection"/>
                     </div>
                     <div class="oe_title">
-                        <label for="name" class="oe_edit_only" string="名称"/>
+                        <label for="name" class="oe_edit_only" string="主题"/>
                         <h1>
-                            <field name="name" placeholder="维护请求"/>
+                            <field name="name" placeholder="主题"/>
                         </h1>
                     </div>
                     <group>
@@ -343,7 +343,9 @@
                         <group>
                             <field name="serial_no"/>
                             <field name="model"/>
+                            <field name="equipment_power"/>
                             <field name="category_id" options="{&quot;no_open&quot;: True}"/>
+                            <field name="is_environmental_protecting_equipment"/>
                             <field name="partner_id" context="{'default_supplier': True, 'default_customer': False}"/>
                             <field name="production_date"/>
                             <field name="cost" groups="my_equipment_maintenance.group_equipment_manager"/>

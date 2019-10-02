@@ -131,11 +131,13 @@ class MaintenanceEquipment(models.Model):
     owner_user_id = fields.Many2one('res.users', string='操作者', track_visibility='onchange')
     category_id = fields.Many2one('my_equipment_maintenance.equipment.category', string='设备分类',
                                   track_visibility='onchange', group_expand='_read_group_category_ids')
+    is_environmental_protecting_equipment = fields.Boolean('是环保设备', default=False)
     partner_id = fields.Many2one('res.partner', string='供应商', domain="[('supplier', '=', 1)]")
     location = fields.Char('安装位置')
     model = fields.Char('型号')
     serial_no = fields.Char('设备编号', copy=False)
     production_date = fields.Date('生产日期')
+    equipment_power = fields.Integer('设备功率')
     effective_date = fields.Date('投入使用日期', default=fields.Date.context_today, required=True,
                                  help="设备投入使用日期，用于按维护频次计算维护时间")
     cost = fields.Float('价格（元）')
@@ -279,8 +281,7 @@ class MaintenanceRequest(models.Model):
             return 'my_equipment_maintenance.mt_req_status'
         return super(MaintenanceRequest, self)._track_subtype(init_values)
 
-
-    name = fields.Char('Subjects', required=True)
+    name = fields.Char('主题', required=True)
     description = fields.Text('描述')
     request_date = fields.Date('请求日期', track_visibility='onchange', default=fields.Date.context_today,
                                help="要求维修实施的时间。")
@@ -305,7 +306,7 @@ class MaintenanceRequest(models.Model):
     my_equipment_maintenance_type = fields.Selection([('corrective', '纠正'), ('preventive', '预防')],
                                                      string='维护类型', default="corrective")
     schedule_date = fields.Datetime('计划日期', help="维护团队期望的实施日期")
-    duration = fields.Float('期间',help="用小时和分钟表示的期间")
+    duration = fields.Float('用时', help="用小时和分钟表示的时间")
 
     @api.multi
     def archive_equipment_request(self):
