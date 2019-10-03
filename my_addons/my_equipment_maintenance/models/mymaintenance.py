@@ -310,7 +310,7 @@ class MaintenanceRequest(models.Model):
     duration = fields.Float('用时', help="用小时和分钟表示的时间")
     operations = fields.One2many(
         'maintenance.line', 'maintenance_id', 'Parts',
-        copy=True, readonly=False, states={'done': [('readonly', True)]})
+        copy=True, readonly=False)
 
     @api.multi
     def archive_equipment_request(self):
@@ -402,7 +402,7 @@ class RepairLine(models.Model):
             'my_equipment_maintenance.request', '维护单编号',
             index=True, ondelete='cascade')
     product_id = fields.Many2one('equipment.parts', '产品', required=True)
-    product_uom_qty = fields.Float(
+    product_uom_qty = fields.Integer(
             'Quantity', default=1, required=True)
 
 
