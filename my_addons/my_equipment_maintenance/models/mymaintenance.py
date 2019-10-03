@@ -403,6 +403,6 @@ class RepairLine(models.Model):
             index=True, ondelete='cascade')
     product_id = fields.Many2one('equipment.parts', '产品', required=True)
     product_uom_qty = fields.Integer(
-            'Quantity', default=1, required=True)
+            '数量', default=1, required=True)
 
 

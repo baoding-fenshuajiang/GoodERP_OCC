@@ -49,7 +49,7 @@
                             <tree string="维修用零件" editable="bottom">
                                 <field name="product_id"/>
                                 <field name='name'/>
-                                <field name="product_uom_qty" string="数量"/>
+                                <field name="product_uom_qty"/>
                               </tree>
                         </field>
                          <div class="oe_clear"/>
@@ -150,7 +150,7 @@
                   groups="my_equipment_maintenance.group_equipment_manager"
                   name="设备维修" sequence="36"
                   web_icon="repair,static/description/icon.png"
-                  parent="my_equipment_maintenance.menu_my_equipment_maintenance_title"
+                  parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         />
 
     </data>
