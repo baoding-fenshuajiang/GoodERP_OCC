@@ -114,7 +114,7 @@ class RepairLine(models.Model):
         index=True, ondelete='cascade')
     product_id = fields.Many2one('equipment.parts', '产品', required=True)
     product_uom_qty = fields.Float(
-        'Quantity', default=1.0, required=True)
+        'Quantity', default=1, required=True)
 
 
 

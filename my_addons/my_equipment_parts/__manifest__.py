@@ -8,7 +8,7 @@
     'description': 'E-Mail:992102498@qq.com',
     'author':  '保定-粉刷匠',
     'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
-    'depends':  ['my_equipment_maintenance',],
+    'depends':  [],
     'sequence': 13,
     'demo': [],
     'data': [

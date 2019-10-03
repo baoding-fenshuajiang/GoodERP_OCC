@@ -54,6 +54,10 @@
         <field name="context">{'search_default_active': 1}</field>
         <field name="target">current</field>
     </record>
+    <menuitem
+        id="menu_my_equipment_maintenance_title"
+        name="设备管理"
+        sequence="110"/>
     <menuitem id="menu_equipment_parts" name="设备备件" action="equipment_parts_action"
-        parent="my_equipment_maintenance.menu_my_equipment_maintenance_title" sequence="1"/>
+        parent="menu_my_equipment_maintenance_title" sequence="1"/>
 </odoo>

@@ -7,7 +7,7 @@
     'category': '设备管理',
     'description': """
         设备维护""",
-    'depends': ['mail'],
+    'depends': ['my_equipment_parts', 'mail'],
     'summary': '管理设备维护',
     'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
     'data': [

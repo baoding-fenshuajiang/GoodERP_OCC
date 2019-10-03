@@ -237,7 +237,7 @@ class MaintenanceEquipment(models.Model):
     def _create_new_request(self, date):
         self.ensure_one()
         self.env['my_equipment_maintenance.request'].create({
-            'name': _('Preventive Maintenance - %s') % self.name,
+            'name': _('预防性维护 - %s') % self.id,
             'request_date': date,
             'schedule_date': date,
             'category_id': self.category_id.id,
@@ -281,15 +281,16 @@ class MaintenanceRequest(models.Model):
             return 'my_equipment_maintenance.mt_req_status'
         return super(MaintenanceRequest, self)._track_subtype(init_values)
 
-    name = fields.Char('主题', required=True)
+    name = fields.Char('维修单编号')
     description = fields.Text('描述')
+    internal_notes = fields.Text('备注')
     request_date = fields.Date('请求日期', track_visibility='onchange', default=fields.Date.context_today,
                                help="要求维修实施的时间。")
     owner_user_id = fields.Many2one('res.users', string='创建人', default=lambda s: s.env.uid)
     category_id = fields.Many2one('my_equipment_maintenance.equipment.category', related='equipment_id.category_id',
                                   string='分类', store=True, readonly=True)
     equipment_id = fields.Many2one('my_equipment_maintenance.equipment', string='设备',
-                                   ondelete='restrict', index=True)
+                                   ondelete='restrict', index=True, required=True)
     user_id = fields.Many2one('res.users', string='技术员', track_visibility='onchange',
                               oldname='technician_user_id')
     stage_id = fields.Many2one('my_equipment_maintenance.stage', string='阶段', ondelete='restrict',
@@ -304,9 +305,12 @@ class MaintenanceRequest(models.Model):
     # without deleting it.")
     archive = fields.Boolean(default=False, help="使用存档来讲维护请求在不删除的情况下不可见。")
     my_equipment_maintenance_type = fields.Selection([('corrective', '纠正'), ('preventive', '预防')],
-                                                     string='维护类型', default="corrective")
-    schedule_date = fields.Datetime('计划日期', help="维护团队期望的实施日期")
+                                                     string='维护类型', default="preventive")
+    schedule_date = fields.Date('计划日期', help="维护团队期望的实施日期")
     duration = fields.Float('用时', help="用小时和分钟表示的时间")
+    operations = fields.One2many(
+        'maintenance.line', 'maintenance_id', 'Parts',
+        copy=True, readonly=False, states={'done': [('readonly', True)]})
 
     @api.multi
     def archive_equipment_request(self):
@@ -388,5 +392,17 @@ class MaintenanceRequest(models.Model):
         """
         stage_ids = stages._search([], order=order, access_rights_uid=SUPERUSER_ID)
         return stages.browse(stage_ids)
+
+
+class RepairLine(models.Model):
+    _name = 'maintenance.line'
+    _description = '维护用零件'
+    name = fields.Text('描述')
+    maintenance_id = fields.Many2one(
+            'my_equipment_maintenance.request', '维护单编号',
+            index=True, ondelete='cascade')
+    product_id = fields.Many2one('equipment.parts', '产品', required=True)
+    product_uom_qty = fields.Float(
+            'Quantity', default=1, required=True)
 
 

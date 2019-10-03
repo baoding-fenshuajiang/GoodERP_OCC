@@ -65,21 +65,14 @@
                     <div class="oe_right">
                         <field name="kanban_state" class="oe_inline" widget="state_selection"/>
                     </div>
-                    <div class="oe_title">
-                        <label for="name" class="oe_edit_only" string="主题"/>
-                        <h1>
-                            <field name="name" placeholder="主题"/>
-                        </h1>
-                    </div>
                     <group>
                         <group>
-                            <field name="owner_user_id" string="请求人"/>
                             <field name="equipment_id"  context="{'default_category_id':category_id}"/>
-                            <field name="category_id" groups="my_equipment_maintenance.group_equipment_manager" attrs="{'invisible': [('equipment_id', '=', False)]}"/>
+                            <field name="category_id" groups="my_equipment_parts.group_equipment_manager" attrs="{'invisible': [('equipment_id', '=', False)]}"/>
                             <field name="request_date" readonly="True"/>
+                            <field name="owner_user_id" string="请求人"/>
                             <field name="close_date" groups="base.group_no_one" readonly="True"/>
                             <field name="archive" invisible="1"/>
-                            <field name="my_equipment_maintenance_type" widget="radio"/>
                         </group>
                         <group>
                             <field name="user_id" string="负责人"/>
@@ -92,8 +85,23 @@
                             </div>
                             <field name="priority" widget="priority"/>
                         </group>
+                        <field name='description' placeholder="内部备注 ......."/>
                     </group>
-                    <field name='description' placeholder="内部备注 ......."/>
+                    <notebook>
+                    <page string="零件">
+                        <field name="operations">
+                            <tree string="维护用零件" editable="bottom">
+                                <field name="product_id"/>
+                                <field name='name'/>
+                                <field name="product_uom_qty" string="数量"/>
+                              </tree>
+                        </field>
+                         <div class="oe_clear"/>
+                    </page>
+                    <page string="备注">
+                        <field name="internal_notes" placeholder="添加备注..."/>
+                    </page>
+                </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
@@ -179,11 +187,10 @@
         <field name="arch" type="xml">
             <tree string="my_equipment_maintenance Request" decoration-bf="message_needaction==True">
                 <field name="message_needaction" invisible="1"/>
-                <field name="name"/>
                 <field name="request_date" groups="base.group_no_one"/>
                 <field name="owner_user_id"/>
                 <field name="user_id"/>
-                <field name="category_id" groups="my_equipment_maintenance.group_equipment_manager"/>
+                <field name="category_id" groups="my_equipment_parts.group_equipment_manager"/>
                 <field name="stage_id"/>
             </tree>
         </field>
@@ -280,7 +287,6 @@
         <field name="name">维护请求</field>
         <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">kanban,tree,form,pivot,graph,calendar</field>
-        <field name="domain">[('my_equipment_maintenance_type', 'in', context.get('maintenance_type', ['preventive', 'corrective']))]</field>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 新建一个维护请求。
@@ -348,7 +354,7 @@
                             <field name="is_environmental_protecting_equipment"/>
                             <field name="partner_id" context="{'default_supplier': True, 'default_customer': False}"/>
                             <field name="production_date"/>
-                            <field name="cost" groups="my_equipment_maintenance.group_equipment_manager"/>
+                            <field name="cost" groups="my_equipment_parts.group_equipment_manager"/>
                             <field name="note"/>
                         </group>
                         <group>
@@ -711,15 +717,9 @@
 
     <!-- Menu items hierachy -->
     <menuitem
-        id="menu_my_equipment_maintenance_title"
-        name="设备管理"
-        web_icon="my_equipment_maintenance,static/description/icon.png"
-        sequence="110"/>
-
-    <menuitem
         id="menu_m_request"
         name="设备维护"
-        parent="menu_my_equipment_maintenance_title"
+        parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         groups="group_equipment_manager,base.group_user"
         sequence="1"/>
 
@@ -742,7 +742,7 @@
     <menuitem
         id="menu_equipment_form"
         name="设备"
-        parent="menu_my_equipment_maintenance_title"
+        parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         action="hr_equipment_action"
         groups="group_equipment_manager,base.group_user"
         sequence="2"/>
@@ -750,7 +750,7 @@
     <menuitem
         id="menu_m_reports"
         name="报表"
-        parent="menu_my_equipment_maintenance_title"
+        parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         groups="group_equipment_manager,base.group_user"
         sequence="3"/>
 
@@ -771,7 +771,7 @@
     <menuitem
         id="my_equipment_maintenance_reporting"
         name="报表"
-        parent="menu_my_equipment_maintenance_title"
+        parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         sequence="20"/>
     <menuitem
         id="my_equipment_maintenance_request_reporting"
@@ -781,7 +781,7 @@
     <menuitem
         id="menu_my_equipment_maintenance_configuration"
         name="设置"
-        parent="menu_my_equipment_maintenance_title"
+        parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         groups="group_equipment_manager"
         sequence="100"/>
 

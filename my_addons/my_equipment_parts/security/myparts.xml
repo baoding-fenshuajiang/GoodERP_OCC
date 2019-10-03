@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- This group is only allowed to deal with equipment registration and my_equipment_maintenance -->
+    <record id="group_equipment_manager" model="res.groups">
+        <field name="name">Equipment Manager</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        <field name="comment">The user will be able to manage equipments.</field>
+    </record>
+
+    <!-- Rules -->
+     <record id="equipment_rule_admin_user" model="ir.rule">
+        <field name="name">Equipments administrator</field>
+        <field name="model_id" ref="model_my_equipment_maintenance_equipment"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('group_equipment_manager'))]"/>
+    </record>
+    <record id="base.user_admin" model="res.users">
+        <field name="groups_id" eval="[(4, ref('group_equipment_manager'))]"/>
+    </record>
+</odoo>
