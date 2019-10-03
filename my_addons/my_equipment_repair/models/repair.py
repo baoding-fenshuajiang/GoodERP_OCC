@@ -56,7 +56,7 @@ class Repair(models.Model):
     @api.multi
     def action_repair_confirm(self):
         if self.filtered(lambda repair: repair.state != 'draft'):
-            raise UserError(_("Only draft repairs can be confirmed."))
+            raise UserError(_("只有草稿状态的为需单才能被确认。"))
         self.write({'state': 'confirmed'})
         return True
 

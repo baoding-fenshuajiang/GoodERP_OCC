@@ -135,7 +135,7 @@ class MaintenanceEquipment(models.Model):
     partner_id = fields.Many2one('res.partner', string='供应商', domain="[('supplier', '=', 1)]")
     location = fields.Char('安装位置')
     model = fields.Char('型号')
-    serial_no = fields.Char('设备编号', copy=False, required=True)
+    serial_no = fields.Char('设备编号', copy=False)
     production_date = fields.Date('生产日期')
     equipment_power = fields.Integer('设备功率(KW)')
     effective_date = fields.Date('投入使用日期', default=fields.Date.context_today, required=True,
@@ -152,7 +152,7 @@ class MaintenanceEquipment(models.Model):
                                                          string="当前维护", store=True)
     period = fields.Integer('预防性维护之间的天数')
     next_action_date = fields.Date(compute='_compute_next_my_equipment_maintenance', string='预防性设备维护', store=True)
-    my_equipment_maintenance_duration = fields.Float('维护用时',help="维护用时")
+    my_equipment_maintenance_duration = fields.Float('维护用时', help="维护用时")
 
     @api.depends('effective_date', 'period', 'my_equipment_maintenance_ids.request_date',
                  'my_equipment_maintenance_ids.close_date')
@@ -210,7 +210,7 @@ class MaintenanceEquipment(models.Model):
                                                                                                   not x.stage_id.done))
 
     _sql_constraints = [
-        ('serial_no', 'unique(serial_no)', "Another asset already exists with this serial number!"),
+        ('serial_no', 'unique(serial_no)', "其它设备已经使用了这个设备编号"),
     ]
 
     @api.model
