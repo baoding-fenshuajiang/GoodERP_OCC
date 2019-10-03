@@ -14,7 +14,7 @@ class MaintenanceStage(models.Model):
     _description = '维护阶段'
     _order = 'sequence, id'
 
-    name = fields.Char('名称', required=True, translate=True)
+    name = fields.Char('名称', required=True)
     sequence = fields.Integer('Sequence', default=20)
     fold = fields.Boolean('在维护中折叠！')
     done = fields.Boolean('请求完成')
@@ -30,9 +30,9 @@ class MaintenanceEquipmentCategory(models.Model):
     def _compute_fold(self):
         self.fold = False if self.equipment_count else True
 
-    name = fields.Char('分类名称', required=True, translate=True)
+    name = fields.Char('分类名称', required=True)
     color = fields.Integer('Color Index')
-    note = fields.Text('备注', translate=False)
+    note = fields.Text('备注')
     equipment_ids = fields.One2many('my_equipment_maintenance.equipment', 'category_id', string='设备',
                                     copy=False)
     equipment_count = fields.Integer(string="设备", compute='_compute_equipment_count')
@@ -124,20 +124,20 @@ class MaintenanceEquipment(models.Model):
             equipment_ids = self._search([('name', operator, name)] + args, limit=limit, access_rights_uid=name_get_uid)
         return self.browse(equipment_ids).name_get()
 
-    name = fields.Char('设备名称', required=True, translate=True)
+    name = fields.Char('设备名称', required=True)
     active = fields.Boolean(default=True)
     technician_user_id = fields.Many2one('res.users', string='维护人', track_visibility='onchange',
                                          oldname='user_id')
     owner_user_id = fields.Many2one('res.users', string='操作者', track_visibility='onchange')
     category_id = fields.Many2one('my_equipment_maintenance.equipment.category', string='设备分类',
                                   track_visibility='onchange', group_expand='_read_group_category_ids')
-    is_environmental_protecting_equipment = fields.Boolean('是环保设备', default=False)
+    is_environmental_protecting_equipment = fields.Boolean('是否环保设备', default=False)
     partner_id = fields.Many2one('res.partner', string='供应商', domain="[('supplier', '=', 1)]")
     location = fields.Char('安装位置')
     model = fields.Char('型号')
-    serial_no = fields.Char('设备编号', copy=False)
+    serial_no = fields.Char('设备编号', copy=False, required=True)
     production_date = fields.Date('生产日期')
-    equipment_power = fields.Integer('设备功率')
+    equipment_power = fields.Integer('设备功率(KW)')
     effective_date = fields.Date('投入使用日期', default=fields.Date.context_today, required=True,
                                  help="设备投入使用日期，用于按维护频次计算维护时间")
     cost = fields.Float('价格（元）')
