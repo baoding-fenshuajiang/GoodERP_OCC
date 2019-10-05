@@ -13,7 +13,7 @@
 ============
 满足IATF16949关于设备履历的要求
 """,
-    'depends': ['my_equipment_parts', 'my_equipment_maintenance'],
+    'depends': ['hr','my_equipment_parts', 'my_equipment_maintenance'],
     'data': [
         'security/ir.model.access.csv',
         'security/repair_security.xml',

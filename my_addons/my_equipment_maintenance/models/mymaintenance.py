@@ -126,8 +126,7 @@ class MaintenanceEquipment(models.Model):
 
     name = fields.Char('设备名称', required=True)
     active = fields.Boolean(default=True)
-    technician_user_id = fields.Many2one('res.users', string='维护人', track_visibility='onchange',
-                                         oldname='user_id')
+    technician_user_id = fields.Many2one('res.users', string='维护人', track_visibility='onchange')
     owner_user_id = fields.Many2one('res.users', string='操作者', track_visibility='onchange')
     category_id = fields.Many2one('my_equipment_maintenance.equipment.category', string='设备分类',
                                   track_visibility='onchange', group_expand='_read_group_category_ids')
@@ -234,20 +233,6 @@ class MaintenanceEquipment(models.Model):
         category_ids = categories._search([], order=order, access_rights_uid=SUPERUSER_ID)
         return categories.browse(category_ids)
 
-    def _create_new_request(self, date):
-        self.ensure_one()
-        self.env['my_equipment_maintenance.request'].create({
-            'name': _('预防性维护 - %s') % self.id,
-            'request_date': date,
-            'schedule_date': date,
-            'category_id': self.category_id.id,
-            'equipment_id': self.id,
-            'my_equipment_maintenance_type': 'preventive',
-            'owner_user_id': self.owner_user_id.id,
-            'user_id': self.technician_user_id.id,
-            'duration': self.my_equipment_maintenance_duration,
-            })
-
     @api.model
     def _cron_generate_requests(self):
         """
@@ -291,8 +276,7 @@ class MaintenanceRequest(models.Model):
                                   string='分类', store=True, readonly=True)
     equipment_id = fields.Many2one('my_equipment_maintenance.equipment', string='设备',
                                    ondelete='restrict', index=True, required=True)
-    user_id = fields.Many2one('res.users', string='技术员', track_visibility='onchange',
-                              oldname='technician_user_id')
+    user_id = fields.Many2many('hr.employee', string='维护人', ondelete='restrict', track_visibility='onchange')
     stage_id = fields.Many2one('my_equipment_maintenance.stage', string='阶段', ondelete='restrict',
                                track_visibility='onchange',
                                group_expand='_read_group_stage_ids', default=_default_stage)
@@ -323,21 +307,6 @@ class MaintenanceRequest(models.Model):
         # self.write({'active': True, 'stage_id': first_stage_obj.id})
         self.write({'archive': False, 'stage_id': first_stage_obj.id})
 
-    @api.onchange('equipment_id')
-    def onchange_equipment_id(self):
-        if self.equipment_id:
-            self.user_id = self.equipment_id.technician_user_id
-
-    @api.model
-    def create(self, vals):
-        # context: no_log, because subtype already handle this
-        self = self.with_context(mail_create_nolog=True)
-        request = super(MaintenanceRequest, self).create(vals)
-        if request.owner_user_id or request.user_id:
-            request._add_followers()
-        request.activity_update()
-        return request
-
     @api.multi
     def write(self, vals):
         # Overridden to reset the kanban_state to normal whenever
@@ -345,45 +314,14 @@ class MaintenanceRequest(models.Model):
         if vals and 'kanban_state' not in vals and 'stage_id' in vals:
             vals['kanban_state'] = 'normal'
         res = super(MaintenanceRequest, self).write(vals)
-        if vals.get('owner_user_id') or vals.get('user_id'):
-            self._add_followers()
         if 'stage_id' in vals:
             self.filtered(lambda m: m.stage_id.done).write({'close_date': fields.Date.today()})
             self.activity_feedback(['my_equipment_maintenance.mail_act_my_equipment_maintenance_request'])
-        if vals.get('user_id') or vals.get('schedule_date'):
-            self.activity_update()
         if vals.get('equipment_id'):
             # need to change description of activity also so unlink old and create new activity
             self.activity_unlink(['my_equipment_maintenance.mail_act_my_equipment_maintenance_request'])
             self.activity_update()
         return res
-
-    def activity_update(self):
-        """ Update my_equipment_maintenance activities based on current record set state.
-        It reschedule, unlink or create my_equipment_maintenance request activities. """
-        self.filtered(lambda request: not request.schedule_date).activity_unlink(['my_equipment_maintenance.'
-                                                                    'mail_act_my_equipment_maintenance_request'])
-        for request in self.filtered(lambda request: request.schedule_date):
-            date_dl = fields.Datetime.from_string(request.schedule_date).date()
-            updated = request.activity_reschedule(
-                ['my_equipment_maintenance.mail_act_my_equipment_maintenance_request'],
-                date_deadline=date_dl,
-                new_user_id=request.user_id.id or request.owner_user_id.id or self.env.uid)
-            if not updated:
-                if request.equipment_id:
-                    note = _('Request planned for <a href="#" data-oe-model="%s" data-oe-id="%s">%s</a>') % (
-                        request.equipment_id._name, request.equipment_id.id, request.equipment_id.display_name)
-                else:
-                    note = False
-                request.activity_schedule(
-                    'my_equipment_maintenance.mail_act_my_equipment_maintenance_request',
-                    fields.Datetime.from_string(request.schedule_date).date(),
-                    note=note, user_id=request.user_id.id or request.owner_user_id.id or self.env.uid)
-
-    def _add_followers(self):
-        for request in self:
-            partner_ids = (request.owner_user_id.partner_id + request.user_id.partner_id).ids
-            request.message_subscribe(partner_ids=partner_ids)
 
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):

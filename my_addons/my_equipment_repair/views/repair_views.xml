@@ -37,7 +37,7 @@
                             <field name="product_id"/>
                             <field name="start_date_time"/>
                             <field name="fault_symptom"/>
-                            <field name="technician_user_id"/>
+                            <field name="technician_user_id"  widget="many2many_tags" options="{'no_create': true}"/>
                             <field name="fault_analysis"/>
                             <field name="solving_process"/>
                             <field name="end_date_time"/>
@@ -48,7 +48,6 @@
                         <field name="operations">
                             <tree string="维修用零件" editable="bottom">
                                 <field name="product_id"/>
-                                <field name='name'/>
                                 <field name="product_uom_qty"/>
                               </tree>
                         </field>

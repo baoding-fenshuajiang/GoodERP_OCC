@@ -22,7 +22,7 @@ class Repair(models.Model):
         'my_equipment_maintenance.equipment', string='要维修的设备',
         readonly=True, required=True, states={'draft': [('readonly', False)]})
     fault_symptom = fields.Text('故障现象')
-    technician_user_id = fields.Many2one('res.users', '维修人')
+    technician_user_id = fields.Many2many('hr.employee', string='维修人', ondelete='restrict')
     fault_analysis = fields.Text('故障分析')
     solving_process = fields.Text('解决过程记录')
     state = fields.Selection([
@@ -56,7 +56,7 @@ class Repair(models.Model):
     @api.multi
     def action_repair_confirm(self):
         if self.filtered(lambda repair: repair.state != 'draft'):
-            raise UserError(_("只有草稿状态的为需单才能被确认。"))
+            raise UserError(_("只有草稿状态的维修单才能被确认。"))
         self.write({'state': 'confirmed'})
         return True
 
@@ -108,7 +108,6 @@ class RepairLine(models.Model):
     _name = 'repair.line'
     _description = '维修用零件'
 
-    name = fields.Text('描述')
     repair_id = fields.Many2one(
         'repair.order', '维修单编号',
         index=True, ondelete='cascade')
