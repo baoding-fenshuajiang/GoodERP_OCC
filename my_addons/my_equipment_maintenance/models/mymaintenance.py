@@ -14,15 +14,14 @@ class MaintenanceStage(models.Model):
     _description = '维护阶段'
     _order = 'sequence, id'
 
-    name = fields.Char('名称', required=True)
+    name = fields.Char('Name', required=True, translate=True)
     sequence = fields.Integer('Sequence', default=20)
-    fold = fields.Boolean('在维护中折叠！')
+    fold = fields.Boolean('在维护阶段中折叠')
     done = fields.Boolean('请求完成')
 
 
 class MaintenanceEquipmentCategory(models.Model):
     _name = 'my_equipment_maintenance.equipment.category'
-    _inherit = ['mail.alias.mixin', 'mail.thread']
     _description = '设备维护分类'
 
     @api.one
@@ -39,10 +38,6 @@ class MaintenanceEquipmentCategory(models.Model):
     my_equipment_maintenance_ids = fields.One2many('my_equipment_maintenance.request', 'category_id', copy=False)
     my_equipment_maintenance_count = fields.Integer(string="维护个数",
                                                     compute='_compute_my_equipment_maintenance_count')
-    alias_id = fields.Many2one(
-        'mail.alias', 'Alias', ondelete='restrict', required=True,
-        help="Email alias for this equipment category. New emails will automatically "
-        "create new my_equipment_maintenance request for this equipment category.")
     fold = fields.Boolean(string='在维护中折叠', compute='_compute_fold', store=True)
 
     @api.multi
@@ -61,16 +56,6 @@ class MaintenanceEquipmentCategory(models.Model):
         for category in self:
             category.my_equipment_maintenance_count = mapped_data.get(category.id, 0)
 
-    @api.model
-    def create(self, vals):
-        self = self.with_context(alias_model_name='my_equipment_maintenance.request',
-                                 alias_parent_model_name=self._name)
-        if not vals.get('alias_name'):
-            vals['alias_name'] = vals.get('name')
-        category_id = super(MaintenanceEquipmentCategory, self).create(vals)
-        category_id.alias_id.write({'alias_parent_thread_id': category_id.id, 'alias_defaults':
-            {'category_id': category_id.id}})
-        return category_id
 
     @api.multi
     def unlink(self):
@@ -83,26 +68,12 @@ class MaintenanceEquipmentCategory(models.Model):
         MailAlias.unlink()
         return res
 
-    def get_alias_model_name(self, vals):
-        return vals.get('alias_model', 'my_equipment_maintenance.equipment')
-
-    def get_alias_values(self):
-        values = super(MaintenanceEquipmentCategory, self).get_alias_values()
-        values['alias_defaults'] = {'category_id': self.id}
-        return values
-
 
 class MaintenanceEquipment(models.Model):
     _name = 'my_equipment_maintenance.equipment'
     _inherit = ['mail.thread', 'mail.activity.mixin']
     _description = '设备'
 
-    @api.multi
-    def _track_subtype(self, init_values):
-        self.ensure_one()
-        if 'owner_user_id' in init_values and self.owner_user_id:
-            return 'my_equipment_maintenance.mt_mat_assign'
-        return super(MaintenanceEquipment, self)._track_subtype(init_values)
 
     @api.multi
     def name_get(self):
@@ -213,19 +184,6 @@ class MaintenanceEquipment(models.Model):
     ]
 
     @api.model
-    def create(self, vals):
-        equipment = super(MaintenanceEquipment, self).create(vals)
-        if equipment.owner_user_id:
-            equipment.message_subscribe(partner_ids=[equipment.owner_user_id.partner_id.id])
-        return equipment
-
-    @api.multi
-    def write(self, vals):
-        if vals.get('owner_user_id'):
-            self.message_subscribe(partner_ids=self.env['res.users'].browse(vals['owner_user_id']).partner_id.ids)
-        return super(MaintenanceEquipment, self).write(vals)
-
-    @api.model
     def _read_group_category_ids(self, categories, domain, order):
         """ Read group customization in order to display all the categories in
             the kanban view, even if they are empty.
@@ -257,15 +215,6 @@ class MaintenanceRequest(models.Model):
     def _default_stage(self):
         return self.env['my_equipment_maintenance.stage'].search([], limit=1)
 
-    @api.multi
-    def _track_subtype(self, init_values):
-        self.ensure_one()
-        if 'stage_id' in init_values and self.stage_id.sequence <= 1:
-            return 'my_equipment_maintenance.mt_req_created'
-        elif 'stage_id' in init_values and self.stage_id.sequence > 1:
-            return 'my_equipment_maintenance.mt_req_status'
-        return super(MaintenanceRequest, self)._track_subtype(init_values)
-
     name = fields.Char('维修单编号')
     description = fields.Text('描述')
     internal_notes = fields.Text('备注')
@@ -283,8 +232,6 @@ class MaintenanceRequest(models.Model):
     priority = fields.Selection([('0', '很低'), ('1', '低'), ('2', '一般'), ('3', '高')], string='优先级')
     color = fields.Integer('颜色索引')
     close_date = fields.Date('关闭日期', help="Date the my_equipment_maintenance was finished. ")
-    kanban_state = fields.Selection([('normal', '进行中'), ('blocked', '受阻'), ('done','已为下阶段准备好')],
-                                    string='看板状态', required=True, default='normal', track_visibility='onchange')
     # active = fields.Boolean(default=True, help="Set active to false to hide the my_equipment_maintenance request
     # without deleting it.")
     archive = fields.Boolean(default=False, help="使用存档来讲维护请求在不删除的情况下不可见。")
@@ -293,43 +240,15 @@ class MaintenanceRequest(models.Model):
     schedule_date = fields.Date('计划日期', help="维护团队期望的实施日期")
     duration = fields.Float('用时', help="用小时和分钟表示的时间")
     operations = fields.One2many(
-        'maintenance.line', 'maintenance_id', 'Parts',
+        'maintenance.line', 'maintenance_id', '零件',
         copy=True, readonly=False)
+    kanban_state = fields.Selection([('normal', 'In Progress'), ('blocked', 'Blocked'), ('done', 'Ready for next stage')],
+                                    string='Kanban State', required=True, default='normal', track_visibility='onchange')
+
 
     @api.multi
     def archive_equipment_request(self):
         self.write({'archive': True})
-
-    @api.multi
-    def reset_equipment_request(self):
-        """ Reinsert the my_equipment_maintenance request into the my_equipment_maintenance pipe in the first stage"""
-        first_stage_obj = self.env['my_equipment_maintenance.stage'].search([], order="sequence asc", limit=1)
-        # self.write({'active': True, 'stage_id': first_stage_obj.id})
-        self.write({'archive': False, 'stage_id': first_stage_obj.id})
-
-    @api.multi
-    def write(self, vals):
-        # Overridden to reset the kanban_state to normal whenever
-        # the stage (stage_id) of the Maintenance Request changes.
-        if vals and 'kanban_state' not in vals and 'stage_id' in vals:
-            vals['kanban_state'] = 'normal'
-        res = super(MaintenanceRequest, self).write(vals)
-        if 'stage_id' in vals:
-            self.filtered(lambda m: m.stage_id.done).write({'close_date': fields.Date.today()})
-            self.activity_feedback(['my_equipment_maintenance.mail_act_my_equipment_maintenance_request'])
-        if vals.get('equipment_id'):
-            # need to change description of activity also so unlink old and create new activity
-            self.activity_unlink(['my_equipment_maintenance.mail_act_my_equipment_maintenance_request'])
-            self.activity_update()
-        return res
-
-    @api.model
-    def _read_group_stage_ids(self, stages, domain, order):
-        """ Read group customization in order to display all the stages in the
-            kanban view, even if they are empty
-        """
-        stage_ids = stages._search([], order=order, access_rights_uid=SUPERUSER_ID)
-        return stages.browse(stage_ids)
 
 
 class RepairLine(models.Model):

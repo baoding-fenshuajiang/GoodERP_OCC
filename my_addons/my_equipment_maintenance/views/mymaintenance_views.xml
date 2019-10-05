@@ -1,47 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-    <!-- equiment.request : views -->
-    <record id="hr_equipment_request_view_search" model="ir.ui.view">
-        <field name="name">equipment.request.search</field>
-        <field name="model">my_equipment_maintenance.request</field>
-        <field name="arch" type="xml">
-            <search string="维护请求搜索">
-                <field name="name"/>
-                <field name="category_id"/>
-                <field name="equipment_id"/>
-                <field name="owner_user_id"/>
-                <field name="stage_id"/>
-                <separator/>
-                <filter string="待办" domain="[('stage_id.done', '=', False)]" name="todo"/>
-                <filter string="受阻" name="kanban_state_block" domain="[('kanban_state', '=', 'blocked')]"/>
-                <filter string="进行中" name="progress" domain="[('kanban_state', '=', 'normal')]"/>
-                <filter string="已完成" name="done" domain="[('kanban_state', '=', 'done')]"/>
-                <filter string="最高优先级" name="top_priority" domain="[('priority', '=', '3')]"/>
-                <separator/>
-                <filter string="未计划维护" domain="[('schedule_date', '=', False)]" name="unscheduled"/>
-                <separator/>
-                <filter string="近期活动" name="activities_overdue"
-                    domain="[('activity_ids.date_deadline', '&lt;', context_today().strftime('%Y-%m-%d'))]"
-                    help="Show all records which has next action date is before today"/>
-                <filter string="今天活动" name="activities_today"
-                    domain="[('activity_ids.date_deadline', '=', context_today().strftime('%Y-%m-%d'))]"/>
-                <filter string="将来活动" name="activities_upcoming_all"
-                        domain="[('activity_ids.date_deadline', '&gt;', context_today().strftime('%Y-%m-%d'))
-                        ]"/>
-                <separator/>
-                <filter string="未读信息" name="message_needaction" domain="[('message_needaction','=',True)]"/>
-                <separator/>
-                <filter string="已存档" name="inactive" domain="[('archive','=',True)]"/>
-                <group  expand='0' string='Group by...'>
-                    <filter string='分类' name="category" domain="[]" context="{'group_by' : 'category_id'}"/>
-                    <filter string='阶段' name="stages" domain="[]" context="{'group_by' : 'stage_id'}"/>
-                    <filter string='创建者' name='created_by' domain="[]" context="{'group_by': 'owner_user_id'}"/>
-                </group>
-            </search>
-        </field>
-    </record>
-
     <record id="hr_equipment_request_view_form" model="ir.ui.view">
         <field name="name">equipment.request.form</field>
         <field name="model">my_equipment_maintenance.request</field>
@@ -103,11 +61,6 @@
                     </page>
                 </notebook>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers"/>
-                    <field name="activity_ids" widget="mail_activity"/>
-                    <field name="message_ids" widget="mail_thread"/>
-                </div>
             </form>
         </field>
     </record>
@@ -369,21 +322,8 @@
                         <field name="name"/>
                     </h1>
                 </div>
-                <group name="group_alias" attrs="{'invisible': [('alias_domain', '=', False)]}" groups="base.group_no_one">
-                    <label for="alias_name" string="邮件别名"/>
-                    <div name="alias_def">
-                        <field name="alias_id" class="oe_read_only oe_inline" string="Email Alias" required="0"/>
-                        <div class="oe_edit_only oe_inline" name="edit_alias" style="display: inline;">
-                            <field name="alias_name" class="oe_inline"/>@<field name="alias_domain" class="oe_inline" readonly="1"/>
-                        </div>
-                    </div>
-                </group>
                 <field name="note" nolabel="1"/>
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers"/>
-                    <field name="message_ids" widget="mail_thread"/>
-                </div>
             </form>
         </field>
     </record>
@@ -495,15 +435,13 @@
 
         <!-- equiment.request : actions -->
     <record id="hr_equipment_request_action" model="ir.actions.act_window">
-        <field name="name">Maintenance Requests</field>
-        <field name="res_model">maintenance.request</field>
+        <field name="name">维护请求</field>
+        <field name="res_model">my_equipment_maintenance.request</field>
         <field name="view_mode">tree,form</field>
         <field name="view_id" ref="hr_equipment_request_view_tree"/>
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-                Add a new maintenance request
-            </p><p>
-                Follow the process of the request and communicate with the collaborator.
+                新建一个维护请求。
             </p>
         </field>
     </record>
@@ -571,10 +509,6 @@
         name="报表"
         parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         sequence="20"/>
-    <menuitem
-        id="my_equipment_maintenance_request_reporting"
-        action="my_equipment_maintenance_request_action_reports"
-        parent="my_equipment_maintenance_reporting"/>
 
     <menuitem
         id="menu_my_equipment_maintenance_configuration"
