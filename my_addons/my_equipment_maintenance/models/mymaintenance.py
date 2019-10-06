@@ -263,3 +263,4 @@ class RepairLine(models.Model):
             '数量', default=1, required=True)
 
 
+

@@ -32,3 +32,13 @@ class BorrowTask(models.Model):
                 rec.left_amount = rec.name.left_amount-rec.processing_quantity
                 rec.name.write({'left_amount': rec.left_amount})
 
+
+class StockRegister(models.Model):
+    _name = 'stock.register'
+    _description = "夹具入库登记"
+
+    name = fields.Many2one('equipment.workholder', string='夹具', required=True)
+    register_date = fields.Date(string="入库日期", default=lambda self: self._context.get('date',
+                                fields.Date.context_today(self)), required=True)
+    note = fields.Text('备注')
+

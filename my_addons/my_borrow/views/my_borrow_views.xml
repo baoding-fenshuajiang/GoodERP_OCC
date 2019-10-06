@@ -39,6 +39,45 @@
       </field>
     </record>
 
+    <record model="ir.ui.view" id="register_list">
+      <field name="name">夹具入库登记</field>
+      <field name="model">stock.register</field>
+      <field name="arch" type="xml">
+        <tree string="夹具入库登记">
+          <field name="name" options='{"no_open":True}'/>
+          <field name="register_date"/>
+          <field name="note"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="borrow_task_form">
+      <field name="name">夹具入库登记</field>
+      <field name="model">stock.register</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <group>
+                <field name="name" options='{"no_open":True}'/>
+                <field name="register_date"/>
+                <field name="note"/>
+              </group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record id="stock_register_search" model="ir.ui.view">
+      <field name="name">夹具登记搜索</field>
+      <field name="model">stock.register</field>
+      <field name="arch" type="xml">
+        <search string="夹具登记">
+          <field name="name" string= "夹具" filter_domain="[('name', 'ilike', self)]"/>
+        </search>
+      </field>
+    </record>
 
     <record id="borrow_task_search" model="ir.ui.view">
       <field name="name">夹具借还搜索</field>
@@ -60,7 +99,13 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="夹具借还" id="menu_borrow_task" action="act_borrow_task_win" parent="my_workholder.menu_equipment" sequence="1"/>
+    <record model="ir.actions.act_window" id="act_stock_register_win">
+      <field name="name">夹具入库</field>
+      <field name="res_model">stock.register</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
+    <menuitem name="夹具借还" id="menu_borrow_task" action="act_borrow_task_win" parent="my_workholder.menu_equipment" sequence="1"/>
+    <menuitem name="夹具入库" id="menu_stock_register" action="act_stock_register_win" parent="my_workholder.menu_equipment" sequence="1"/>
   </data>
 </odoo>
