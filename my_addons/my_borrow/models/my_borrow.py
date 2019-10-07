@@ -32,6 +32,16 @@ class BorrowTask(models.Model):
                 rec.left_amount = rec.name.left_amount-rec.processing_quantity
                 rec.name.write({'left_amount': rec.left_amount})
 
+                next_maintenance = self.env['my_maintenance.maintenance.task'].search([('name', '=', rec.name),
+                                                                                       ('is_returned', '=', False)])
+                if not next_maintenance:
+                        _create_new_task(rec.name)
+
+    def _create_new_task(self, id):
+        self.env['my_maintenance.maintenance.task'].create({
+            'name': id,
+            })
+
 
 class StockRegister(models.Model):
     _name = 'stock.register'

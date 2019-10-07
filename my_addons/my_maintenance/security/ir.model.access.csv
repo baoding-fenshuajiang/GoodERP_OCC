@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-maintenance_access, 工装维护权限,model_maintenance_task,my_borrow.borrow_manager,1,1,1,1

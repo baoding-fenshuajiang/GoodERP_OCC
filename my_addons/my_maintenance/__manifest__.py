@@ -9,8 +9,6 @@
     'author':  "保定-粉刷匠，992102498@qq.com",
     'website': 'http://blog.sina.com.cn/kaiyuanlvzhou',
     'depends': ['my_workholder',
-                'hr',
-                'my_borrow',
                 ],
     'category': 'Warehouse',
     'sequence': 13,
@@ -19,7 +17,6 @@
        ],
     'data': [
         'views/my_maintenance_views.xml',
-        'security/ir.model.access.csv',
     ],
     'qweb': [
 
