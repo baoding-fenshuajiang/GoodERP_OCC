@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+workholder_access, 工装登记权限,model_equipment_workholder,workholder_register_manager,1,1,1,1
+
+

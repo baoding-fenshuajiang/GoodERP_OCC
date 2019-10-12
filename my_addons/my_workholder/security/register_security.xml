@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <!-- 夹具登记组 -->
+    <record id="workholder_register_manager" model="res.groups">
+      <field name="name">夹具登记员</field>
+      <field name="category_id" ref="base.module_category_warehouse_management"/>
+    </record>
+  </data>
+</odoo>

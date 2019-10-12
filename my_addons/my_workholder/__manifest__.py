@@ -14,7 +14,9 @@
     'sequence': 13,
     'demo': [],
     'data': [
-        'views/my_workholder_views.xml'
+        'views/my_workholder_views.xml',
+        'security/register_security.xml',
+        'security/ir.model.access.csv',
     ],
     'qweb': [
 
