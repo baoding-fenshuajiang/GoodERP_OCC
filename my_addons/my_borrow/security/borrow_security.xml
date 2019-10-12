@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
-    <!-- 夹具借还管理员组用来全权管理夹具的入库、借还和维护 -->
-    <record id="borrow_manager" model="res.groups">
-      <field name="name">夹具借还管理</field>
-      <field name="category_id" ref="base.module_category_warehouse_management"/>
-    </record>
-    <!--只有编号以G开头的夹具才可以供进行借还-->
-    <record model="ir.rule" id="equipment_workholder_borrow_rule">
-        <field name="name">夹具借还适用产品</field>
-        <field name="model_id" ref="my_workholder.model_equipment_workholder"/>
-        <field name="domain_force">[('default_code','like','G%')]</field>
-        <field name="groups" eval="[(4,ref('borrow_manager'))]" />
-    </record>
+      <!-- 夹具借还管理员组用来全权管理夹具的入库、借还和维护 -->
+      <record id="borrow_manager" model="res.groups">
+            <field name="name">夹具借还管理</field>
+            <field name="category_id" ref="my_workholder.module_category_workholder_management"/>
+      </record>
+      <!--只有编号以G开头的夹具才可以供进行借还-->
+      <record model="ir.rule" id="equipment_workholder_borrow_rule">
+            <field name="name">夹具借还适用产品</field>
+            <field name="model_id" ref="my_workholder.model_equipment_workholder"/>
+            <field name="domain_force">[('default_code','like','G%')]</field>
+            <field name="groups" eval="[(4,ref('borrow_manager'))]" />
+      </record>
   </data>
 </odoo>
