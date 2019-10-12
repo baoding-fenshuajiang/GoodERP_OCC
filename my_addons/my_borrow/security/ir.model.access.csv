@@ -1,2 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 borrow_access, 工装借还权限,model_borrow_task,borrow_manager,1,1,1,1
+maintenance_access, 工装维护权限,model_maintenance_task,borrow_manager,1,1,1,1
+register_access, 工装入库登记权限,model_stock_register,borrow_manager,1,1,1,1
+
