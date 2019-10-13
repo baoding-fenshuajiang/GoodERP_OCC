@@ -6,7 +6,7 @@
       <field name="model">borrow.task</field>
       <field name="arch" type="xml">
         <tree string="夹具借还任务" decoration-danger="not(is_returned)">
-          <field name="name" options='{"no_open":True}'/>
+          <field name="equipment_workholder_id" options='{"no_open":True}'/>
           <field name="borrower_id" options='{"no_open":True}'/>
           <field name="borrow_date"/>
           <field name="return_date"/>
@@ -25,7 +25,7 @@
           <sheet>
             <group>
               <group>
-				  <field name="name" options='{"no_open":True}'/>
+				  <field name="equipment_workholder_id" options='{"no_open":True}'/>
 				  <field name="borrower_id" options='{"no_open":True}'/>
 				  <field name="borrow_date"/>
 				  <field name="return_date"/>
@@ -44,7 +44,7 @@
       <field name="model">stock.register</field>
       <field name="arch" type="xml">
         <tree string="夹具入库登记">
-          <field name="name" options='{"no_open":True}'/>
+          <field name="equipment_workholder_id" options='{"no_open":True}'/>
           <field name="register_date"/>
           <field name="note"/>
         </tree>
@@ -59,7 +59,7 @@
           <sheet>
             <group>
               <group>
-                <field name="name" options='{"no_open":True}'/>
+                <field name="equipment_workholder_id" options='{"no_open":True}'/>
                 <field name="register_date"/>
                 <field name="note"/>
               </group>
@@ -74,7 +74,7 @@
       <field name="model">stock.register</field>
       <field name="arch" type="xml">
         <search string="夹具登记">
-          <field name="name" string= "夹具" filter_domain="[('name', 'ilike', self)]"/>
+          <field name="equipment_workholder_id" string= "夹具" filter_domain="[('equipment_workholder_id', 'ilike', self)]"/>
         </search>
       </field>
     </record>
@@ -86,7 +86,7 @@
         <search string="夹具借还">
           <filter string="未归还" name="NotReturnned" domain="[('is_returned', '=', False)]"/>
           <filter string="已归还" name="Returnned" domain="[('is_returned', '=', True)]"/>
-          <field name="name" string= "工装" filter_domain="[('name', 'ilike', self)]"/>
+          <field name="equipment_workholder_id" string= "工装" filter_domain="[('equipment_workholder_id', 'ilike', self)]"/>
          </search>
       </field>
     </record>
@@ -110,7 +110,7 @@
       <field name="model">maintenance.task</field>
       <field name="arch" type="xml">
         <tree string="夹具维护任务" decoration-danger="not(is_returned)">
-          <field name="name" options='{"no_open":True}'/>
+          <field name="equipment_workholder_id" options='{"no_open":True}'/>
           <field name="serviceman_id" options='{"no_open":True}'/>
           <field name="maintenance_date"/>
           <field name="return_date"/>
@@ -127,7 +127,7 @@
           <sheet>
             <group>
               <group>
-				  <field name="name" options='{"no_open":True}'/>
+				  <field name="equipment_workholder_id" options='{"no_open":True}'/>
 				  <field name="serviceman_id" options='{"no_open":True}'/>
 				  <field name="maintenance_date"/>
 				  <field name="return_date"/>
@@ -148,7 +148,7 @@
         <search string="夹具维护">
           <filter string="未完成" name="NotReturnned" domain="[('is_returned', '=', False)]"/>
           <filter string="已完成" name="Returnned" domain="[('is_returned', '=', True)]"/>
-          <field name="name" string= "工装" filter_domain="[('name', 'ilike', self)]"/>
+          <field name="equipment_workholder_id" string= "工装" filter_domain="[('equipment_workholder_id', 'ilike', self)]"/>
          </search>
       </field>
     </record>
