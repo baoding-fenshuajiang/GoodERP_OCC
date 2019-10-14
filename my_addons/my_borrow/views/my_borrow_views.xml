@@ -46,6 +46,7 @@
         <tree string="夹具入库登记">
           <field name="equipment_workholder_id" options='{"no_open":True}'/>
           <field name="register_date"/>
+          <field name="handler_id"/>
           <field name="note"/>
         </tree>
       </field>
@@ -61,6 +62,7 @@
               <group>
                 <field name="equipment_workholder_id" options='{"no_open":True}'/>
                 <field name="register_date"/>
+                <field name="handler_id"/>
                 <field name="note"/>
               </group>
             </group>

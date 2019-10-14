@@ -13,7 +13,6 @@
                 <field name="producer"/>
                 <field name="durability"/>
                 <field name="left_amount"/>
-                <field name="location"/>
             </tree>
         </field>
     </record>

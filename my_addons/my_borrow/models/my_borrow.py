@@ -49,6 +49,7 @@ class StockRegister(models.Model):
     equipment_workholder_id = fields.Many2one('equipment.workholder', string='夹具', required=True)
     register_date = fields.Date(string="入库日期", default=lambda self: self._context.get('date',
                                 fields.Date.context_today(self)), required=True)
+    handler_id = fields.Many2one('hr.employee', string='入库人', required=True)
     note = fields.Text('备注')
 
 
