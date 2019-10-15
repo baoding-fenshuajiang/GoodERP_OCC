@@ -65,5 +65,5 @@
 
     <menuitem name="工装管理" id="menu_equipment"/>
     <menuitem id="menu_equipment_workholder" name="夹具" action="equipment_workholder_action"
-        parent="menu_equipment" sequence="1"/>
+        parent="menu_equipment" sequence="50"/>
 </odoo>

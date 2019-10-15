@@ -163,9 +163,12 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="夹具借还" id="menu_borrow_task" action="act_borrow_task_win" parent="my_workholder.menu_equipment" sequence="1"/>
-    <menuitem name="夹具入库" id="menu_stock_register" action="act_stock_register_win" parent="my_workholder.menu_equipment" sequence="1"/>
-    <menuitem name="夹具维护" id="menu_maintenance_task" action="act_maintenance_task_win" parent="my_workholder.menu_equipment" sequence="1"/>
+    <menuitem name="夹具借还" id="menu_borrow_task" action="act_borrow_task_win"
+              parent="my_workholder.menu_equipment" sequence="20"/>
+    <menuitem name="夹具入库" id="menu_stock_register" action="act_stock_register_win"
+              parent="my_workholder.menu_equipment" sequence="40"/>
+    <menuitem name="夹具维护" id="menu_maintenance_task" action="act_maintenance_task_win"
+              parent="my_workholder.menu_equipment" sequence="30"/>
 
   </data>
 </odoo>

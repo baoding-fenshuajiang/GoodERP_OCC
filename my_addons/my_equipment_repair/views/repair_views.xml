@@ -147,7 +147,7 @@
         <menuitem action="action_repair_order_tree"
                   id="menu_repair_order"
                   groups="my_equipment_maintenance.group_equipment_manager"
-                  name="设备维修" sequence="36"
+                  name="设备维修" sequence="60"
                   web_icon="repair,static/description/icon.png"
                   parent="my_equipment_parts.menu_my_equipment_maintenance_title"
         />
