@@ -123,6 +123,8 @@ class MaintenanceEquipment(models.Model):
     period = fields.Integer('预防性维护之间的天数')
     next_action_date = fields.Date(compute='_compute_next_my_equipment_maintenance', string='预防性设备维护', store=True)
     my_equipment_maintenance_duration = fields.Float('维护用时', help="维护用时")
+    equipment_spare_parts = fields.One2many(
+        'equipment_spare_parts.line', 'equipment_register_id', '设备备件清单',copy=True, readonly=False)
 
     @api.depends('effective_date', 'period', 'my_equipment_maintenance_ids.request_date',
                  'my_equipment_maintenance_ids.close_date')
@@ -234,14 +236,12 @@ class MaintenanceRequest(models.Model):
     close_date = fields.Date('关闭日期', help="Date the my_equipment_maintenance was finished. ")
     # active = fields.Boolean(default=True, help="Set active to false to hide the my_equipment_maintenance request
     # without deleting it.")
-    archive = fields.Boolean(default=False, help="使用存档来讲维护请求在不删除的情况下不可见。")
+    archive = fields.Boolean(default=False, help="使用存档来将维护请求在不删除的情况下不可见。")
     my_equipment_maintenance_type = fields.Selection([('corrective', '纠正'), ('preventive', '预防')],
                                                      string='维护类型', default="preventive")
     schedule_date = fields.Date('计划日期', help="维护团队期望的实施日期")
     duration = fields.Float('用时', help="用小时和分钟表示的时间")
-    operations = fields.One2many(
-        'maintenance.line', 'maintenance_id', '零件',
-        copy=True, readonly=False)
+    operations = fields.One2many('maintenance.line', 'maintenance_id', '零件',copy=True, readonly=False)
     kanban_state = fields.Selection([('normal', 'In Progress'), ('blocked', 'Blocked'), ('done', 'Ready for next stage')],
                                     string='Kanban State', required=True, default='normal', track_visibility='onchange')
 
@@ -261,6 +261,18 @@ class RepairLine(models.Model):
     product_id = fields.Many2one('equipment.parts', '产品', required=True)
     product_uom_qty = fields.Integer(
             '数量', default=1, required=True)
+
+class EquipmentPartsLine(models.Model):
+    _name = 'equipment_spare_parts.line'
+    _description = '设备备件明细'
+    equipment_spare_part_id = fields.Many2one('equipment.parts', '产品', required=True)
+    equipment_part_qty = fields.Integer(
+            '数量', default=1, required=True)
+    is_virtual_stock = fields.Boolean('虚拟库存', default=False, help="不在库房存货，存放在供应商处。")
+    equipment_register_id = fields.Many2one(
+            'my_equipment_maintenance.equipment', '设备',
+            index=True, ondelete='cascade')
+
 
 
 

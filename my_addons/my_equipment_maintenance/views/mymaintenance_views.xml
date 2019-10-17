@@ -132,6 +132,16 @@
                                 </group>
                             </group>
                         </page>
+                        <page string="备件清单">
+                            <field name="equipment_spare_parts">
+                                <tree string="设备备件清单" editable="bottom">
+                                    <field name="equipment_spare_part_id"/>
+                                    <field name='equipment_part_qty'/>
+                                    <field name="is_virtual_stock"/>
+                                </tree>
+                            </field>
+                            <div class="oe_clear"/>
+                        </page>
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
