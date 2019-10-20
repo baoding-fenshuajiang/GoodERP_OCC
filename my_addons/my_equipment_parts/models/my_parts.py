@@ -7,7 +7,7 @@ from odoo.osv import expression
 
 
 # 备件模型
-class MyWorkholder(models.Model):
+class MyEquipmentParts(models.Model):
     _name = "equipment.parts"
     _description = "设备备件"
     _order = "name"
