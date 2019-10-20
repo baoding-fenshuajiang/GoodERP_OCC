@@ -8,6 +8,7 @@
             <tree string="备件">
                 <field name="default_code"/>
                 <field name="name"/>
+                <field name="model"/>
                 <field name="description"/>
 
             </tree>
@@ -24,6 +25,7 @@
                     <group>
                         <field name="default_code"/>
                         <field name="name"/>
+                        <field name="model"/>
                         <field name="description"/>
                         <field name="active" invisible="0"/>
                     </group>

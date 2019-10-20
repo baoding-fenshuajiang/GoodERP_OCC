@@ -14,6 +14,7 @@ class MyWorkholder(models.Model):
     name = fields.Char('名称', index=True, required=True, translate=False)
     description = fields.Text('备注', translate=False)
     default_code = fields.Char('编号', index=True)
+    model = fields.Char('型号')
     active = fields.Boolean('有效', default=True, help="如果取消勾选，可以实现隐藏这个产品而不是移除它。")
 
     @api.multi
