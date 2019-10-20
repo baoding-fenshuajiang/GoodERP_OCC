@@ -219,8 +219,7 @@ class MaintenanceRequest(models.Model):
 
     name = fields.Char('维修单编号',
         default=lambda self: self.env['ir.sequence'].next_by_code('maintenance.order'),
-        copy=False, required=True,
-        states={'stage_0': [('readonly', False)]})
+        copy=False, required=True,states={'new': [('readonly', False)]})
     description = fields.Text('描述')
     internal_notes = fields.Text('备注')
     request_date = fields.Date('请求日期', track_visibility='onchange', default=fields.Date.context_today,
