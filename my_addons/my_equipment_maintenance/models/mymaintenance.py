@@ -217,7 +217,10 @@ class MaintenanceRequest(models.Model):
     def _default_stage(self):
         return self.env['my_equipment_maintenance.stage'].search([], limit=1)
 
-    name = fields.Char('维修单编号')
+    name = fields.Char('维修单编号',
+        default=lambda self: self.env['ir.sequence'].next_by_code('maintenance.order'),
+        copy=False, required=True,
+        states={'stage_0': [('readonly', False)]})
     description = fields.Text('描述')
     internal_notes = fields.Text('备注')
     request_date = fields.Date('请求日期', track_visibility='onchange', default=fields.Date.context_today,

@@ -19,6 +19,7 @@
         'views/mymaintenance_templates.xml',
         'views/mail_activity_views.xml',
         'data/mymaintenance_cron.xml',
+        'data/ir_sequence_data.xml',
     ],
     'demo': ['data/mymaintenance_demo.xml'],
     'installable': True,
